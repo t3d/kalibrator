@@ -45,15 +45,14 @@ di.recipe              - od Calibre 0.6.41
 eclicto.recipe         - od Calibre 0.6.41
 eksiazki.recipe        - od Calibre 0.6.41
 fronda.recipe          - od Calibre 0.6.46
-gazeta_pomorska.recipe - -
+gazeta_pomorska.recipe - od Calibre 0.7.20
 interia_fakty.recipe   - od Calibre 0.6.41
 interia_sport.recipe   - od Calibre 0.6.41
 legeartis.recipe       - od Calibre 0.6.41
 legitymizm.recipe      - od Calibre 0.6.41
 michalkiewicz.recipe   - od Calibre 0.6.41
-nczas.recipe           - od Calibre 0.6.41
-rmf24_ESKN.recipe      - -
-rmf24_fakty.recipe     - -
+rmf24_ESKN.recipe      - od Calibre 0.7.20
+rmf24_fakty.recipe     - od Calibre 0.7.20
 runa.recipe            - od Calibre 0.6.46
 
 REGUŁY TESTOWE
@@ -63,6 +62,7 @@ esensja.recipe         - Kanały RSS ze strony esensja.pl
 frazpc.recipe          - Newsy i artykuły ze strony frazpc.pl
 nczas.recipe           - Wydanie internetowe tygodnika Najwyższy Czas!
 osnews_pl.recipe       - Strona OSNews.pl
+pclab_pl.recipe        - Aktualności z pclab.pl
 rmf24_opinie.recipe    - Blogi, wywiady i komentarze z rmf24.pl
 
 

@@ -3,7 +3,7 @@
 # # Przed uzyciem przeczytaj komentarz w sekcji "feeds"
 
 __license__   = 'GPL v3'
-__copyright__ = u'2010, Richard z forum.eksiazki.org'
+__copyright__ = u'2010, Richard forum_eksiazki_org'
 '''pomorska.pl'''
 
 import re
@@ -14,7 +14,7 @@ class GazetaPomorska(BasicNewsRecipe):
     publisher      = u'Gazeta Pomorska'
     description    = u'Kujawy i Pomorze - wiadomo\u015bci'
     language       = 'pl'
-    __author__     = u'Richard z forum.eksiazki.org'
+    __author__     = u'Richard forum_eksiazki_org'
                       # # (dziekuje t3d z forum.eksiazki.org za testy)
     oldest_article = 2
     max_articles_per_feed = 20
