@@ -10,7 +10,10 @@ INSTALACJA
 =======================================================================
 Aby korzystać z reguł, należy pobrać pliki .recipe na dysk komputera,
 a następnie wskazać pobrany plik w okienku "Dodaj własne źródło 
-aktualności" w programie Calibre. Następnie należy ustawić zasady 
-pobierania wiadomości w okienku "Zaplanuj pobieranie aktualności".
-Być może w kolejnych wersjach Calibre reguły z tego pakietu pojawią się
-w programie.
+aktualności" w programie Calibre. 
+
+Następnie można ustawić zasady pobierania wiadomości w okienku 
+"Zaplanuj pobieranie aktualności". 
+
+Być może w kolejnych wersjach Calibre reguły z tego pakietu znajdą się
+w pakiecie preinstalowanych reguł.
