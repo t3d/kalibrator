@@ -21,6 +21,6 @@ class eksiazki(BasicNewsRecipe):
 
     keep_only_tags = [dict(name='div', attrs={'id':'content-body'})]
     remove_tags = [
-	    dict(name='span', attrs={'class':'nr_comm'}),
-	    dict(name='div', attrs={'id':'tabsContainer'}),
+        dict(name='span', attrs={'class':'nr_comm'}),
+        dict(name='div', attrs={'id':'tabsContainer'}),
         dict(name='div', attrs={'class':'next_previous_links'})]
