@@ -10,14 +10,14 @@ from calibre.web.feeds.news import BasicNewsRecipe
 
 class eksiazki(BasicNewsRecipe):
 
-    title          = u'eksiazki.org'
+    title          = u'eKsiazki.org'
     desciption     = u'Twoje centrum wiedzy o epapierze i ebookach'
     language = 'pl'
     __author__ = u'Tomasz D\u0142ugosz'
     no_stylesheets = True
     remove_javascript = True
 
-    feeds          = [(u'wpisy', u'http://www.eksiazki.org/feed/')]
+    feeds          = [(u'eKsiazki.org', u'http://www.eksiazki.org/feed/')]
 
     keep_only_tags = [dict(name='div', attrs={'id':'content-body'})]
     remove_tags = [
