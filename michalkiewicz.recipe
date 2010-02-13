@@ -1,6 +1,6 @@
 #!/usr/bin/env  python
 
-__license__   = 'GPL v2'
+__license__   = 'GPL v3'
 __copyright__ = '2010, Tomasz Dlugosz <tomek3d@gmail.com>'
 '''
 michalkiewicz.pl
