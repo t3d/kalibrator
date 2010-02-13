@@ -52,5 +52,6 @@ class DziennikInternautowRecipe(BasicNewsRecipe):
 			(r', <a href="http://di.com.pl/komentarze,.*?</div>', lambda match: '</div>'),
 			(r'<div class="fotonews".*?">', lambda match: '<div class="fotonews">'),
 			(r'http://di.com.pl/pic/photo/mini/', lambda match: 'http://di.com.pl/pic/photo/oryginal/'),
+			(r'\s*</', lambda match: '</'),
 		]
 	]
