@@ -1,15 +1,20 @@
+#!/usr/bin/env  python
+
 from calibre.web.feeds.news import BasicNewsRecipe
 import re
 
+__license__	= 'GPL v3'
+__author__ = 'Mori'
+__version__ = 'v. 0.3'
+
 class DziennikInternautowRecipe(BasicNewsRecipe):
-	__license__	= 'GPL v3'
 	__author__ = 'Mori'
 	language = 'pl'
-	version = 3
-	
+
 	title = u'Dziennik Internautow'
-	publisher = u'Dziennik Internautow'
-	description = u'Dziennik Internautow'
+	publisher = u'Dziennik Internautów Sp. z o.o.'
+	description = u'Internet w ¿yciu i biznesie. Porady, wywiady, interwencje, bezpieczeñstwo w Sieci, technologia.'
+
 	max_articles_per_feed = 100
 	oldest_article = 7
 	cover_url = 'http://di.com.pl/pic/logo_di_norm.gif'
