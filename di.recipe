@@ -1,0 +1,42 @@
+from calibre.web.feeds.news import BasicNewsRecipe
+import re
+
+class DziennikInternautowRecipe(BasicNewsRecipe):
+		__license__	= 'GPL v3'
+		__author__ = 'Mori'
+		language = 'pl'
+		version = 1
+
+		title					= u'Dziennik Internautow'
+		publisher = u'Dziennik Internautow'
+		description = u'Dziennik Internautow'
+		max_articles_per_feed = 100
+		
+		no_stylesheets = True
+		remove_javascript = True
+		encoding = 'utf-8'
+		
+		feeds = [
+			(u'http://feeds.feedburner.com/glowny-di')
+		]
+
+		keep_only_tags = [
+			dict(name = 'div', attrs = {'id' : 'pub_head'}),
+			dict(name = 'div', attrs = {'id' : 'pub_content'})
+		]
+
+		remove_tags = [
+			dict(name = 'div', attrs = {'class' : 'poradniki_context'}),
+			dict(name = 'div', attrs = {'class' : 'uniBox'}),
+			dict(name = 'object', attrs = {}),
+			dict(name = 'h3', attrs = {})
+		]
+		
+		preprocess_regexps = [
+			(re.compile(i[0], re.IGNORECASE | re.DOTALL), i[1]) for i in 
+			[
+				(r'<a href="http://di.com.pl/komentarze,.*?</div>', lambda match: '</div>'),
+				(r'<div class="fotonews".*?">', lambda match: '<div class="fotonews">'),
+				(r'http://di.com.pl/pic/photo/mini/', lambda match: 'http://di.com.pl/pic/photo/oryginal/'),
+			]
+		]
