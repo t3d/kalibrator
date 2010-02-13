@@ -5,7 +5,7 @@ class DziennikInternautowRecipe(BasicNewsRecipe):
 	__license__	= 'GPL v3'
 	__author__ = 'Mori'
 	language = 'pl'
-	version = 1
+	version = 3
 	
 	title = u'Dziennik Internautow'
 	publisher = u'Dziennik Internautow'
