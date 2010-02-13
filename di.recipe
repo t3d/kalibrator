@@ -1,11 +1,14 @@
 #!/usr/bin/env  python
 
-from calibre.web.feeds.news import BasicNewsRecipe
-import re
-
 __license__	= 'GPL v3'
 __author__ = 'Mori'
-__version__ = 'v. 0.3'
+__version__ = 'v. 0.4'
+'''
+di.com.pl
+'''
+
+from calibre.web.feeds.news import BasicNewsRecipe
+import re
 
 class DziennikInternautowRecipe(BasicNewsRecipe):
 	__author__ = 'Mori'
@@ -31,7 +34,7 @@ class DziennikInternautowRecipe(BasicNewsRecipe):
 	'''
 	
 	feeds = [
-		(u'http://feeds.feedburner.com/glowny-di')
+		(u'Dziennik Internautów', u'http://feeds.feedburner.com/glowny-di')
 	]
 	
 	keep_only_tags = [
