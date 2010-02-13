@@ -2,7 +2,7 @@
 
 __license__	= 'GPL v3'
 __author__ = 'Mori'
-__version__ = 'v. 0.4'
+__version__ = 'v. 0.5'
 '''
 di.com.pl
 '''
@@ -15,8 +15,8 @@ class DziennikInternautowRecipe(BasicNewsRecipe):
 	language = 'pl'
 
 	title = u'Dziennik Internautow'
-	publisher = u'Dziennik Internautów Sp. z o.o.'
-	description = u'Internet w ¿yciu i biznesie. Porady, wywiady, interwencje, bezpieczeñstwo w Sieci, technologia.'
+	publisher = u'Dziennik InternautÃ³w Sp. z o.o.'
+	description = u'Internet w Å¼yciu i biznesie. Porady, wywiady, interwencje, bezpieczeÅ„stwo w Sieci, technologia.'
 
 	max_articles_per_feed = 100
 	oldest_article = 7
@@ -34,7 +34,7 @@ class DziennikInternautowRecipe(BasicNewsRecipe):
 	'''
 	
 	feeds = [
-		(u'Dziennik Internautów', u'http://feeds.feedburner.com/glowny-di')
+		(u'Dziennik InternautÃ³w', u'http://feeds.feedburner.com/glowny-di')
 	]
 	
 	keep_only_tags = [
