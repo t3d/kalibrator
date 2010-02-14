@@ -55,6 +55,9 @@ class InteriaSport(BasicNewsRecipe):
         color: black;
         }
 
+        .articleLead {
+        font-size: 1.2em;
+        }
         '''
 
     preprocess_regexps = [
