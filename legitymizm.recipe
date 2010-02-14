@@ -3,7 +3,7 @@
 __license__   = 'GPL v3'
 __copyright__ = u'2010, Tomasz Dlugosz <tomek3d@gmail.com>'
 '''
-legitymizm.pl
+legitymizm.org
 '''
 
 from calibre.web.feeds.news import BasicNewsRecipe
