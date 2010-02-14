@@ -32,3 +32,7 @@ class InteriaFakty(BasicNewsRecipe):
         dict(name='div', attrs={'class':'clear'}),
         dict(name='div', attrs={'class':'embed embedLeft articleEmbedArticleList articleEmbedArticleListTitle'}),
         dict(name='span', attrs={'class':'keywords'})]
+
+    extra_css = '''
+	    h2 { font-size: 1.2em; }
+	'''
