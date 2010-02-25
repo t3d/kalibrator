@@ -16,7 +16,7 @@ class FantazmatyRecipe(BasicNewsRecipe):
 
 	title = u'Fantazmaty'
 	publisher = u'Agencja Wydawnicza Runa'
-	description = u'Blog agencji wydawniczej Runa'
+	description = u'Blog Agencji Wydawniczej Runa'
 	
 	no_stylesheets = True
 	remove_javascript = True
