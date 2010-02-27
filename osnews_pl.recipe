@@ -16,7 +16,7 @@ class OSNewsRecipe(BasicNewsRecipe):
 
 	title = u'OSNews.pl'
 	publisher = u'OSNews.pl'
-	description = u'OSnews.pl jest społecznościowym serwisem informacyjnym poświęconym oprogramowaniu, systemom operacyjnym i światowi IT'
+	description = u'OSnews.pl jest spo\u0142eczno\u015bciowym serwisem informacyjnym po\u015bwi\u0119conym oprogramowaniu, systemom operacyjnym i \u015bwiatowi IT'
 	
 	no_stylesheets = True
 	remove_javascript = True
