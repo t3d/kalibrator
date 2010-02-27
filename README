@@ -4,7 +4,7 @@ za pomocą programu Calibre.
 Sam program Calibre służy do zarządzania cyfrowymi kopiami książek
 i ich konwersją oraz przenoszeniem na czytniki ebooków.
     Strona projektu Calibre:
-    http://calibre-ebook.com/download
+    http://calibre-ebook.com/
 
 INSTALACJA
 =======================================================================
@@ -25,10 +25,12 @@ eclicto.recipe        - Blog projektu eClicto
 eksiazki.recipe       - Blog vortalu eKsiazki.org
 interia_fakty.recipe  - Fakty z interia.pl
 interia_sport.recipe  - Sport z interia.pl
-legeartis.recipe      - blog Olgierda Rudaka
-legitymizm.recipe     - strona Organizaji Monarchistów Polskich
-michalkiewicz.recipe  - blog Stanisława Michalkiewicza
-nczas.recipe          - wydanie internetowe tygodnika Najwyższy Czas!
+legeartis.recipe      - Blog Olgierda Rudaka
+legitymizm.recipe     - Strona Organizaji Monarchistów Polskich
+michalkiewicz.recipe  - Blog Stanisława Michalkiewicza
+nczas.recipe          - Wydanie internetowe tygodnika Najwyższy Czas!
+osnews.recipe         - Strona OSNews.pl
+runa.recipe           - Blog Agencji Wydawniczej Runa
 
 KONTAKT
 =======================================================================
