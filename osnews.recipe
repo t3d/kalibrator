@@ -1,0 +1,42 @@
+#!/usr/bin/env  python
+
+__license__ = 'GPL v3'
+__author__ = 'Mori'
+__version__ = 'v. 0.1'
+'''
+OSNews.pl
+'''
+
+from calibre.web.feeds.news import BasicNewsRecipe
+import re
+
+class OSNewsRecipe(BasicNewsRecipe):
+	__author__ = 'Mori'
+	language = 'pl'
+
+	title = u'OSNews.pl'
+	publisher = u'OSNews.pl'
+	description = u'OSnews.pl jest społecznościowym serwisem informacyjnym poświęconym oprogramowaniu, systemom operacyjnym i światowi IT'
+	
+	no_stylesheets = True
+	remove_javascript = True
+	encoding = 'utf-8'
+	
+	oldest_article = 100
+	max_articles_per_feed = 100
+	
+	feeds = [
+		(u'OSNews.pl', u'http://feeds.feedburner.com/osnewspl_full')
+	]
+	
+	remove_tags_after = [
+		dict(name = 'div', attrs = {'id' : 'content'})
+	]
+	
+	preprocess_regexps = [
+		(re.compile(i[0], re.IGNORECASE | re.DOTALL), i[1]) for i in 
+		[
+			(r'<!--.*?-->', lambda match: ''),
+			(r'<div class="wpbuzzer_button".*</div>', lambda match: '')
+		]
+	]
