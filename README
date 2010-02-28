@@ -15,8 +15,8 @@ aktualności" w programie Calibre.
 Następnie można ustawić zasady pobierania wiadomości w okienku 
 "Zaplanuj pobieranie aktualności". 
 
-Być może w kolejnych wersjach Calibre reguły z tego pakietu znajdą się
-w pakiecie preinstalowanych reguł.
+Część reguł z tego pakietu została już dołączona do pakietu reguł
+preinstalowanych w Calibre (vide dział REGUŁY ZINTEGROWANE Z CALIBRE).
 
 OPIS REGUŁ
 =======================================================================
@@ -32,6 +32,21 @@ michalkiewicz.recipe  - Blog Stanisława Michalkiewicza
 nczas.recipe          - Wydanie internetowe tygodnika Najwyższy Czas!
 osnews_pl.recipe      - Strona OSNews.pl
 runa.recipe           - Blog Agencji Wydawniczej Runa
+
+REGUŁY ZINTEGROWANE Z CALIBRE
+=======================================================================
+di.recipe             - od Calibre 0.6.41
+eclicto.recipe        - od Calibre 0.6.41
+eksiazki.recipe       - od Calibre 0.6.41
+fronda.recipe         - -
+interia_fakty.recipe  - od Calibre 0.6.41
+interia_sport.recipe  - od Calibre 0.6.41
+legeartis.recipe      - od Calibre 0.6.41
+legitymizm.recipe     - od Calibre 0.6.41
+michalkiewicz.recipe  - od Calibre 0.6.41
+nczas.recipe          - od Calibre 0.6.41
+osnews_pl.recipe      - -
+runa.recipe           - -
 
 KONTAKT
 =======================================================================
