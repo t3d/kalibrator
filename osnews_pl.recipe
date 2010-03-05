@@ -21,22 +21,35 @@ class OSNewsRecipe(BasicNewsRecipe):
 	no_stylesheets = True
 	remove_javascript = True
 	encoding = 'utf-8'
+	use_embedded_content = False;
 	
 	oldest_article = 100
 	max_articles_per_feed = 100
+
+	extra_css = '''
+		.newsinformations li {display:inline;}
+		.news-heading a {font-size:large;}
+	'''
 	
 	feeds = [
 		(u'OSNews.pl', u'http://feeds.feedburner.com/osnewspl_full')
 	]
 	
-	remove_tags_after = [
-		dict(name = 'div', attrs = {'id' : 'content'})
+	keep_only_tags = [
+		dict(name = 'a', attrs = {'class' : 'news-heading'}),
+		dict(name = 'div', attrs = {'class' : 'newsinformations'}),
+		dict(name = 'div', attrs = {'id' : 'news-content'})
+	]
+
+	remove_tags = [
+		dict(name = 'div', attrs = {'class' : 'wpbuzzer_button'})
 	]
 	
 	preprocess_regexps = [
 		(re.compile(i[0], re.IGNORECASE | re.DOTALL), i[1]) for i in 
 		[
 			(r'<!--.*?-->', lambda match: ''),
-			(r'<div class="wpbuzzer_button".*</div>', lambda match: '')
+			(r'<li><span class="newsinformations-bold"><a href=".*?</a></span></li>', lambda match: ''),
+			(r'<li><span class="newsinformations-bold"></span></li>', lambda match: '')
 		]
 	]
