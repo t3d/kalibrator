@@ -12,7 +12,7 @@ import re
 class Fronda(BasicNewsRecipe):
     title          = u'Fronda.pl'
     publisher      = u'Fronda.pl'
-    desciption     = u'Portal po\u015bwi\u0119cony - Infformacje'
+    description    = u'Portal po\u015bwi\u0119cony - Infformacje'
     language = 'pl'
     __author__ = u'Tomasz D\u0142ugosz'
     oldest_article = 7
