@@ -15,8 +15,8 @@ class DziennikInternautowRecipe(BasicNewsRecipe):
 	language = 'pl'
 
 	title = u'Dziennik Internautow'
-	publisher = u'Dziennik Internautów Sp. z o.o.'
-	description = u'Internet w życiu i biznesie. Porady, wywiady, interwencje, bezpieczeństwo w Sieci, technologia.'
+	publisher = u'Dziennik Internaut\u00f3w Sp. z o.o.'
+	description = u'Internet w \u017cyciu i biznesie. Porady, wywiady, interwencje, bezpiecze\u0144stwo w Sieci, technologia.'
 
 	max_articles_per_feed = 100
 	oldest_article = 7
@@ -34,7 +34,7 @@ class DziennikInternautowRecipe(BasicNewsRecipe):
 	'''
 	
 	feeds = [
-		(u'Dziennik Internautów', u'http://feeds.feedburner.com/glowny-di')
+		(u'Dziennik Internaut\u00f3w', u'http://feeds.feedburner.com/glowny-di')
 	]
 	
 	keep_only_tags = [
