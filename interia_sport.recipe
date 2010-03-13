@@ -31,7 +31,8 @@ class InteriaSport(BasicNewsRecipe):
 
     keep_only_tags = [dict(name='div', attrs={'id':'article'})]
 
-    remove_tags = [dict(name='div', attrs={'class':'object gallery'})]
+    remove_tags = [dict(name='div', attrs={'class':'object gallery'}),
+                   dict(name='div', attrs={'class':'box fontSizeSwitch'})]
 
     extra_css = '''
         .articleDate {
