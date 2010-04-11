@@ -1,0 +1,32 @@
+#!/usr/bin/env  python
+
+__license__   = 'GPL v3'
+__copyright__ = u'2010, Tomasz Dlugosz <tomek3d@gmail.com>'
+'''
+frazpc.pl
+'''
+
+from calibre.web.feeds.news import BasicNewsRecipe
+import re
+class FrazPC(BasicNewsRecipe):
+    title          = u'frazpc.pl'
+    publisher      = u'frazpc.pl'
+    description    = u'Tw\xf3j Vortal Technologiczny'
+    language = 'pl'
+    __author__ = u'Tomasz D\u0142ugosz'
+    oldest_article = 7
+    max_articles_per_feed = 100
+    use_embedded_content = False
+    no_stylesheets = True
+
+    feeds          = [(u'Aktualno\u015bci', u'http://i.frazpc.pl/rss_news.xml'), (u'Artyku\u0142y', u'http://i.frazpc.pl/rss_art.xml') ]
+
+    keep_only_tags = [dict(name='table', attrs={'cellpadding':'10'})]
+#dict(name='td', attrs={'class':'imgHolder'}),
+#                     dict(name='td', attrs={'class':'fileInfo'})]
+
+    preprocess_regexps = [
+        (re.compile(i[0], re.IGNORECASE | re.DOTALL), i[1]) for i in 
+            [ (r'<table.*<b>Wi?cej aktualno?ci</b></a></p></td></tr>\n</table> ', lambda match: ''),
+              (r'<p align=right>.*<b>Komentarze.* </p>', lambda match: '')]
+    ]
