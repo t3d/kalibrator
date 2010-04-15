@@ -1,8 +1,8 @@
 #!/usr/bin/env  python
 
 __license__ = 'GPL v3'
-__author__ = 'Mori'
-__version__ = 'v. 0.1'
+__author__ = 'Mori & Tomasz Dlugosz'
+__version__ = 'v. 0.2'
 '''
 OSNews.pl
 '''
@@ -11,45 +11,46 @@ from calibre.web.feeds.news import BasicNewsRecipe
 import re
 
 class OSNewsRecipe(BasicNewsRecipe):
-	__author__ = 'Mori'
-	language = 'pl'
+    __author__ = 'Mori & Tomasz D\u0142ugosz'
+    language = 'pl'
 
-	title = u'OSNews.pl'
-	publisher = u'OSNews.pl'
-	description = u'OSnews.pl jest spo\u0142eczno\u015bciowym serwisem informacyjnym po\u015bwi\u0119conym oprogramowaniu, systemom operacyjnym i \u015bwiatowi IT'
-	
-	no_stylesheets = True
-	remove_javascript = True
-	encoding = 'utf-8'
-	use_embedded_content = False;
-	
-	oldest_article = 100
-	max_articles_per_feed = 100
+    title = u'OSNews.pl'
+    publisher = u'OSNews.pl'
+    description = u'OSnews.pl jest spo\u0142eczno\u015bciowym serwisem informacyjnym po\u015bwi\u0119conym oprogramowaniu, systemom operacyjnym i \u015bwiatowi IT'
 
-	extra_css = '''
-		.newsinformations li {display:inline;}
-		.news-heading a {font-size:large;}
-	'''
-	
-	feeds = [
-		(u'OSNews.pl', u'http://feeds.feedburner.com/osnewspl_full')
-	]
-	
-	keep_only_tags = [
-		dict(name = 'a', attrs = {'class' : 'news-heading'}),
-		dict(name = 'div', attrs = {'class' : 'newsinformations'}),
-		dict(name = 'div', attrs = {'id' : 'news-content'})
-	]
+    no_stylesheets = True
+    remove_javascript = True
+    encoding = 'utf-8'
+    use_embedded_content = False;
 
-	remove_tags = [
-		dict(name = 'div', attrs = {'class' : 'wpbuzzer_button'})
-	]
-	
-	preprocess_regexps = [
-		(re.compile(i[0], re.IGNORECASE | re.DOTALL), i[1]) for i in 
-		[
-			(r'<!--.*?-->', lambda match: ''),
-			(r'<li><span class="newsinformations-bold"><a href=".*?</a></span></li>', lambda match: ''),
-			(r'<li><span class="newsinformations-bold"></span></li>', lambda match: '')
-		]
-	]
+    oldest_article = 7
+    max_articles_per_feed = 100
+
+    extra_css = '''
+        .newsinformations li {display:inline;}
+        blockquote {border:2px solid #000; padding:5px;}
+    '''
+
+    feeds = [
+        (u'OSNews.pl', u'http://feeds.feedburner.com/osnewspl_full')
+    ]
+
+    keep_only_tags = [
+        dict(name = 'a', attrs = {'class' : 'news-heading'}),
+        dict(name = 'div', attrs = {'class' : 'newsinformations'}),
+        dict(name = 'div', attrs = {'id' : 'news-content'})
+    ]
+
+    remove_tags = [
+        dict(name = 'div', attrs = {'class' : 'wpbuzzer_button'}),
+        dict(name = 'div', attrs = {'class' : 'sociable'})
+    ]
+
+    preprocess_regexps = [
+        (re.compile(i[0], re.IGNORECASE | re.DOTALL), i[1]) for i in
+        [
+            (r'<!--.*?-->', lambda match: ''),
+            (r'<li><span class="newsinformations-bold"><a href=".*?</a></span></li>', lambda match: ''),
+            (r'<li><span class="newsinformations-bold"></span></li>', lambda match: '')
+        ]
+    ]
