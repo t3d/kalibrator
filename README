@@ -18,6 +18,11 @@ Następnie można ustawić zasady pobierania wiadomości w okienku
 Część reguł z tego pakietu została już dołączona do pakietu reguł
 preinstalowanych w Calibre (vide dział REGUŁY ZINTEGROWANE Z CALIBRE).
 
+Oprócz poprawnie działających reguł w repozytorium znajduje się także
+katalog beta, zawierający reguły z różnych powodów nie funkcjonujące 
+poprawnie lub niedokończone.
+
+
 OPIS REGUŁ
 =======================================================================
 di.recipe             - Dziennik Internautów
@@ -30,7 +35,6 @@ legeartis.recipe      - Blog Olgierda Rudaka
 legitymizm.recipe     - Strona Organizaji Monarchistów Polskich
 michalkiewicz.recipe  - Blog Stanisława Michalkiewicza
 nczas.recipe          - Wydanie internetowe tygodnika Najwyższy Czas!
-osnews_pl.recipe      - Strona OSNews.pl
 runa.recipe           - Blog Agencji Wydawniczej Runa
 
 REGUŁY ZINTEGROWANE Z CALIBRE
@@ -45,8 +49,15 @@ legeartis.recipe      - od Calibre 0.6.41
 legitymizm.recipe     - od Calibre 0.6.41
 michalkiewicz.recipe  - od Calibre 0.6.41
 nczas.recipe          - od Calibre 0.6.41
-osnews_pl.recipe      - -
 runa.recipe           - od Calibre 0.6.46
+
+REGUŁY TESTOWE
+=======================================================================
+esensja.recipe        - Kanały RSS ze strony esensja.pl
+frazpc.recipe         - Newsy i artykuły ze strony frazpc.pl
+osnews_pl.recipe      - Strona OSNews.pl
+wprost.recipe         - Wiadomości ze strony wprost.pl
+
 
 KONTAKT
 =======================================================================
