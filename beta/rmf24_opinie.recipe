@@ -23,7 +23,9 @@ class RMF24_opinie(BasicNewsRecipe):
                       (u'Przes\u0142uchanie', u'http://www.rmf24.pl/opinie/wywiady/przesluchanie/feed'),
                       (u'Komentarze', u'http://www.rmf24.pl/opinie/komentarze/feed')]
 
-    keep_only_tags = [dict(name='div', attrs={'class':'box articleSingle print'})]
+    keep_only_tags = [
+        dict(name='div', attrs={'class':'box articleSingle print'}),
+        dict(name='div', attrs={'class':'box articleSingle print blogSingleEntry'})]
 
     remove_tags = [
         dict(name='div', attrs={'class':'toTop'}),
