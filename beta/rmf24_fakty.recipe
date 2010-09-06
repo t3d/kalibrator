@@ -9,7 +9,7 @@ rmf24.pl
 from calibre.web.feeds.news import BasicNewsRecipe
 
 class RMF24(BasicNewsRecipe):
-    title          = u'Rmf24.pl'
+    title          = u'Rmf24.pl Fakty'
     description    = u'Fakty ze strony rmf24.pl'
     language = 'pl'
     oldest_article = 7

@@ -9,7 +9,7 @@ rmf24.pl
 from calibre.web.feeds.news import BasicNewsRecipe
 
 class RMF24_ESKN(BasicNewsRecipe):
-    title          = u'Rmf24.pl'
+    title          = u'Rmf24.pl - Ekonomia Sport Kultura Nauka'
     description    = u'Ekonomia, sport, kultura i nauka ze strony rmf24.pl'
     language = 'pl'
     oldest_article = 7
