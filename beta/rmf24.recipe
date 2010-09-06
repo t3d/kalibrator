@@ -21,9 +21,7 @@ class RMF24(BasicNewsRecipe):
     feeds          = [(u'Kraj', u'http://www.rmf24.pl/fakty/polska/feed'),
                       (u'\u015awiat', u'http://www.rmf24.pl/fakty/swiat/feed')]
 
-    keep_only_tags = [dict(name='div', attrs={'class':'boxList'})]
-#        dict(name='div', attrs={'class':'boxHeader'}),
-#        dict(name='div', attrs={'class':'boxBody'})]
+    keep_only_tags = [dict(name='div', attrs={'class':'box articleSingle print'})]
 
     remove_tags = [
         dict(name='div', attrs={'class':'toTop'}),
