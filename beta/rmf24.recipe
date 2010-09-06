@@ -25,7 +25,9 @@ class RMF24(BasicNewsRecipe):
 
     remove_tags = [
         dict(name='div', attrs={'class':'toTop'}),
-        dict(name='div', attrs={'class':'category'})]
+        dict(name='div', attrs={'class':'category'}),
+        dict(name='div', attrs={'class':'embed embedRight articleEmbedArticleFull'}),
+        dict(name='div', attrs={'class':'embed embedAd'})]
 
     extra_css = '''
 	    h1 { font-size: 1.2em; }
