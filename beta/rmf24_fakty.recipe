@@ -6,6 +6,7 @@ __copyright__ = u'2010, Tomasz Dlugosz <tomek3d@gmail.com>'
 rmf24.pl
 '''
 
+import re
 from calibre.web.feeds.news import BasicNewsRecipe
 
 class RMF24(BasicNewsRecipe):
@@ -27,8 +28,17 @@ class RMF24(BasicNewsRecipe):
         dict(name='div', attrs={'class':'toTop'}),
         dict(name='div', attrs={'class':'category'}),
         dict(name='div', attrs={'class':'embed embedRight articleEmbedArticleFull'}),
+        dict(name='div', attrs={'class':'embed embedLeft articleEmbedAudio'}),
+        dict(name='div', attrs={'class':'embed embedRight articleEmbedWideo articleEmbedVideo'}),
+        dict(name='div', attrs={'class':'embed embedRight articleEmbedArticleListTitle'}),
         dict(name='div', attrs={'class':'embed embedAd'})]
 
     extra_css = '''
-	    h1 { font-size: 1.2em; }
-	'''
+        h1 { font-size: 1.2em; }
+        '''
+    preprocess_regexps = [
+        (re.compile(i[0], re.IGNORECASE | re.DOTALL), i[1]) for i in 
+        [
+            (r'<h2>Zdj.cie</h2>', lambda match: '</div>')
+        ]
+    ]
