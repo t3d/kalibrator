@@ -44,6 +44,7 @@ class RMF24_opinie(BasicNewsRecipe):
     preprocess_regexps = [
         (re.compile(i[0], re.IGNORECASE | re.DOTALL), i[1]) for i in 
         [
-            (r'<h2>Zdj.cie</h2>', lambda match: '</div>')
+            (r'<h2>Zdj.cie</h2>', lambda match: ''),
+            (r'<a href="http://www.facebook.com/pages/RMF24pl/.*?>RMF24.pl</a> on Facebook</div>', lambda match: '</div>')
         ]
     ]
