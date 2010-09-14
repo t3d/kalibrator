@@ -1,0 +1,89 @@
+#!/usr/bin/env  python
+
+# # Przed uzyciem przeczytaj komentarz w sekcji "feeds"
+
+__license__   = 'GPL v3'
+__copyright__ = u'2010, Richard z forum.eksiazki.org'
+'''pomorska.pl'''
+
+from calibre.web.feeds.news import BasicNewsRecipe
+
+class GazetaPomorska(BasicNewsRecipe):
+    title          = u'Gazeta Pomorska'
+    publisher      = u'Gazeta Pomorska'
+    description    = u'Kujawy i Pomorze - wiadomoœci'
+    language       = 'pl'
+    __author__     = u'Richard z forum.eksiazki.org'
+    oldest_article = 2
+    max_articles_per_feed = 20
+    no_stylesheets = True
+    remove_javascript = True
+
+    feeds = [
+# # Tutaj jest wymieniona lista kategorii jakie mozemy otrzymywac z Gazety
+# # Pomorskiej, po jednej kategorii w wierszu. Jesli na poczatku danego wiersza
+# # znajduje sie jeden znak "#", oznacza to ze kategoria jest zakomentowana
+# # i nie bedziemy jej otrzymywac. Jesli chcemy ja otrzymywac nalezy usunac
+# # znak # z jej wiersza.
+# # Jesli subskrybujemy wiecej niz jedna kategorie, na koncu wiersza z kazda
+# # kategoria musi sie znajdowac niezakomentowany przecinek, z wyjatkiem
+# # ostatniego wiersza - ma byc bez przecinka na koncu.
+# # Rekomendowane opcje wyboru kategorii:
+# # 1. PomorskaRSS - wiadomosci kazdego typu, lub
+# # 2. Region + wybrane miasta, lub
+# # 3. Wiadomosci tematyczne.
+# # Lista kategorii:
+
+             # # PomorskaRSS - wiadomosci kazdego typu, zakomentuj znakiem "#"
+             # # przed odkomentowaniem wiadomosci wybranego typu:
+             (u'PomorskaRSS', u'http://www.pomorska.pl/rss.xml')
+             
+             # # wiadomosci z regionu nie przypisane do okreslonego miasta:
+             # (u'Region', u'http://www.pomorska.pl/region.xml'),
+             
+             # # wiadomosci przypisane do miast:
+             # (u'Bydgoszcz', u'http://www.pomorska.pl/bydgoszcz.xml'), 
+             # (u'Naklo', u'http://www.pomorska.pl/naklo.xml'),
+             # (u'Koronowo', u'http://www.pomorska.pl/koronowo.xml'),
+             # (u'Solec Kujawski', u'http://www.pomorska.pl/soleckujawski.xml'),
+             # (u'Grudziadz', u'http://www.pomorska.pl/grudziadz.xml'),
+             # (u'Inowroclaw', u'http://www.pomorska.pl/inowroclaw.xml'),
+             # (u'Torun', u'http://www.pomorska.pl/torun.xml'),
+             # (u'Wloclawek', u'http://www.pomorska.pl/wloclawek.xml'),
+             # (u'Aleksandrow Kujawski', u'http://www.pomorska.pl/aleksandrow.xml'),
+             # (u'Brodnica', u'http://www.pomorska.pl/brodnica.xml'),
+             # (u'Chelmno', u'http://www.pomorska.pl/chelmno.xml'),
+             # (u'Chojnice', u'http://www.pomorska.pl/chojnice.xml'),
+             # (u'Ciechocinek', u'http://www.pomorska.pl/ciechocinek.xml'),
+             # (u'Golub Dobrzyn', u'http://www.pomorska.pl/golubdobrzyn.xml'),
+             # (u'Mogilno', u'http://www.pomorska.pl/mogilno.xml'),
+             # (u'Radziejow', u'http://www.pomorska.pl/radziejow.xml'),
+             # (u'Rypin', u'http://www.pomorska.pl/rypin.xml'),
+             # (u'Sepolno', u'http://www.pomorska.pl/sepolno.xml'),
+             # (u'Swiecie', u'http://www.pomorska.pl/swiecie.xml'),
+             # (u'Tuchola', u'http://www.pomorska.pl/tuchola.xml'),
+             # (u'Znin', u'http://www.pomorska.pl/znin.xml')
+             
+             # # Wiadomosci tematyczne (redundancja z kategoriami region/miasta):
+             # (u'Sport', u'http://www.pomorska.pl/sport.xml'), 
+             # (u'Zdrowie', u'http://www.pomorska.pl/zdrowie.xml'),
+             # (u'Auto', u'http://www.pomorska.pl/moto.xml'),
+             # (u'Dom', u'http://www.pomorska.pl/dom.xml'),
+             # (u'Reportaz', u'http://www.pomorska.pl/reportaz.xml'),
+             # (u'Gospodarka', u'http://www.pomorska.pl/gospodarka.xml')
+           ]
+
+    keep_only_tags = [dict(name='div', attrs={'id':'article'})]
+
+    remove_tags = [
+        dict(name='p', attrs={'id':'articleTags'}),
+        dict(name='div', attrs={'id':'articleEpaper'}),
+        dict(name='div', attrs={'id':'articleConnections'}),
+        dict(name='div', attrs={'class':'articleFacts'}),
+        dict(name='div', attrs={'id':'articleExternalLink'}),
+        dict(name='a', attrs={'name':'fb_share'})]
+
+    extra_css = '''h1 { font-size: 1.4em; }
+                        h2 { font-size: 1.0em; }'''
+
+
