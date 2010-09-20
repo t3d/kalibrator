@@ -31,8 +31,11 @@ class RMF24_ESKN(BasicNewsRecipe):
         dict(name='div', attrs={'class':'category'}),
         dict(name='div', attrs={'class':'embed embedRight articleEmbedArticleFull'}),
         dict(name='div', attrs={'class':'embed embedRight articleEmbedAudio'}),
+        dict(name='div', attrs={'class':'embed embedLeft articleEmbedAudio'}),
         dict(name='div', attrs={'class':'embed embedCenter articleEmbedArticleTitle'}),
+        dict(name='div', attrs={'class':'embed embedRight articleEmbedArticleListTitle'}),
         dict(name='div', attrs={'class':'embed embedCenter articleEmbedAlbumHorizontal'}),
+        dict(name='div', attrs={'class':'embed embedLeft articleEmbedWideo articleEmbedVideo'}),
         dict(name='div', attrs={'class':'embed embedAd'})]
 
     extra_css = '''

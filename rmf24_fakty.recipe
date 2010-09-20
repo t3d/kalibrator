@@ -25,12 +25,17 @@ class RMF24(BasicNewsRecipe):
     keep_only_tags = [dict(name='div', attrs={'class':'box articleSingle print'})]
 
     remove_tags = [
+        dict(name='div', attrs={'id':'adBox625'}),
         dict(name='div', attrs={'class':'toTop'}),
         dict(name='div', attrs={'class':'category'}),
         dict(name='div', attrs={'class':'embed embedRight articleEmbedArticleFull'}),
         dict(name='div', attrs={'class':'embed embedLeft articleEmbedAudio'}),
+        dict(name='div', attrs={'class':'embed embedCenter articleEmbedWideo articleEmbedVideo"'}),
         dict(name='div', attrs={'class':'embed embedRight articleEmbedWideo articleEmbedVideo'}),
         dict(name='div', attrs={'class':'embed embedRight articleEmbedArticleListTitle'}),
+        dict(name='div', attrs={'class':'embed embedRight articleEmbedArticleTitle'}),
+        dict(name='div', attrs={'class':'embed embedLeft articleEmbedArticleTitle'}),
+        dict(name='div', attrs={'class':'embed embedCenter articleEmbedAlbumHorizontal'}),
         dict(name='div', attrs={'class':'embed embedAd'})]
 
     extra_css = '''
