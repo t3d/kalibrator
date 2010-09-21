@@ -1,0 +1,41 @@
+#!/usr/bin/env  python
+
+__license__   = 'GPL v3'
+__copyright__ = u'2010, Richard z forum.eksiazki.org'
+'''chip.pl'''
+
+import re
+from calibre.web.feeds.recipes import BasicNewsRecipe
+
+class Chip_pl(BasicNewsRecipe):
+    title          = u'Chip.pl - aktualno\u015bci'
+    publisher      = u'Chip.pl'
+    description    = u'Chip.pl - aktualno\u015bci'
+    language = 'pl'
+    __author__ = 'Richard z forum.eksiazki.org'
+                      # # (dziekuje t3d z forum.eksiazki.org za testy)
+    oldest_article = 2
+    max_articles_per_feed = 22
+    no_stylesheets = True
+    remove_javascript = True
+    preprocess_regexps     = [
+         (re.compile(r'<span[^<>]*>[ ]*Tagi[ ]*</span>[ :]*', re.DOTALL), lambda m: ''),
+         (re.compile(r'<a href=[^<>]*chip.pl[^<>]*tag[^<>]*tag[^<>]*>[^<>]*</a>[, ]*', re.DOTALL), lambda m: '')
+        ]
+
+    feeds          = [(u'Chip.pl - aktualno\u015bci', u'http://www.chip.pl/RSS')]
+
+    keep_only_tags = [dict(name='div', attrs={'class':'newsContainer'})]
+
+    remove_tags = [
+        dict(name='div', attrs={'class':'bookmarks'}),
+        dict(name='div', attrs={'class':'itemsNavigation'}),
+        dict(name='div', attrs={'id':'navi'}),
+        dict(name='a', attrs={'class':'prev'}),
+        dict(name='a', attrs={'class':'next'}),
+        dict(name='div', attrs={'class':'toolbox'})
+]
+
+    extra_css = '''h1 { font-size: 1.4em; }
+                        h2 { font-size: 1.0em; }'''
+

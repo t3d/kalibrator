@@ -15,6 +15,7 @@ class GazetaPomorska(BasicNewsRecipe):
     description    = u'Kujawy i Pomorze - wiadomo\u015bci'
     language       = 'pl'
     __author__     = u'Richard z forum.eksiazki.org'
+                      # # (dziekuje t3d z forum.eksiazki.org za testy)
     oldest_article = 2
     max_articles_per_feed = 20
     no_stylesheets = True
@@ -94,6 +95,7 @@ class GazetaPomorska(BasicNewsRecipe):
         dict(name='div', attrs={'id':'articleGalleries'}),
         dict(name='div', attrs={'id':'articleAlarm'}),
         dict(name='div', attrs={'id':'adholder_srodek1'}),
+        dict(name='div', attrs={'id':'articleVideo'}),
         dict(name='a', attrs={'name':'fb_share'})]
 
     extra_css = '''h1 { font-size: 1.4em; }
