@@ -25,43 +25,46 @@ poprawnie lub niedokończone.
 
 OPIS REGUŁ
 =======================================================================
-di.recipe             - Dziennik Internautów
-eclicto.recipe        - Blog projektu eClicto
-eksiazki.recipe       - Blog vortalu eKsiazki.org
-fronda.recipe         - Infformacje z fronda.pl
-interia_fakty.recipe  - Fakty z interia.pl
-interia_sport.recipe  - Sport z interia.pl
-legeartis.recipe      - Blog Olgierda Rudaka
-legitymizm.recipe     - Strona Organizaji Monarchistów Polskich
-michalkiewicz.recipe  - Blog Stanisława Michalkiewicza
-nczas.recipe          - Wydanie internetowe tygodnika Najwyższy Czas!
-rmf24_ESKN.recipe     - Ekonomia, Sport, Kultura i Nauka z rmf24.pl
-rmf24_fakty.recipe    - Fakty z rmf24.pl
-runa.recipe           - Blog Agencji Wydawniczej Runa
+di.recipe              - Dziennik Internautów
+eclicto.recipe         - Blog projektu eClicto
+eksiazki.recipe        - Blog vortalu eKsiazki.org
+fronda.recipe          - Infformacje z fronda.pl
+gazeta_pomorska.recipe - Kujawy i Pomorze - Wiadomości
+interia_fakty.recipe   - Fakty z interia.pl
+interia_sport.recipe   - Sport z interia.pl
+legeartis.recipe       - Blog Olgierda Rudaka
+legitymizm.recipe      - Strona Organizaji Monarchistów Polskich
+michalkiewicz.recipe   - Blog Stanisława Michalkiewicza
+nczas.recipe           - Wydanie internetowe tygodnika Najwyższy Czas!
+rmf24_ESKN.recipe      - Ekonomia, Sport, Kultura i Nauka z rmf24.pl
+rmf24_fakty.recipe     - Fakty z rmf24.pl
+runa.recipe            - Blog Agencji Wydawniczej Runa
 
 REGUŁY ZINTEGROWANE Z CALIBRE
 =======================================================================
-di.recipe             - od Calibre 0.6.41
-eclicto.recipe        - od Calibre 0.6.41
-eksiazki.recipe       - od Calibre 0.6.41
-fronda.recipe         - od Calibre 0.6.46
-interia_fakty.recipe  - od Calibre 0.6.41
-interia_sport.recipe  - od Calibre 0.6.41
-legeartis.recipe      - od Calibre 0.6.41
-legitymizm.recipe     - od Calibre 0.6.41
-michalkiewicz.recipe  - od Calibre 0.6.41
-nczas.recipe          - od Calibre 0.6.41
-rmf24_ESKN.recipe     - -
-rmf24_fakty.recipe    - -
-runa.recipe           - od Calibre 0.6.46
+di.recipe              - od Calibre 0.6.41
+eclicto.recipe         - od Calibre 0.6.41
+eksiazki.recipe        - od Calibre 0.6.41
+fronda.recipe          - od Calibre 0.6.46
+gazeta_pomorska.recipe - -
+interia_fakty.recipe   - od Calibre 0.6.41
+interia_sport.recipe   - od Calibre 0.6.41
+legeartis.recipe       - od Calibre 0.6.41
+legitymizm.recipe      - od Calibre 0.6.41
+michalkiewicz.recipe   - od Calibre 0.6.41
+nczas.recipe           - od Calibre 0.6.41
+rmf24_ESKN.recipe      - -
+rmf24_fakty.recipe     - -
+runa.recipe            - od Calibre 0.6.46
 
 REGUŁY TESTOWE
 =======================================================================
-esensja.recipe        - Kanały RSS ze strony esensja.pl
-frazpc.recipe         - Newsy i artykuły ze strony frazpc.pl
-osnews_pl.recipe      - Strona OSNews.pl
-rmf24_opinie.recipe   - Blogi, wywiady i komentarze z rmf24.pl
-wprost.recipe         - Wiadomości ze strony wprost.pl
+chip_pl.recipe         - Aktualności z chip.pl
+esensja.recipe         - Kanały RSS ze strony esensja.pl
+frazpc.recipe          - Newsy i artykuły ze strony frazpc.pl
+osnews_pl.recipe       - Strona OSNews.pl
+rmf24_opinie.recipe    - Blogi, wywiady i komentarze z rmf24.pl
+wprost.recipe          - Wiadomości ze strony wprost.pl
 
 
 KONTAKT
