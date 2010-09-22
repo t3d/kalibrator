@@ -13,8 +13,9 @@ class Chip_pl(BasicNewsRecipe):
     description    = u'Chip.pl - aktualno\u015bci'
     language = 'pl'
     __author__ = 'Richard z forum.eksiazki.org'
+                      # # (dziekuje t3d z forum.eksiazki.org za testy)
     oldest_article = 2
-    max_articles_per_feed = 15
+    max_articles_per_feed = 22
     no_stylesheets = True
     remove_javascript = True
     preprocess_regexps     = [
@@ -29,6 +30,9 @@ class Chip_pl(BasicNewsRecipe):
     remove_tags = [
         dict(name='div', attrs={'class':'bookmarks'}),
         dict(name='div', attrs={'class':'itemsNavigation'}),
+        dict(name='div', attrs={'id':'navi'}),
+        dict(name='a', attrs={'class':'prev'}),
+        dict(name='a', attrs={'class':'next'}),
         dict(name='div', attrs={'class':'toolbox'})
 ]
 

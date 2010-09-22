@@ -29,10 +29,7 @@ class RMF24_ESKN(BasicNewsRecipe):
     remove_tags = [
         dict(name='div', attrs={'class':'toTop'}),
         dict(name='div', attrs={'class':'category'}),
-        dict(name='div', attrs={'class':'embed embedRight articleEmbedArticleFull'}),
-        dict(name='div', attrs={'class':'embed embedRight articleEmbedAudio'}),
-        dict(name='div', attrs={'class':'embed embedCenter articleEmbedArticleTitle'}),
-        dict(name='div', attrs={'class':'embed embedCenter articleEmbedAlbumHorizontal'}),
+        dict(name='div', attrs={'class':'REMOVE'}),
         dict(name='div', attrs={'class':'embed embedAd'})]
 
     extra_css = '''
@@ -43,6 +40,7 @@ class RMF24_ESKN(BasicNewsRecipe):
         (re.compile(i[0], re.IGNORECASE | re.DOTALL), i[1]) for i in 
         [
             (r'<h2>Zdj.cie</h2>', lambda match: ''),
+            (r'embed embed(Left|Right|Center) articleEmbed(Audio|Wideo articleEmbedVideo|ArticleFull|ArticleTitle|ArticleListTitle|AlbumHorizontal)">', lambda match: 'REMOVE">'),
             (r'<a href="http://www.facebook.com/pages/RMF24pl/.*?>RMF24.pl</a> on Facebook</div>', lambda match: '</div>')
         ]
     ]
