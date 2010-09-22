@@ -23,8 +23,11 @@ class FrazPC(BasicNewsRecipe):
 
     keep_only_tags = [dict(name='div', attrs={'id':'FRAZ_CONTENT'})]
 
+    remove_tags = [dict(name='p', attrs={'class':'gray tagsP fs11'})]
+
     preprocess_regexps = [
         (re.compile(i[0], re.IGNORECASE | re.DOTALL), i[1]) for i in 
             [(r'<div id="post-[0-9]*"', lambda match: '<div id="FRAZ_CONTENT"')]
     ]
 
+    remove_attributes = [ 'width', 'height' ]
