@@ -35,7 +35,6 @@ interia_sport.recipe   - Sport z interia.pl
 legeartis.recipe       - Blog Olgierda Rudaka
 legitymizm.recipe      - Strona Organizaji Monarchistów Polskich
 michalkiewicz.recipe   - Blog Stanisława Michalkiewicza
-nczas.recipe           - Wydanie internetowe tygodnika Najwyższy Czas!
 rmf24_ESKN.recipe      - Ekonomia, Sport, Kultura i Nauka z rmf24.pl
 rmf24_fakty.recipe     - Fakty z rmf24.pl
 runa.recipe            - Blog Agencji Wydawniczej Runa
@@ -62,6 +61,7 @@ REGUŁY TESTOWE
 chip_pl.recipe         - Aktualności z chip.pl
 esensja.recipe         - Kanały RSS ze strony esensja.pl
 frazpc.recipe          - Newsy i artykuły ze strony frazpc.pl
+nczas.recipe           - Wydanie internetowe tygodnika Najwyższy Czas!
 osnews_pl.recipe       - Strona OSNews.pl
 rmf24_opinie.recipe    - Blogi, wywiady i komentarze z rmf24.pl
 wprost.recipe          - Wiadomości ze strony wprost.pl

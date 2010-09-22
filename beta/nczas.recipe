@@ -8,8 +8,6 @@ nczas.com
 
 from calibre.web.feeds.news import BasicNewsRecipe
 
-# 
-
 class NCzas(BasicNewsRecipe):
     title          = u'Najwy\u017cszy Czas!'
     description    = u'Najwy\u017cszy Czas!\nwydanie internetowe'
@@ -18,11 +16,11 @@ class NCzas(BasicNewsRecipe):
     oldest_article = 7
     max_articles_per_feed = 100
     no_stylesheets = True
-    cover_url      = 'http://nczas.com/wp-content/themes/default/grafika/logo.png'
+    # cover_url      = 'http://nczas.home.pl/wp-content/themes/nczaslight/img/logo.jpg'
 
-    keep_only_tags = [dict(name='div', attrs={'class':'trescartykulu'})]
+  #  keep_only_tags = [dict(name='div', attrs={'class':'trescartykulu'})]
 
-    feeds          = [(u'Najwy\u017cszy Czas!', u'http://nczas.com/feed/')]
+    feeds          = [(u'Najwy\u017cszy Czas!', u'http://nczas.home.pl/feed/')]
 
     def postprocess_html(self, soup, first):
 
