@@ -19,14 +19,12 @@ class FrazPC(BasicNewsRecipe):
     use_embedded_content = False
     no_stylesheets = True
 
-    feeds          = [(u'Aktualno\u015bci', u'http://i.frazpc.pl/rss_news.xml'), (u'Artyku\u0142y', u'http://i.frazpc.pl/rss_art.xml') ]
+    feeds          = [(u'Aktualno\u015bci', u'http://www.frazpc.pl/feed'), (u'Recenzje', u'http://www.frazpc.pl/kat/recenzje-2/feed') ]
 
-    keep_only_tags = [dict(name='table', attrs={'cellpadding':'10'})]
+    keep_only_tags = [dict(name='div', attrs={'id':'FRAZ_CONTENT'})]
 
     preprocess_regexps = [
         (re.compile(i[0], re.IGNORECASE | re.DOTALL), i[1]) for i in 
-            [ (r'<table.*?<b>Wi?cej aktualno?ci</b></a></p></td></tr>\n</table> ', lambda match: ''),
-              (r'<p align=right>.*<b>Komentarze.* </p>', lambda match: '')]
+            [(r'<div id="post-[0-9]*"', lambda match: '<div id="FRAZ_CONTENT"')]
     ]
 
-    remove_attributes = ['align', 'width', 'height', 'bgcolor']
