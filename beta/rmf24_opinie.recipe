@@ -26,6 +26,7 @@ class RMF24_opinie(BasicNewsRecipe):
 
     keep_only_tags = [
         dict(name='div', attrs={'class':'box articleSingle print'}),
+        dict(name='div', attrs={'class':'box articleSingle print singleCommentary'}),
         dict(name='div', attrs={'class':'box articleSingle print blogSingleEntry'})]
 
     remove_tags = [
