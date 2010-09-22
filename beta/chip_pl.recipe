@@ -20,12 +20,16 @@ class Chip_pl(BasicNewsRecipe):
     remove_javascript = True
     preprocess_regexps     = [
          (re.compile(r'<span[^<>]*>[ ]*Tagi[ ]*</span>[ :]*', re.DOTALL), lambda m: ''),
-         (re.compile(r'<a href=[^<>]*chip.pl[^<>]*tag[^<>]*tag[^<>]*>[^<>]*</a>[, ]*', re.DOTALL), lambda m: '')
+         (re.compile(r'<a href=[^<>]*chip.pl[^<>]*tag[^<>]*tag[^<>]*>[^<>]*</a>[, ]*', re.DOTALL), lambda m: ''),
+         (re.compile(r'<[^<>]*>Por.wnywarka[^<>]*</[^<>]*>', re.DOTALL), lambda m: '')
         ]
 
     feeds          = [(u'Chip.pl - aktualno\u015bci', u'http://www.chip.pl/RSS')]
 
-    keep_only_tags = [dict(name='div', attrs={'class':'newsContainer'})]
+    keep_only_tags = [
+         dict(name='div', attrs={'class':'newsContainer'}),
+         dict(name='div', attrs={'id':'content'})
+        ]
 
     remove_tags = [
         dict(name='div', attrs={'class':'bookmarks'}),
@@ -33,7 +37,13 @@ class Chip_pl(BasicNewsRecipe):
         dict(name='div', attrs={'id':'navi'}),
         dict(name='a', attrs={'class':'prev'}),
         dict(name='a', attrs={'class':'next'}),
-        dict(name='div', attrs={'class':'toolbox'})
+        dict(name='div', attrs={'class':'toolbox'}),
+        dict(name='table', attrs={'id':'rateprod'}),
+        dict(name='div', attrs={'id':'tabs'}),
+        dict(name='div', attrs={'class':'compareBox'}),
+        dict(name='div', attrs={'class':'comments'}),
+        dict(name='a', attrs={'class':'external-link'}),
+        dict(name='div', attrs={'class':'listingBar'})
 ]
 
     extra_css = '''h1 { font-size: 1.4em; }
