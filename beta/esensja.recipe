@@ -31,6 +31,7 @@ class Esensja(BasicNewsRecipe):
         dict(name='div', attrs={'class':'wykop'}),
         dict(name='div', attrs={'class':'wykop'}),
         dict(name='div', attrs={'id':'komentarze'}),
-        dict(name='div', attrs={'class':'leady'})]
+        dict(name='div', attrs={'class':'leady'}),
+        dict(name='div', attrs={'id':'panel_tekst_3'})]
 
     preprocess_regexps = [(re.compile(r'<h1>Najnowsze</h1>', re.DOTALL|re.IGNORECASE), lambda m: '')]
