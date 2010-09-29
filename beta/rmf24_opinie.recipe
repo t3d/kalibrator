@@ -39,6 +39,12 @@ class RMF24_opinie(BasicNewsRecipe):
         h1 { font-size: 1.2em; }
     '''
 
+    # thanks to Kovid Goyal
+    def get_article_url(self, article):
+        link = article.get('link')
+        if 'audio' not in link:
+            return link
+
     preprocess_regexps = [
         (re.compile(i[0], re.IGNORECASE | re.DOTALL), i[1]) for i in 
         [
