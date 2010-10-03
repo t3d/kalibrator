@@ -27,7 +27,9 @@ class FrazPC(BasicNewsRecipe):
 
     preprocess_regexps = [
         (re.compile(i[0], re.IGNORECASE | re.DOTALL), i[1]) for i in 
-            [(r'<div id="post-[0-9]*"', lambda match: '<div id="FRAZ_CONTENT"')]
+            [(r'<div id="post-[0-9]*"', lambda match: '<div id="FRAZ_CONTENT"'),
+             (r'href="/f/news/', lambda match: 'href="http://www.frazpc.pl/f/news/'),
+             (r' &nbsp; <a href="http://www.frazpc.pl/[^>]*?">(Skomentuj|Komentarz(e)?\([0-9]*\))</a>&nbsp; \|', lambda match: '')]
     ]
 
     remove_attributes = [ 'width', 'height' ]
