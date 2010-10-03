@@ -28,6 +28,7 @@ OPIS REGUŁ
 di.recipe              - Dziennik Internautów
 eclicto.recipe         - Blog projektu eClicto
 eksiazki.recipe        - Blog vortalu eKsiazki.org
+frazpc.recipe          - Newsy i artykuły ze strony frazpc.pl
 fronda.recipe          - Infformacje z fronda.pl
 gazeta_pomorska.recipe - Kujawy i Pomorze - Wiadomości
 interia_fakty.recipe   - Fakty z interia.pl
@@ -45,6 +46,7 @@ REGUŁY ZINTEGROWANE Z CALIBRE
 di.recipe              - od Calibre 0.6.41
 eclicto.recipe         - od Calibre 0.6.41
 eksiazki.recipe        - od Calibre 0.6.41
+frazpc.recipe          - -
 fronda.recipe          - od Calibre 0.6.46
 gazeta_pomorska.recipe - od Calibre 0.7.20
 interia_fakty.recipe   - od Calibre 0.6.41
@@ -61,7 +63,6 @@ REGUŁY TESTOWE
 =======================================================================
 chip_pl.recipe         - Aktualności z chip.pl
 esensja.recipe         - Kanały RSS ze strony esensja.pl
-frazpc.recipe          - Newsy i artykuły ze strony frazpc.pl
 nczas.recipe           - Wydanie internetowe tygodnika Najwyższy Czas!
 osnews_pl.recipe       - Strona OSNews.pl
 pclab_pl.recipe        - Aktualności z pclab.pl
