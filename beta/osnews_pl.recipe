@@ -14,8 +14,8 @@ class OSNewsRecipe(BasicNewsRecipe):
     __author__ = 'Mori & Tomasz D\u0142ugosz'
     language = 'pl'
 
-    title = u'OSNews.pl'
-    publisher = u'OSNews.pl'
+    title = u'OSnews.pl'
+    publisher = u'OSnews.pl'
     description = u'OSnews.pl jest spo\u0142eczno\u015bciowym serwisem informacyjnym po\u015bwi\u0119conym oprogramowaniu, systemom operacyjnym i \u015bwiatowi IT'
 
     no_stylesheets = True
@@ -32,7 +32,7 @@ class OSNewsRecipe(BasicNewsRecipe):
     '''
 
     feeds = [
-        (u'OSNews.pl', u'http://feeds.feedburner.com/osnewspl_full')
+        (u'OSNews.pl', u'http://feeds.feedburner.com/OSnewspl')
     ]
 
     keep_only_tags = [
@@ -43,7 +43,10 @@ class OSNewsRecipe(BasicNewsRecipe):
 
     remove_tags = [
         dict(name = 'div', attrs = {'class' : 'wpbuzzer_button'}),
-        dict(name = 'div', attrs = {'class' : 'sociable'})
+        dict(name = 'div', attrs = {'class' : 'sociable'}),
+        dict(name = 'div', attrs = {'class' : 'post_prev'}),
+        dict(name = 'div', attrs = {'class' : 'post_next'}),
+        dict(name = 'div', attrs = {'class' : 'clr'})
     ]
 
     preprocess_regexps = [
