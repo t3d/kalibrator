@@ -49,3 +49,9 @@ class Chip_pl(BasicNewsRecipe):
     extra_css = '''h1 { font-size: 1.4em; }
                         h2 { font-size: 1.0em; }'''
 
+    # dodane przez t3d:
+    def get_article_url(self, article):
+        link = article.get('link')
+        if 'przeglad-najciekawszych-informacji-mijajacego-tygodnia' not in link:
+            return link
+
