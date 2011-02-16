@@ -63,9 +63,12 @@ REGUŁY TESTOWE
 =======================================================================
 chip_pl.recipe         - Aktualności z chip.pl
 esensja.recipe         - Kanały RSS ze strony esensja.pl
+kopalniawiedzy.recipe  - Ciekawostki ze strony kopalniawiedzy.pl
+korepondent.recipe     - Strona korespondent.pl
 nczas.recipe           - Wydanie internetowe tygodnika Najwyższy Czas!
 osnews_pl.recipe       - Strona OSNews.pl
 pclab_pl.recipe        - Aktualności z pclab.pl
+swiatkindle.recipe     - Polski blog o kindle
 
 
 KONTAKT
