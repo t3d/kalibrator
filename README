@@ -33,6 +33,8 @@ fronda.recipe          - Infformacje z fronda.pl
 gazeta_pomorska.recipe - Kujawy i Pomorze - Wiadomości
 interia_fakty.recipe   - Fakty z interia.pl
 interia_sport.recipe   - Sport z interia.pl
+kopalniawiedzy.recipe  - Ciekawostki ze strony kopalniawiedzy.pl
+korepondent.recipe     - Strona korespondent.pl
 legeartis.recipe       - Blog Olgierda Rudaka
 legitymizm.recipe      - Strona Organizaji Monarchistów Polskich
 michalkiewicz.recipe   - Blog Stanisława Michalkiewicza
@@ -53,6 +55,8 @@ interia_fakty.recipe   - od Calibre 0.6.41
 interia_sport.recipe   - od Calibre 0.6.41
 legeartis.recipe       - od Calibre 0.6.41
 legitymizm.recipe      - od Calibre 0.6.41
+kopalniawiedzy.recipe  - od Calibre 0.7.45
+korepondent.recipe     - od Calibre 0.7.45
 michalkiewicz.recipe   - od Calibre 0.6.41
 rmf24_ESKN.recipe      - od Calibre 0.7.20
 rmf24_fakty.recipe     - od Calibre 0.7.20
@@ -63,8 +67,6 @@ REGUŁY TESTOWE
 =======================================================================
 chip_pl.recipe         - Aktualności z chip.pl
 esensja.recipe         - Kanały RSS ze strony esensja.pl
-kopalniawiedzy.recipe  - Ciekawostki ze strony kopalniawiedzy.pl
-korepondent.recipe     - Strona korespondent.pl
 nczas.recipe           - Wydanie internetowe tygodnika Najwyższy Czas!
 osnews_pl.recipe       - Strona OSNews.pl
 pclab_pl.recipe        - Aktualności z pclab.pl
