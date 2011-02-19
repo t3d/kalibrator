@@ -1,7 +1,6 @@
 #!/usr/bin/env  python
 
 __license__ = 'GPL v3'
-__author__ = 'Mori & Tomasz Dlugosz'
 __version__ = 'v. 0.2'
 '''
 OSNews.pl
@@ -11,7 +10,7 @@ from calibre.web.feeds.news import BasicNewsRecipe
 import re
 
 class OSNewsRecipe(BasicNewsRecipe):
-    __author__ = 'Mori & Tomasz D\u0142ugosz'
+    __author__ = u'Mori & Tomasz D\u0142ugosz'
     language = 'pl'
 
     title = u'OSnews.pl'
@@ -42,18 +41,10 @@ class OSNewsRecipe(BasicNewsRecipe):
     ]
 
     remove_tags = [
-        dict(name = 'div', attrs = {'class' : 'wpbuzzer_button'}),
         dict(name = 'div', attrs = {'class' : 'sociable'}),
         dict(name = 'div', attrs = {'class' : 'post_prev'}),
         dict(name = 'div', attrs = {'class' : 'post_next'}),
         dict(name = 'div', attrs = {'class' : 'clr'})
     ]
 
-    preprocess_regexps = [
-        (re.compile(i[0], re.IGNORECASE | re.DOTALL), i[1]) for i in
-        [
-            (r'<!--.*?-->', lambda match: ''),
-            (r'<li><span class="newsinformations-bold"><a href=".*?</a></span></li>', lambda match: ''),
-            (r'<li><span class="newsinformations-bold"></span></li>', lambda match: '')
-        ]
-    ]
+    preprocess_regexps = [(re.compile(u'</span>Komentarze: \(?[0-9]+\)? ?<span'), lambda match: '</span><span')]
