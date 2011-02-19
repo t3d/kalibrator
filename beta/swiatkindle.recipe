@@ -9,7 +9,7 @@ swiatkindle.pl
 import re
 
 class swiatkindle(BasicNewsRecipe):
-    title          = u'\u015awiat Kindle'
+    title          = u'Swiat Kindle'
     description    = u'Blog o czytniku Amazon Kindle. Wersje, ksi\u0105\u017cki, kupowanie i korzystanie w Polsce'
     language = 'pl'
     __author__ = u'Tomasz D\u0142ugosz'
