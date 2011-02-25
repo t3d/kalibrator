@@ -16,7 +16,7 @@ class swiatczytnikow(BasicNewsRecipe):
     oldest_article = 7
     max_articles_per_feed = 100
 
-    feeds       = [(u'\u015awiat Kindle - wpisy', u'http://swiatkindle.pl/feed')]
+    feeds       = [(u'Świat Czytników - wpisy', u'http://swiatczytnikow.pl/feed')]
 
     remove_tags = [dict(name = 'ul', attrs = {'class' : 'similar-posts'})]
 
