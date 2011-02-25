@@ -38,10 +38,12 @@ korepondent.recipe     - Strona korespondent.pl
 legeartis.recipe       - Blog Olgierda Rudaka
 legitymizm.recipe      - Strona Organizaji Monarchistów Polskich
 michalkiewicz.recipe   - Blog Stanisława Michalkiewicza
+osnews_pl.recipe       - Strona OSNews.pl
 rmf24_ESKN.recipe      - Ekonomia, Sport, Kultura i Nauka z rmf24.pl
 rmf24_fakty.recipe     - Fakty z rmf24.pl
 rmf24_opinie.recipe    - Blogi, wywiady i komentarze z rmf24.pl
 runa.recipe            - Blog Agencji Wydawniczej Runa
+swiatkindle.recipe     - Polski blog o kindle
 
 REGUŁY ZINTEGROWANE Z CALIBRE
 =======================================================================
@@ -58,19 +60,19 @@ legitymizm.recipe      - od Calibre 0.6.41
 kopalniawiedzy.recipe  - od Calibre 0.7.45
 korepondent.recipe     - od Calibre 0.7.45
 michalkiewicz.recipe   - od Calibre 0.6.41
+osnews_pl.recipe       - od Calibre 0.7.47
 rmf24_ESKN.recipe      - od Calibre 0.7.20
 rmf24_fakty.recipe     - od Calibre 0.7.20
 rmf24_opinie.recipe    - od Calibre 0.7.21
 runa.recipe            - od Calibre 0.6.46
+swiatkindle.recipe     - od Calibre 0.7.47
 
 REGUŁY TESTOWE
 =======================================================================
 chip_pl.recipe         - Aktualności z chip.pl
 esensja.recipe         - Kanały RSS ze strony esensja.pl
 nczas.recipe           - Wydanie internetowe tygodnika Najwyższy Czas!
-osnews_pl.recipe       - Strona OSNews.pl
 pclab_pl.recipe        - Aktualności z pclab.pl
-swiatkindle.recipe     - Polski blog o kindle
 
 
 KONTAKT
