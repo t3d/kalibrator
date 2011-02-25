@@ -3,14 +3,14 @@
 __license__   = 'GPL v3'
 __copyright__ = u'2011, Tomasz Dlugosz <tomek3d@gmail.com>'
 '''
-swiatkindle.pl
+swiatczytnikow.pl
 '''
 
 import re
 
-class swiatkindle(BasicNewsRecipe):
-    title          = u'Swiat Kindle'
-    description    = u'Blog o czytniku Amazon Kindle. Wersje, ksi\u0105\u017cki, kupowanie i korzystanie w Polsce'
+class swiatczytnikow(BasicNewsRecipe):
+    title          = u'Swiat Czytnikow'
+    description    = u'Czytniki e-książek w Polsce. Jak wybrać, kupić i korzystać z Amazon Kindle i innych'
     language = 'pl'
     __author__ = u'Tomasz D\u0142ugosz'
     oldest_article = 7
