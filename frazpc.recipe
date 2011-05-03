@@ -33,6 +33,6 @@ class FrazPC(BasicNewsRecipe):
         dict(name='div', attrs={'class':'comments_box'})
     ]
 
-#    preprocess_regexps = [re.compile(r'\| <a href="#comments">Komentarze \([0-9]*\)</a>'), lambda match: '']
+    preprocess_regexps = [(re.compile(r'\| <a href="#comments">Komentarze \([0-9]*\)</a>'), lambda match: '')]
 
     remove_attributes = [ 'width', 'height' ]
