@@ -42,7 +42,6 @@ osnews_pl.recipe       - Strona OSNews.pl
 rmf24_ESKN.recipe      - Ekonomia, Sport, Kultura i Nauka z rmf24.pl
 rmf24_fakty.recipe     - Fakty z rmf24.pl
 rmf24_opinie.recipe    - Blogi, wywiady i komentarze z rmf24.pl
-runa.recipe            - Blog Agencji Wydawniczej Runa
 rzeczpospolita.recipe  - Rzeczpospolita Online
 swiatkindle.recipe     - Polski blog o czytnikach
 
@@ -65,7 +64,6 @@ osnews_pl.recipe       - od Calibre 0.7.47
 rmf24_ESKN.recipe      - od Calibre 0.7.20
 rmf24_fakty.recipe     - od Calibre 0.7.20
 rmf24_opinie.recipe    - od Calibre 0.7.21
-runa.recipe            - od Calibre 0.6.46
 rzeczpospolita.recipe  - od Calibre 0.8.1
 swiatkindle.recipe     - od Calibre 0.7.47
 
@@ -75,6 +73,7 @@ chip_pl.recipe         - Aktualności z chip.pl
 esensja.recipe         - Kanały RSS ze strony esensja.pl
 nczas.recipe           - Wydanie internetowe tygodnika Najwyższy Czas!
 pclab_pl.recipe        - Aktualności z pclab.pl
+runa.recipe            - Blog Agencji Wydawniczej Runa
 
 
 KONTAKT
