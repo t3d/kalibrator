@@ -18,7 +18,7 @@ class KopalniaWiedzy(BasicNewsRecipe):
 		remove_javascript     = True    
 		no_stylesheets        = True
 		
-		remove_tags    = [{'name':'p', 'attrs': {'class': 'keywords'} }]
+		remove_tags    = [{'name':'p', 'attrs': {'class': 'keywords'} }, {'name':'div', 'attrs': {'class':'sexy-bookmarks sexy-bookmarks-bg-caring'}}]
 		remove_tags_after = dict(attrs={'class':'ad-square'})
 		keep_only_tags    = [dict(name="div", attrs={'id':'articleContent'})]
 		extra_css      = '.topimage {margin-top: 30px}'
