@@ -6,7 +6,7 @@ class duzyformat(BasicNewsRecipe):
    __author__ = u'intromatyk <intromatyk@gmail.com>'
    title = 'Duży Format'
    description = u'Duży Format'
-   language = 'pl_PL'
+   language = 'pl'
    publisher = 'Agora SA'
    publication_type = 'magazine'
      
