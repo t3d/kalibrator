@@ -3,7 +3,7 @@ import re
 
 class duzyformat(BasicNewsRecipe):
    __license__ = 'GPL v3'
-   __author__ = u'intromatyk <intromatyk@gmail.com>'
+   __author__ = u'Lukk, Łukasz Grąbczewski, intromatyk <intromatyk@gmail.com>'
    title = 'Duży Format'
    description = u'Duży Format'
    language = 'pl'
