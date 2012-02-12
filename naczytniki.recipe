@@ -11,7 +11,7 @@ class naczytniki(BasicNewsRecipe):
     category='readers'
     oldest_article = 7
     max_articles_per_feed = 100
-    remove_tags_after= dict(name='div', attrs={'class':'sociable'})
+    remove_tags_after= dict(name='span', attrs={'class':''})
     keep_only_tags=[dict(name='div', attrs={'class':'post'})]
     remove_tags=[dict(name='span', attrs={'class':'comments'}), dict(name='div', attrs={'class':'sociable'})]
     feeds          = [(u'Wpisy', u'http://naczytniki.pl/?feed=rss2')]
