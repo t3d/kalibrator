@@ -1,0 +1,115 @@
+_license__   = 'GPL v3'
+__copyright__ = 'Marcin Urban 2011'
+__modyfication__ = '2012, Krzysk(at)wp.pl'
+
+import re
+from calibre.web.feeds.recipes import BasicNewsRecipe
+
+class recipeMagic(BasicNewsRecipe):
+    title                       = "Men's Health PL"
+    __author__            = 'Marcin Urban 2011'
+    description             = u'Mens Health PL, lifestylowy magazyn dla mężczyzn <br>'
+    cover_url               = u'http://www.menshealth.pl/images/logo.gif'
+    masthead_url         = u'http://www.totalbody.net.au/product_images/uploaded_images/mens-health.jpg' #(KK)
+    oldest_article         = 7
+    max_articles_per_feed  = 100
+    no_stylesheets       = True
+    #delay                  = 1
+    use_embedded_content   = False
+    encoding               = 'utf8'
+    publisher              = u'Motor Presse Polska'
+    category               = u'news, PL,'
+    language               = 'pl'
+    publication_type     = 'magazine'
+    extra_css              = ''' body {font-family: verdana, arial, helvetica, geneva, sans-serif ;}
+                       h1{text-align: center;}
+         h2{font-size: medium; font-weight: bold;}
+      .art-data {font-size: x-small;}
+                               .art-lead {font-weight: bold;}
+                                        .img-head {font-size: x-small; color: #666666;}'''
+    preprocess_regexps     = [(re.compile(r'<!--.*?-->', re.DOTALL), lambda m: '')]
+    conversion_options = {
+                             'tags'            : category
+                            ,'language'        : language
+                            ,'publisher'       : publisher
+                   #         ,'linearize_tables': True
+                         } #(KK)
+
+    keep_only_tags    = [
+                       dict(name='div', attrs={'class':'kol-670 big'})
+                        ]
+
+    remove_attributes = ['width','height']
+
+    def parse_index(self): #(kk)
+        soup = self.index_to_soup('http://www.menshealth.pl/rss.xml')
+        feeds = []
+        articles = {}
+        sections = []
+        section = ''
+
+        for item in soup.findAll('item') :
+                section = self.tag_to_string(item.category)
+                if not articles.has_key(section) :
+                    sections.append(section)
+                    articles[section] = []
+                article_url = self.tag_to_string(item.guid)
+                article_title = self.tag_to_string(item.title)
+                article_date = self.tag_to_string(item.pubDate) 
+                article_description = self.tag_to_string(item.description)
+                articles[section].append( { 'title' : article_title,  'url' : article_url, 'date' : article_date, 'description' : article_description })
+
+        for section in sections :
+             feeds.append((section, articles[section]))
+        return feeds 
+
+    def append_page(self, soup, appendtag):   #(kk)
+        tags = soup.find('div', attrs={'class':'navibar'})
+        for tag1 in tags.findAll('a') :
+           if tag1.string == u'Fitness':
+              section = 'fitness/'
+           elif tag1.string == u'Dieta':
+              section = 'dieta/'
+           elif tag1.string == u'Zdrowie':
+              section = 'zdrowie/'
+           elif tag1.string == u'Seks/Związki':
+              section = 'seks/'
+           elif tag1.string == u'Pieniądze':
+              section = 'praca/'
+           elif tag1.string == u'Męskie sprawy':
+              section = 'sprawy/'
+           elif tag1.string == u'Styl':
+              section = 'styl/'
+           elif tag1.string == u'Hi-tech':
+              section = 'hitech/'
+           elif tag1.string == u'Wyzwania':
+              section = 'wyzwania'
+
+        apage = soup.find('div', attrs={'class':'stronice'})
+        if apage is not None:
+          for nexturl in apage.findAll('a'):
+             if nexturl.string in ['2','3','4','5', '6', '7', '8', '9']:
+                soup2 = self.index_to_soup('http://www.menshealth.pl/' + section + nexturl['href'])
+                pagetext = soup2.findAll('div', attrs={'class':'kol-670 big'})
+                for tag in pagetext:
+                    pos = len(appendtag.contents)
+                    appendtag.insert(pos, tag)
+
+        while appendtag.find('div', attrs={'class': ['stronice', 'kol-160l', 'navibar', 'art-tagi', 'box-rek-336', 'Ocena-box', 'oh small']}) is not None:
+            appendtag.find('div', attrs={'class': ['stronice', 'kol-160l', 'navibar', 'art-tagi', 'box-rek-336', 'Ocena-box', 'oh small']}).replaceWith('')
+
+    def preprocess_html(self, soup): #(kk)
+        self.append_page(soup, soup.body)
+        return soup
+
+    def get_cover_url(self): #(kk)
+        soup = self.index_to_soup('http://www.menshealth.pl/archiwum.html')
+        tag = soup.find(name='div', attrs={'class':'arch-l'})
+        cover_url = 'http://www.menshealth.pl' + tag.img['src']
+        return cover_url
+
+    def populate_article_metadata(self, article, soup, first): #(kk)
+        if first and hasattr(self, 'add_toc_thumbnail'):
+            picdiv = soup.find('img')
+            if picdiv is not None:
+                self.add_toc_thumbnail(article,picdiv['src'])

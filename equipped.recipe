@@ -1,0 +1,15 @@
+#!/usr/bin/env  python
+
+'''
+equipped.pl
+'''
+
+from calibre.web.feeds.news import BasicNewsRecipe
+import re
+
+class equipped(AutomaticNewsRecipe):
+    title          = u'Equipped'
+    oldest_article = 7
+    max_articles_per_feed = 100
+
+    feeds          = [(u'Equipped', u'http://www.equipped.pl/feed/')]

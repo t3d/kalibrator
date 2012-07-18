@@ -1,0 +1,13 @@
+#!/usr/bin/env  python
+
+'''
+dzialzagraniczny.pl
+'''
+
+class dzial_zagraniczny(BasicNewsRecipe):
+    title          = u'Dzial Zagraniczny'
+    oldest_article = 7
+    max_articles_per_feed = 100
+    auto_cleanup = True
+
+    feeds          = [(u'dzial_zagraniczny', u'http://feeds.feedburner.com/dyndns/UOfz')]

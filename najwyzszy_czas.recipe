@@ -1,0 +1,16 @@
+#!/usr/bin/env  python
+
+'''
+nczas.com
+'''
+
+from calibre.web.feeds.news import BasicNewsRecipe
+import re
+
+class nczas(BasicNewsRecipe):
+    title          = u'Najwy\u017cszy Czas'
+    oldest_article = 7
+    max_articles_per_feed = 100
+    auto_cleanup = True
+
+    feeds          = [(u'Najwyższy Czas', u'http://nczas.com/feed/')]

@@ -1,0 +1,61 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+__license__ = 'GPL v3'
+__copyright__ = u'Łukasz Grąbczewski 2011'
+__version__ = '1.0'
+
+import re, zipfile, os
+from calibre.ptempfile import PersistentTemporaryFile
+from calibre.ebooks.conversion.cli import main
+
+class jazzpress(BasicNewsRecipe):
+	__author__ = u'Łukasz Grąbczewski'
+	title = 'JazzPRESS'
+	language = 'pl'
+	publisher = 'Fundacja Popularyzacji Muzyki Jazzowej EuroJAZZ'
+	publication_type = 'magazine'
+	description = u'Internetowa gazeta poświęcona muzyce improwizowanej'
+	
+	conversion_options = {
+		'authors' : 'Fundacja Popularyzacji Muzyki Jazzowej EuroJAZZ'
+		,'publisher' : publisher
+		,'language' : language
+		,'preserve_cover_aspect_ratio': True
+		,'remove_first_image': True
+	}
+	
+	def build_index(self):
+		browser = self.get_browser()
+		rc = browser.open('http://radiojazz.fm/')
+
+		# find the link
+		booklink = browser.find_link(url_regex=re.compile('e_JazzPRESS\d\d\d\d\.zip'))
+
+		# download
+		self.report_progress(0,_('Downloading ZIP'))
+		self.log('from ' + booklink.url)
+		response = browser.follow_link(booklink)
+		book_file = PersistentTemporaryFile(suffix='.zip')
+		book_file.write(response.read())
+		book_file.close()
+		
+		self.report_progress(0.1,_('Extracting MOBI'))
+		zfile = zipfile.ZipFile(book_file.name, 'r')
+		members = zfile.namelist()
+		for zipmember in members:
+			if zipmember.endswith('.mobi'):
+				zfile.extract(zipmember)
+				os.rename(zipmember, 'input.mobi')
+		book_file.close()
+		
+		# convert
+		self.report_progress(0.2,_('Converting to OEB'))
+		mobi_file = self.output_dir + '/input.mobi'
+		oebdir = self.output_dir + '/INPUT/'
+		main(['ebook-convert', mobi_file, oebdir, 'input kindle'])
+		
+		# feed calibre
+		index = os.path.join(oebdir, 'content.opf')
+		
+		return index

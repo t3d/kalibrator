@@ -1,0 +1,42 @@
+import re
+from calibre.web.feeds.news import BasicNewsRecipe
+
+class programtvRecipe(BasicNewsRecipe):
+    __license__ = 'GPL v3'
+    __author__ = u'intromatyk <intromatyk@gmail.com>'
+    language = 'pl'
+    version = 1
+
+    title = u'Katalog eGazeciarz'
+    category = u'News'
+    description = ''
+    cover_url=''
+    oldest_article = 100000
+    max_articles_per_feed = 100000
+    no_stylesheets = True
+    remove_javascript = True
+    simultaneous_downloads = 2    
+    keep_only_tags =[]
+    keep_only_tags.append(dict(name = 'div', attrs = {'class' : 'article-content'}))
+    extra_css = '''
+                    h2
+                    {margin-top: 50px;
+                    color:black;
+                    text-align:center;
+                    font-style:italic;
+                    font-weight:bold;}
+                    h5
+                    {margin-top: 50px;
+                    color:black;
+                    text-align:justify;}
+                    '''    
+
+    feeds          = [
+                            ('Nowosci', 'feed://egazeciarz.pl/RSS/Nowosci.xml'),
+                            ('Program TV', 'feed://egazeciarz.pl/RSS/Program%20TV.xml'),
+                            ('Polskie Serwisy', 'feed://egazeciarz.pl/RSS/Polskie%20Serwisy.xml'),
+                            ('Brytyjskie Serwisy', 'http://egazeciarz.pl/RSS/Brytyjskie%20Serwisy.xml'),
+                            ('Hiszpanskie Serwisy', 'http://egazeciarz.pl/RSS/Hiszpanskie%20Serwisy.xml'),
+                            ('Niemieckie Serwisy', 'http://egazeciarz.pl/RSS/Niemieckie%20Serwisy.xml'),
+                            ('Anglojezyczne Serwisy', 'http://egazeciarz.pl/RSS/Anglojezyczne%20Serwisy.xml'),
+                           ]

@@ -1,0 +1,24 @@
+#!/usr/bin/env  python
+
+'''
+appfunds.blogspot.com
+'''
+
+from calibre.web.feeds.news import BasicNewsRecipe
+import re
+
+class app_funds(BasicNewsRecipe):
+    title          = u'APP Funds'
+    __author__        = 'teepel'
+    language       = 'pl'
+    description ='Wiadomości z bloga appfunds.blogspot.com'
+    INDEX='http://appfunds.blogspot.com'
+    remove_empty_feeds= True
+    oldest_article = 7
+    max_articles_per_feed = 100
+    simultaneous_downloads = 5
+    remove_javascript=True
+    no_stylesheets=True
+    auto_cleanup = True
+
+    feeds          = [(u'blog', u'http://feeds.feedburner.com/blogspot/etVI')]

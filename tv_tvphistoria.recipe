@@ -1,0 +1,60 @@
+import re
+import datetime
+
+from calibre.web.feeds.news import BasicNewsRecipe
+
+class programtvRecipe(BasicNewsRecipe):
+    __license__ = 'GPL v3'
+    __author__ = u'intromatyk <intromatyk@gmail.com>'
+    language = 'pl'
+    version = 1
+
+    title = u'Program TVP Historia'
+    category = u'News'
+    description = ''
+    cover_url=''
+    remove_empty_feeds= True
+    no_stylesheets=True
+    oldest_article = 1
+    max_articles_per_feed = 100000
+    recursions = 0
+    no_stylesheets = True
+    remove_javascript = True
+    simultaneous_downloads = 2
+
+    keep_only_tags =[]
+    keep_only_tags.append(dict(name = 'div', attrs = {'class' : 'program'}))
+    
+    channel_id = '17025176'
+    today = datetime.date.today()
+
+    one_day = datetime.timedelta(days=1)
+    two_days = datetime.timedelta(days=2)
+    three_days = datetime.timedelta(days=3)
+    four_days = datetime.timedelta(days=4)
+    five_days = datetime.timedelta(days=5)
+    six_days = datetime.timedelta(days=6)
+    seven_days = datetime.timedelta(days=7)
+     
+    day_one = today
+    day_two = today + one_day
+    day_three = today + two_days
+    day_four = today + three_days
+    day_five = today + four_days
+    day_six = today + five_days
+    day_seven = today + six_days
+    day_eight = today + seven_days
+    
+    Weekday = ['Poniedzialek', 'Wtorek', 'Sroda', 'Czwartek', 'Piatek', 'Sobota', 'Niedziela']
+
+
+    feeds          = [
+                            ('%s %s' % (Weekday[datetime.date.weekday(day_one)],day_one), 'feed://programtv.interia.pl/feed/program,%s?sDate=%s' % (channel_id,day_one)),
+                            ('%s %s' % (Weekday[datetime.date.weekday(day_two)],day_two), 'feed://programtv.interia.pl/feed/program,%s?sDate=%s' % (channel_id,day_two)),
+                            ('%s %s' % (Weekday[datetime.date.weekday(day_three)],day_three), 'feed://programtv.interia.pl/feed/program,%s?sDate=%s' % (channel_id,day_three)),
+                            ('%s %s' % (Weekday[datetime.date.weekday(day_four)],day_four), 'feed://programtv.interia.pl/feed/program,%s?sDate=%s' % (channel_id,day_four)),
+                            ('%s %s' % (Weekday[datetime.date.weekday(day_five)],day_five), 'feed://programtv.interia.pl/feed/program,%s?sDate=%s' % (channel_id,day_five)),
+                            ('%s %s' % (Weekday[datetime.date.weekday(day_six)],day_six), 'feed://programtv.interia.pl/feed/program,%s?sDate=%s' % (channel_id,day_six)),
+                            ('%s %s' % (Weekday[datetime.date.weekday(day_seven)],day_seven), 'feed://programtv.interia.pl/feed/program,%s?sDate=%s' % (channel_id,day_seven)),
+                         
+                     ]
