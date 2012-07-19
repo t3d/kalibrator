@@ -3,7 +3,7 @@ from calibre.web.feeds.news import BasicNewsRecipe
 
 class programtvRecipe(BasicNewsRecipe):
     __license__ = 'GPL v3'
-    __author__ = u'intromatyk <intromatyk@gmail.com>'
+    __author__ = u'Artur Stachecki <artur.stachecki@gmail.com>'
     language = 'pl'
     version = 1
 
@@ -15,9 +15,9 @@ class programtvRecipe(BasicNewsRecipe):
     max_articles_per_feed = 100000
     no_stylesheets = True
     remove_javascript = True
-    simultaneous_downloads = 2    
+    simultaneous_downloads = 10
     keep_only_tags =[]
-    keep_only_tags.append(dict(name = 'div', attrs = {'class' : 'article-content'}))
+    keep_only_tags.append(dict(name = 'div', attrs = {'class' : 'jbintrotext'}))
     extra_css = '''
                     h2
                     {margin-top: 50px;
@@ -32,11 +32,12 @@ class programtvRecipe(BasicNewsRecipe):
                     '''    
 
     feeds          = [
-                            ('Nowosci', 'feed://egazeciarz.pl/RSS/Nowosci.xml'),
-                            ('Program TV', 'feed://egazeciarz.pl/RSS/Program%20TV.xml'),
-                            ('Polskie Serwisy', 'feed://egazeciarz.pl/RSS/Polskie%20Serwisy.xml'),
-                            ('Brytyjskie Serwisy', 'http://egazeciarz.pl/RSS/Brytyjskie%20Serwisy.xml'),
-                            ('Hiszpanskie Serwisy', 'http://egazeciarz.pl/RSS/Hiszpanskie%20Serwisy.xml'),
-                            ('Niemieckie Serwisy', 'http://egazeciarz.pl/RSS/Niemieckie%20Serwisy.xml'),
-                            ('Anglojezyczne Serwisy', 'http://egazeciarz.pl/RSS/Anglojezyczne%20Serwisy.xml'),
+#                            ('Nowosci', 'feed://egazeciarz.pl/RSS/Nowosci.xml'),
+#                            ('Inne', 'http://egazeciarz.pl/index.php?option=com_content&view=category&id=86&format=feed&type=rss'),
+                            ('Program TV', 'http://egazeciarz.pl/index.php?option=com_content&view=category&id=86&format=feed&type=rss'),
+                            ('Polskie Serwisy', 'http://egazeciarz.pl/index.php?option=com_content&view=category&id=81&format=feed&type=rss'),
+                            ('Brytyjskie Serwisy', 'http://egazeciarz.pl/index.php?option=com_content&view=category&id=83&format=feed&type=rss'),
+                            ('Hiszpanskie Serwisy', 'http://egazeciarz.pl/index.php?option=com_content&view=category&id=85&format=feed&type=rss'),
+                            ('Niemieckie Serwisy', 'http://egazeciarz.pl/index.php?option=com_content&view=category&id=84&format=feed&type=rss'),
+                            ('Anglojezyczne Serwisy', 'http://egazeciarz.pl/index.php?option=com_content&view=category&id=82&format=feed&type=rss'),
                            ]
