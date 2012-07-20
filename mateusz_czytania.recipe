@@ -1,5 +1,8 @@
 #!/usr/bin/env  python
 
+__license__ = 'GPL v3'
+__author__ = 'teepel <teepel44@gmail.com>'
+
 '''
 http://www.mateusz.pl/czytania
 '''
@@ -8,8 +11,8 @@ from calibre.web.feeds.news import BasicNewsRecipe
 import re
 
 class czytania_mateusz(BasicNewsRecipe):
-    __author__        = 'teepel'
     title          = u'Czytania na ka\u017cdy dzie\u0144'
+    __author__ = 'teepel <teepel44@gmail.com>'
     description    = u'Codzienne czytania z jednego z najstarszych polskich serwisów katolickich.'
     language = 'pl'
     INDEX='http://www.mateusz.pl/czytania'
