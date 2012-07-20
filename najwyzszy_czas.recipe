@@ -1,5 +1,8 @@
 #!/usr/bin/env  python
 
+__license__ = 'GPL v3'
+__author__ = 'teepel <teepel44@gmail.com>'
+
 '''
 nczas.com
 '''
@@ -9,8 +12,16 @@ import re
 
 class nczas(BasicNewsRecipe):
     title          = u'Najwy\u017cszy Czas'
+    __author__ = 'teepel <teepel44@gmail.com>'
+    language       = 'pl'
+    description ='Wiadomości z nczas.com'
+    INDEX='http://nczas.com'
     oldest_article = 7
     max_articles_per_feed = 100
     auto_cleanup = True
+    remove_empty_feeds= True
+    simultaneous_downloads = 5
+    remove_javascript=True
+    no_stylesheets=True
 
     feeds          = [(u'Najwyższy Czas', u'http://nczas.com/feed/')]
