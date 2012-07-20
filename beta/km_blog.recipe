@@ -1,0 +1,35 @@
+#!/usr/bin/env  python
+
+__license__ = 'GPL v3'
+__author__ = 'teepel <teepel44@gmail.com>'
+
+'''
+korwin-mikke.pl/blog
+'''
+
+from calibre.web.feeds.news import BasicNewsRecipe
+import re
+
+class km_blog(BasicNewsRecipe):
+    title          = u'Korwin-Mikke Blog'
+    __author__ = 'teepel <teepel44@gmail.com>'
+    language       = 'pl'
+    description ='Wiadomości z bloga korwin-mikke.pl/blog '
+    INDEX='http://korwin-mikke.pl/blog'
+    remove_empty_feeds= True
+    oldest_article = 7
+    max_articles_per_feed = 100
+    remove_javascript=True
+    no_stylesheets=True
+    auto_cleanup = True
+
+    feeds          = [(u'blog', u'http://korwin-mikke.pl/blog/rss')]
+
+    keep_only_tags =[]
+	#this line should show title of the article, but it doesnt work
+    keep_only_tags.append(dict(name = 'div', attrs = {'class' : 'clearfix'}))
+    keep_only_tags.append(dict(name = 'div', attrs = {'class' : 'text'}))
+
+    remove_tags =[]
+    remove_tags.append(dict(name = 'p', attrs = {'class' : 'float_right'}))
+    remove_tags.append(dict(name = 'p', attrs = {'class' : 'date'}))
