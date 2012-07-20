@@ -1,13 +1,27 @@
 #!/usr/bin/env  python
 
+__license__ = 'GPL v3'
+__author__ = 'teepel <teepel44@gmail.com>'
+
 '''
 dzialzagraniczny.pl
 '''
 
+from calibre.web.feeds.news import BasicNewsRecipe
+import re
+
 class dzial_zagraniczny(BasicNewsRecipe):
-    title          = u'Dzial Zagraniczny'
+    title          = u'Dział Zagraniczny'
+    __author__ = 'teepel <teepel44@gmail.com>'
+    language       = 'pl'
+    description    = u'Polskiego czytelnika to nie interesuje'
+    INDEX='http://dzialzagraniczny.pl'
     oldest_article = 7
     max_articles_per_feed = 100
+    remove_empty_feeds= True
+    simultaneous_downloads = 5
+    remove_javascript=True
+    no_stylesheets=True
     auto_cleanup = True
 
     feeds          = [(u'dzial_zagraniczny', u'http://feeds.feedburner.com/dyndns/UOfz')]
