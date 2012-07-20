@@ -1,5 +1,8 @@
 #!/usr/bin/env  python
 
+__license__ = 'GPL v3'
+__author__ = 'teepel <teepel44@gmail.com> based on GW from fenuks'
+
 '''
 warszawa.gazeta.pl
 '''
@@ -9,9 +12,9 @@ import re
 
 class gw_wawa(BasicNewsRecipe):
     title          = u'Gazeta Wyborcza Warszawa'
-    __author__        = 'teepel na podstawie GW od fenuks'
+    __author__ = 'teepel <teepel44@gmail.com> based on GW from fenuks'
     language       = 'pl'
-    description ='news from http://warszawa.gazeta.pl/'
+    description ='Wiadomości z warszawskiego wydania Gazety Wyborczej'
     category='newspaper'
     publication_type = 'newspaper'
     masthead_url='http://bi.gazeta.pl/im/3/4089/m4089863.gif'
