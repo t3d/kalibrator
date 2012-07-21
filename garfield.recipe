@@ -9,7 +9,7 @@ from calibre.web.feeds.news import BasicNewsRecipe
 import mechanize, re
 
 class GoComics(BasicNewsRecipe):
-    title               = 'GoComics-Garfield'
+    title               = 'Garfield'
     __author__          = 'Starson17'
     __version__         = '1.06'
     __date__            = '07 June 2011'
