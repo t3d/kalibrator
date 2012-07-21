@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 __license__   = 'GPL v3'
-__copyright__   = u'Lukk 2010, Lukasz Grabczewski 2011, intromatyk <intromatyk@gmail.com> 2011'
+__copyright__   = u'Lukk 2010, Lukasz Grabczewski 2011, Artur Stachecki <artur.stachecki@gmail.com> 2011'
 __version__   = '2.0'
 
 '''
