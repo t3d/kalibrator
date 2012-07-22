@@ -21,7 +21,6 @@ class prawica_recipe(BasicNewsRecipe):
     max_articles_per_feed = 100
     remove_javascript=True
     no_stylesheets=True
-    auto_cleanup = True
 
     feeds          = [(u'all', u'http://prawica.net/all/feed')]
 
@@ -36,6 +35,7 @@ class prawica_recipe(BasicNewsRecipe):
     remove_tags.append(dict(name = 'div', attrs = {'class' : 'field field-type-viewfield field-field-autor2'}))
     remove_tags.append(dict(name = 'div', attrs = {'class' : 'field field-type-viewfield field-field-publikacje-autora'}))
     remove_tags.append(dict(name = 'div', attrs = {'id' : 'rate-widget-2 rate-widget clear-block rate-average rate-widget-fivestar rate-daa7512627f21dcf15e0af47e5279f0e rate-processed'}))
+    remove_tags_after =[(dict(name = 'div', attrs = {'class' : 'field-label-inline-first'}))]
 
     def print_version(self, url):
         return url.replace('http://prawica.net/', 'http://prawica.net/print/')
