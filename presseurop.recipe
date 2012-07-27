@@ -4,6 +4,9 @@
 www.presseurop.eu/pl
 '''
 
+__license__ = 'GPL v3'
+__author__ = 'teepel <teepel44@gmail.com>'
+
 from calibre.web.feeds.news import BasicNewsRecipe
 import re
 

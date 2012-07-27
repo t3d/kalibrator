@@ -1,0 +1,149 @@
+#!/usr/bin/env  python
+
+__license__   = 'GPL v3'
+__copyright__ = 'Copyright 2010 Starson17'
+'''
+www.gocomics.com
+'''
+from calibre.web.feeds.news import BasicNewsRecipe
+import mechanize, re
+
+class GoComics(BasicNewsRecipe):
+    title               = 'Garfield'
+    __author__          = 'Starson17'
+    __version__         = '1.06'
+    __date__            = '07 June 2011'
+    description         = u'200+ Comics - Customize for more days/comics: Defaults to 7 days, 25 comics - 20 general, 5 editorial.'
+    category            = 'news, comics'
+    language            = 'en'
+    use_embedded_content= False
+    no_stylesheets      = True
+    remove_javascript   = True
+    cover_url           = 'http://paulbuckley14059.files.wordpress.com/2008/06/calvin-and-hobbes.jpg'
+    remove_attributes = ['style']
+
+    ####### USER PREFERENCES - COMICS, IMAGE SIZE AND NUMBER OF COMICS TO RETRIEVE ########
+    # num_comics_to_get - I've tried up to 99 on Calvin&Hobbes
+    num_comics_to_get = 7
+    # comic_size 300 is small, 600 is medium, 900 is large, 1500 is extra-large
+    comic_size = 300
+    # CHOOSE COMIC STRIPS BELOW - REMOVE COMMENT '# ' FROM IN FRONT OF DESIRED STRIPS
+    # Please do not overload their servers by selecting all comics and 1000 strips from each!
+
+    conversion_options = {'linearize_tables'  : True
+                        , 'comment'           : description
+                        , 'tags'              : category
+                        , 'language'          : language
+                        }
+
+    keep_only_tags     = [dict(name='div', attrs={'class':['feature','banner']}),
+                          ]
+
+    remove_tags = [dict(name='a', attrs={'class':['beginning','prev','cal','next','newest']}),
+                   dict(name='div', attrs={'class':['tag-wrapper']}),
+                   dict(name='a', attrs={'href':re.compile(r'.*mutable_[0-9]+', re.IGNORECASE)}),
+                   dict(name='img', attrs={'src':re.compile(r'.*mutable_[0-9]+', re.IGNORECASE)}),
+                   dict(name='ul', attrs={'class':['share-nav','feature-nav']}),
+                   ]
+
+    def get_browser(self):
+        br = BasicNewsRecipe.get_browser(self)
+        cookies = mechanize.CookieJar()
+        br = mechanize.build_opener(mechanize.HTTPCookieProcessor(cookies))
+        br.addheaders = [('Referer','http://www.gocomics.com/')]
+        return br
+
+    def parse_index(self):
+        feeds = []
+        for title, url in [
+                       #(u"2 Cows and a Chicken", u"http://www.gocomics.com/2cowsandachicken"),
+                       #(u"Fred Basset", u"http://www.gocomics.com/fredbasset"),
+                       #(u"Free Range", u"http://www.gocomics.com/freerange"),
+                       #(u"Frog Applause", u"http://www.gocomics.com/frogapplause"),
+                       #(u"Garfield Minus Garfield", u"http://www.gocomics.com/garfieldminusgarfield"),
+                       (u"Garfield", u"http://www.gocomics.com/garfield"),
+                       (u"Garfield en Espanol", u"http://www.gocomics.com/garfieldespanol"),
+                       #(u"Gasoline Alley", u"http://www.gocomics.com/gasolinealley"),
+                       #(u"Geech Classics", u"http://www.gocomics.com/geechclassics"),
+                       #(u"Get Fuzzy", u"http://www.gocomics.com/getfuzzy"),
+                       #(u"Gil Thorp", u"http://www.gocomics.com/gilthorp"),
+                       #(u"Ginger Meggs", u"http://www.gocomics.com/gingermeggs"),
+                       #(u"Wit of the World",u"http://www.gocomics.com/witoftheworld"),
+                             ]:
+            print 'Working on: ', title
+            articles = self.make_links(url)
+            if articles:
+                feeds.append((title, articles))
+        return feeds
+
+    def make_links(self, url):
+        title = 'Temp'
+        current_articles = []
+        pages = range(1, self.num_comics_to_get+1)
+        for page in pages:
+            page_soup = self.index_to_soup(url)
+            if page_soup:
+                try:
+                  strip_title = page_soup.find(name='div', attrs={'class':'top'}).h1.a.string
+                except:
+                  strip_title = 'Error - no Title found'
+                try:
+                  date_title = page_soup.find('ul', attrs={'class': 'feature-nav'}).li.string
+                  if not date_title:
+                      date_title = page_soup.find('ul', attrs={'class': 'feature-nav'}).li.string
+                except:
+                  date_title = 'Error - no Date found'
+                title = strip_title + ' - ' + date_title
+                for i in range(2):
+                  try:
+                    strip_url_date = page_soup.find(name='div', attrs={'class':'top'}).h1.a['href']
+                    break #success - this is normal exit
+                  except:
+                    strip_url_date = None
+                    continue #try to get strip_url_date again
+                for i in range(2):
+                  try:
+                    prev_strip_url_date = page_soup.find('a', attrs={'class': 'prev'})['href']
+                    break #success - this is normal exit
+                  except:
+                    prev_strip_url_date = None
+                    continue #try to get prev_strip_url_date again
+                if strip_url_date:
+                  page_url = 'http://www.gocomics.com' + strip_url_date
+                else:
+                  continue
+                if prev_strip_url_date:
+                  prev_page_url = 'http://www.gocomics.com' + prev_strip_url_date
+                else:
+                  continue
+            current_articles.append({'title': title, 'url': page_url, 'description':'', 'date':''})
+            url = prev_page_url
+        current_articles.reverse()
+        return current_articles
+
+    def preprocess_html(self, soup):
+        if soup.title:
+            title_string = soup.title.string.strip()
+            _cd = title_string.split(',',1)[1]
+            comic_date = ' '.join(_cd.split(' ', 4)[0:-1])
+        if soup.h1.span:
+            artist = soup.h1.span.string
+            soup.h1.span.string.replaceWith(comic_date + artist)
+        feature_item = soup.find('p',attrs={'class':'feature_item'})
+        if feature_item.a:
+            a_tag = feature_item.a
+            a_href = a_tag["href"]
+            img_tag = a_tag.img
+            img_tag["src"] = a_href
+            img_tag["width"] = self.comic_size
+            img_tag["height"] = None
+        return self.adeify_images(soup)
+
+    extra_css = '''
+                    h1{font-family:Arial,Helvetica,sans-serif; font-weight:bold;font-size:large;}
+                    h2{font-family:Arial,Helvetica,sans-serif; font-weight:normal;font-size:small;}
+                    img {max-width:100%; min-width:100%;}
+                    p{font-family:Arial,Helvetica,sans-serif;font-size:small;}
+                    body{font-family:Helvetica,Arial,sans-serif;font-size:small;}
+		'''
+

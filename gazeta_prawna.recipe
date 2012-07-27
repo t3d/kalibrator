@@ -30,7 +30,7 @@ class gazetaprawna(BasicNewsRecipe):
     ]
 
     feeds = [
-      (u'Wiadomo\u015bci - najwa\u017cniejsze', u'http://www.gazetaprawna.pl/wiadomosci/najwazniejsze/rss.xml'),
+      (u'Z ostatniej chwili', u'http://rss.gazetaprawna.pl/GazetaPrawna'),
       (u'Biznes i prawo gospodarcze', u'http://biznes.gazetaprawna.pl/rss.xml'),
       (u'Prawo i wymiar sprawiedliwo\u015bci', u'http://prawo.gazetaprawna.pl/rss.xml'),
       (u'Praca i ubezpieczenia', u'http://praca.gazetaprawna.pl/rss.xml'),

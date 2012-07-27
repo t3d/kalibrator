@@ -23,7 +23,6 @@ class OSW_Recipe(BasicNewsRecipe):
     cover_url=''
     remove_empty_feeds= True
     no_stylesheets=True
-    auto_cleanup = True
     remove_javascript = True
     simultaneous_downloads = 5
 
@@ -35,7 +34,7 @@ class OSW_Recipe(BasicNewsRecipe):
 
     remove_tags =[]
     remove_tags.append(dict(name = 'table', attrs = {'id' : 'attachments'}))
-
+    remove_tags.append(dict(name = 'div', attrs = {'class' : 'print-submitted'}))
     
     feeds          = [(u'osw', u'http://www.osw.waw.pl/pl/rss.xml')]
 
