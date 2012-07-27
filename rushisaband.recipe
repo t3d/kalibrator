@@ -23,7 +23,7 @@ class rushisaband(BasicNewsRecipe):
 
     keep_only_tags =[]
     keep_only_tags.append(dict(name = 'h4'))
-	keep_only_tags.append(dict(name = 'h5'))
-	keep_only_tags.append(dict(name = 'p'))
+    keep_only_tags.append(dict(name = 'h5'))
+    keep_only_tags.append(dict(name = 'p'))
     
     feeds = [(u'Rush is a Band', u'http://feeds2.feedburner.com/rushisaband/blog')]
