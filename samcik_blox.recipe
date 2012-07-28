@@ -15,7 +15,6 @@ class samcik(BasicNewsRecipe):
     __author__ = 'teepel <teepel44@gmail.com>'
     language       = 'pl'
     description =u'Blog Macieja Samcika, długoletniego dziennikarza ekonomicznego Gazety Wyborczej . O finansach małych i dużych. Mnóstwo ciekawostek na temat pieniędzy.'
-    INDEX='http://bankier.pl/'
     oldest_article = 7
     max_articles_per_feed = 100
     remove_javascript=True
