@@ -1,0 +1,54 @@
+#!/usr/bin/env  python
+
+__license__ = 'GPL v3'
+__author__ = 'teepel <teepel44@gmail.com>'
+
+'''
+stopklatka.pl
+'''
+
+from calibre.web.feeds.news import BasicNewsRecipe
+import re
+
+class stopklatka(AutomaticNewsRecipe):
+    title          = u'Stopklatka'
+    __author__ = 'teepel <teepel44@gmail.com>'
+    language       = 'pl'
+    description =u'Baza filmów, seriali i aktorów, repertuar kin, program tv, wydarzenia ze świata filmu.'
+    masthead_url='http://img.stopklatka.pl/img/stopklatka_logo.gif'
+    remove_empty_feeds= True
+    oldest_article = 30
+    max_articles_per_feed = 100
+    remove_javascript=True
+    no_stylesheets=True
+    simultaneous_downloads = 5
+
+    feeds          = [
+                            (u'Wydarzenia', u'http://rss.stopklatka.pl/wydarzenia.rss'),
+                            (u'Wydarzenia branżowe', u'http://rss.stopklatka.pl/wydarzenia_branzowe.rss'),
+                            (u'Wydarzenia DVD', u'http://rss.stopklatka.pl/wydarzenia_dvd.rss'),
+                            (u'Najważniejsze wydarzenia', u'http://rss.stopklatka.pl/wydarzenia_najwazniejsze.rss'),
+                            (u'Wydarzenia niezależne', u'http://rss.stopklatka.pl/wydarzenia_off.rss'),
+	    ]
+
+    #keep_only_tags =[]
+
+    remove_tags =[]
+    remove_tags.append(dict(name = 'img', attrs = {'src' : 'http://img.stopklatka.pl/rysunki/storm/logo.gif'}))
+    remove_tags.append(dict(name = 'div', attrs = {'align' : 'right'}))
+    remove_tags.append(dict(name = 'div', attrs = {'align' : 'center'}))
+    remove_tags.append(dict(name = 'font', attrs = {'style' : 'font-size: 9pt;','face' : 'arial, arial ce, helvetica','size' : '1'}))
+    remove_tags.append(dict(name = 'center'))
+    remove_tags.append(dict(name = 'embed', attrs = {'type' : 'application/x-shockwave-flash'}))
+    remove_tags.append(dict(name = 'div', attrs = {'id' : 'yahoovideoplayer'}))
+    remove_tags.append(dict(name = 'table', attrs = {'cellspacing' : '0','cellpadding' : '0', 'border' : '0', 'width' : '100%'}))
+
+
+    def print_version(self, url):
+        segment = url.split('=')
+        urlPart = segment[1]
+        segments = urlPart.split('&')
+        urlPart2 = segments[0]
+        return 'http://www.stopklatka.pl/narzedzia/drukuj.asp?typ=wydarzenie&id=' + urlPart2
+
+    
