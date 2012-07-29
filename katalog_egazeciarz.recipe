@@ -16,8 +16,9 @@ class programtvRecipe(BasicNewsRecipe):
     no_stylesheets = True
     remove_javascript = True
     simultaneous_downloads = 10
-    keep_only_tags =[]
-    keep_only_tags.append(dict(name = 'div', attrs = {'class' : 'jbintrotext'}))
+    remove_tags =[]
+    remove_tags.append(dict(attrs = {'id' : ['logowrap', 'navwrap', 'footerLeft']}))
+    remove_tags.append(dict(attrs = {'class' : 'jbmoduleBody'}))
     extra_css = '''
                     h2
                     {margin-top: 50px;
