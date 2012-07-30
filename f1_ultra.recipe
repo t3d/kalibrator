@@ -18,8 +18,8 @@ class f1ultra(BasicNewsRecipe):
     remove_tags_after =[dict(attrs = {'style' : 'margin-top:5px;margin-bottom:5px;display: inline;'})]
     remove_tags =[(dict(attrs = {'class' : ['buttonheading', 'avPlayerContainer', 'createdate']}))]
     remove_tags.append(dict(attrs = {'title' : ['PDF', 'Drukuj', 'Email']}))
-	remove_tags.append(dict(name = 'form', attrs = {'method' : 'post'}))
-	remove_tags.append(dict(name = 'hr', attrs = {'size' : '2'}))
+    remove_tags.append(dict(name = 'form', attrs = {'method' : 'post'}))
+    remove_tags.append(dict(name = 'hr', attrs = {'size' : '2'}))
     
     preprocess_regexps = [(re.compile(r'align="left"'), lambda match: ''),
 		          (re.compile(r'align="right"'), lambda match: ''),
