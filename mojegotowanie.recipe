@@ -14,7 +14,7 @@ class mojegotowanie(BasicNewsRecipe):
     title = u'Moje Gotowanie'
     __author__ = 'MrStefan <mrstefaan@gmail.com>, teepel <teepel44@gmail.com>'
     language = 'pl'
-    description =u'Gotowanie to Twoja pasja? Uwielbiasz sa≥atki? Lubisz grillowaÊ? Przepisy kulinarne doskona≥e na wszystkie okazje znajdziesz na www.mojegotowanie.pl.'
+    description =u'Gotowanie to Twoja pasja? Uwielbiasz sa≈Çatki? Lubisz grillowaƒá? Przepisy kulinarne doskona≈Çe na wszystkie okazje znajdziesz na www.mojegotowanie.pl.'
     masthead_url='http://www.mojegotowanie.pl/extension/selfstart/design/self/images/top_c2.gif'
     remove_empty_feeds= True
     oldest_article = 7
@@ -25,7 +25,7 @@ class mojegotowanie(BasicNewsRecipe):
     keep_only_tags =[]
     keep_only_tags.append(dict(name = 'div', attrs = {'class' : 'content'}))
 
-    feeds = [(u'Artyku≥y', u'http://mojegotowanie.pl/rss/feed/artykuly'),
+    feeds = [(u'Artyku≈Çy', u'http://mojegotowanie.pl/rss/feed/artykuly'),
                  (u'Przepisy', u'http://mojegotowanie.pl/rss/feed/przepisy')]
 				 
     def parse_feeds(self):
