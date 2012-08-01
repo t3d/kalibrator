@@ -4,13 +4,13 @@ __license__ = 'GPL v3'
 __copyright__ = 'teepel <teepel44@gmail.com> based on GW from fenuks'
 
 '''
-warszawa.gazeta.pl
+krakow.gazeta.pl
 '''
 
 from calibre.web.feeds.news import BasicNewsRecipe
 import re
 
-class gw_wawa(BasicNewsRecipe):
+class gw_krakow(BasicNewsRecipe):
     title          = u'Gazeta Wyborcza Kraków'
     __author__ = 'teepel <teepel44@gmail.com> based on GW from fenuks'
     language       = 'pl'
