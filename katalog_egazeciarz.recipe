@@ -33,7 +33,6 @@ class programtvRecipe(BasicNewsRecipe):
                     '''    
 
     feeds          = [
-                            ('Nowosci', 'http://egazeciarz.pl/index.php?option=com_content&view=category&id=78&format=feed&type=rss'),
                             ('Inne', 'http://egazeciarz.pl/index.php?option=com_content&view=category&id=87&format=feed&type=rss'),
                             ('Program TV', 'http://egazeciarz.pl/index.php?option=com_content&view=category&id=86&format=feed&type=rss'),
                             ('Polskie Serwisy', 'http://egazeciarz.pl/index.php?option=com_content&view=category&id=81&format=feed&type=rss'),
