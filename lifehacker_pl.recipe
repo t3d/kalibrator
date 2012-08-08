@@ -14,7 +14,7 @@ class lifehacking(BasicNewsRecipe):
     title = u'Lifehacker Polska'
     __author__ = 'MrStefan <mrstefaan@gmail.com>'
     language = 'pl'
-    description =u'Lifehacking - sposoby na zwiêkszanie w³asnej wydajnoœci. U³atwiaj sobie ¿ycie, wykorzystuj¹c wiedzê, metody, technologie, przydatne strony ...'
+    description =u'Lifehacking - sposoby na zwiÄ™kszanie wÅ‚asnej wydajnoÅ›ci. UÅ‚atwiaj sobie Å¼ycie, wykorzystujÄ…c wiedzÄ™, metody, technologie, przydatne strony ...'
     masthead_url='http://lifehacking.pl/wp-content/themes/lifehacking/images/lifehackerlogo.png'
     remove_empty_feeds= True
     oldest_article = 7
