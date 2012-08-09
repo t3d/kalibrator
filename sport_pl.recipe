@@ -21,7 +21,7 @@ class sport_pl(BasicNewsRecipe):
     remove_javascript=True
     no_stylesheets=True
     remove_empty_feeds = True
-	simultaneous_downloads = 5
+    simultaneous_downloads = 5
 
     keep_only_tags =[]
     keep_only_tags.append(dict(name = 'div', attrs = {'id' : 'gazeta_article'}))
