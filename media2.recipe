@@ -21,7 +21,7 @@ class media2_pl(BasicNewsRecipe):
     max_articles_per_feed = 100
     remove_javascript=True
     no_stylesheets=True
-	simultaneous_downloads = 5
+    simultaneous_downloads = 5
 
     extra_css = '''.news-lead{font-weight: bold; }'''
 
