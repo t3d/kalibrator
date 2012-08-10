@@ -16,7 +16,7 @@ class AntywebRecipe(BasicNewsRecipe):
     auto_cleanup = False
     no_stylesheets=True
     use_embedded_content = False
-    oldest_article = 7
+    oldest_article = 1
     max_articles_per_feed = 100
     remove_javascript = True
     simultaneous_downloads = 3
