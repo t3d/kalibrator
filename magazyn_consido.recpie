@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 
 __license__ = 'GPL v3'
-__copyright__ = 'teepel'
 
 '''
 magazynconsido.pl/
@@ -9,11 +8,10 @@ magazynconsido.pl/
 
 from calibre.web.feeds.news import BasicNewsRecipe
 from calibre.utils.magick import Image
-import time
 
 class magazynconsido(BasicNewsRecipe):
     title = u'Magazyn Consido'
-    __author__ = 'teepel <teepel44@gmail.com>'
+    __author__ = 'Artur Stachecki <artur.stachecki@gmail.com> ,teepel <teepel44@gmail.com>'
     language = 'pl'
     description =u'Portal dla architektów i projektantów'
     masthead_url='http://qualitypixels.pl/wp-content/themes/airlock/advance/inc/timthumb.php?src=http://qualitypixels.pl/wp-content/uploads/2012/01/logotyp-magazynconsido-11.png&w=455&zc=1'
@@ -24,7 +22,6 @@ class magazynconsido(BasicNewsRecipe):
     use_embedded_content = False
 
     keep_only_tags =[]
-  #  keep_only_tags.append(dict(name = 'div', attrs = {'class' : 'post'}))
     keep_only_tags.append(dict(name = 'h1'))
     keep_only_tags.append(dict(name = 'p'))
     keep_only_tags.append(dict(attrs = {'class' : 'navigation'}))
