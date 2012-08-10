@@ -55,8 +55,7 @@ class magazynconsido(BasicNewsRecipe):
 	       feeds.append((section, articles[section]))
 	       feeds.pop()
             else:
-               feeds.append((section, articles[section]))
-	    print section
+               feeds.append((section, articles[section]))	    
         return feeds 
 
     def append_page(self, soup, appendtag):    
