@@ -4,7 +4,7 @@ __license__ = 'GPL v3'
 __copyright__ = 'teepel 2012'
 
 '''
-dzialzagraniczny.pl
+suchary.pl
 '''
 
 from calibre.web.feeds.news import BasicNewsRecipe
