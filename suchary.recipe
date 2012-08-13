@@ -1,0 +1,30 @@
+#!/usr/bin/env  python
+
+__license__ = 'GPL v3'
+__copyright__ = 'teepel 2012'
+
+'''
+dzialzagraniczny.pl
+'''
+
+from calibre.web.feeds.news import BasicNewsRecipe
+import re
+
+class suchary(BasicNewsRecipe):
+    title          = u'Suchary'
+    __author__ = 'teepel <teepel44@gmail.com>'
+    language       = 'pl'
+    description    = u'Starannie wyselekcjonowane i dokładnie wybrane kawały dowcipy rodem z Familiady.'
+    oldest_article = 7
+    masthead_url='http://suchary.com/img/logo.png'
+    max_articles_per_feed = 100
+    simultaneous_downloads = 5
+    remove_javascript=True
+    no_stylesheets=True
+
+    extra_css = '''.author{font-style: oblique; text-align: right}'''
+
+    keep_only_tags =[]
+    keep_only_tags.append(dict(name = 'section', attrs = {'class' : 'post-content'}))
+
+    feeds          = [(u'Suchary', u'http://feeds.feedburner.com/suchary')]
