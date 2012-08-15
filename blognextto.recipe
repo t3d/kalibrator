@@ -1,27 +1,19 @@
-﻿#!/usr/bin/env python
-
-__license__ = 'GPL v3'
-__copyright__ = 'MrStefan'
-
-'''
-www.blog.nexto.pl
-'''
-
 from calibre.web.feeds.news import BasicNewsRecipe
 import re
 
 class blognexto(BasicNewsRecipe):
-    title = u'BLOG.NEXTO.pl'
+    title = 'BLOG.NEXTO.pl'
     __author__ = 'MrStefan <mrstefaan@gmail.com>'
     language = 'pl'
-    description =u'o e-publikacjach prawie wszystko'
+    description ='o e-publikacjach prawie wszystko'
     masthead_url='http://blog.nexto.pl/wp-content/uploads/2012/04/logo-blog-nexto.pl_.jpg'
     remove_empty_feeds= True
     oldest_article = 7
     max_articles_per_feed = 100
     remove_javascript=True
     no_stylesheets=True
-	
+
+
     keep_only_tags =[]
     keep_only_tags.append(dict(name = 'div', attrs = {'id' : 'content'}))
 
@@ -34,4 +26,4 @@ class blognexto(BasicNewsRecipe):
     remove_tags.append(dict(name = 'div', attrs = {'class' : 'commments-box'}))
     remove_tags.append(dict(name = 'div', attrs = {'id' : 'respond'}))
 
-    feeds          = [(u'Artykuły', u'http://feeds.feedburner.com/blognexto')]
+    feeds          = [('Artykuly', 'http://feeds.feedburner.com/blognexto')]
