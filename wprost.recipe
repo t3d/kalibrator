@@ -69,7 +69,7 @@ class Wprost(BasicNewsRecipe):
                         a = soup.find('a', attrs={'title' : re.compile(r'Spis *', re.IGNORECASE | re.DOTALL)})
                 self.EDITION = a['href'].replace('/tygodnik/?I=', '')
 		self.EDITION_SHORT = a['href'].replace('/tygodnik/?I=15', '')
-                self.cover_url = a.img['src']
+		self.cover_url = a.img['src']
 
         def parse_index(self):
                 self.find_last_issue()
@@ -83,7 +83,7 @@ class Wprost(BasicNewsRecipe):
                 return feeds
 
         def find_articles(self, main_block):
-                for a in main_block.findAllNext( attrs={'href': re.compile(r'/ar/%s.*?/' % (self.EDITION_SHORT), re.IGNORECASE | re.DOTALL)}):
+                for a in main_block.findAll('a'):
                         if a.name in "td":
                                 break
                         if self.EXCLUDE_LOCKED & self.is_blocked(a):
