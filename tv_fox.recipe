@@ -56,7 +56,7 @@ class programtvRecipe(BasicNewsRecipe):
 
         feeds = []
         for title, url in [
-('%s %s' % (Weekday[datetime.date.weekday(day_one)],day_one), 'http://tv.gazeta.pl/program_tv/0,110298,8700474,,,%s,3,%s.html' % (day_one, channel_id))
+('%s %s' % (Weekday[datetime.date.weekday(day_one)],day_one), 'http://tv.gazeta.pl/program_tv/0,110298,8700474,,,%s,3,%s.html' % (day_one, channel_id)),
 ('%s %s' % (Weekday[datetime.date.weekday(day_two)],day_two), 'http://tv.gazeta.pl/program_tv/0,110298,8700474,,,%s,3,%s.html' % (day_two, channel_id))
 ,
 ('%s %s' % (Weekday[datetime.date.weekday(day_three)],day_three), 'http://tv.gazeta.pl/program_tv/0,110298,8700474,,,%s,3,%s.html' % (day_three, channel_id))
