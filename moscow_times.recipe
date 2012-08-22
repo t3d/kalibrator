@@ -33,13 +33,10 @@ class Moscowtimes(BasicNewsRecipe):
                         .text{font-family:Arial,Tahoma,Verdana,Helvetica,sans-serif ; font-size:75%; }
                         '''
     feeds          = [
-                         (u'News'          , u'http://www.themoscowtimes.com/rss/rss.php?type=news'     )
-                        ,(u'Current Issue' , u'http://www.themoscowtimes.com/rss/rss.php?type=issue'   )
-                        ,(u'Most Read'     , u'http://www.themoscowtimes.com/rss/rss.php?type=most_read'    )
-                        ,(u'Latest'        , u'http://www.themoscowtimes.com/rss/rss.php?type=latest')
-                        ,(u'Business'      , u'http://www.themoscowtimes.com/rss/rss.php?type=business'     )
-                        ,(u'Art and Ideas' , u'http://www.themoscowtimes.com/rss/rss.php?type=arts'     )
-                        ,(u'Opinion'       , u'http://www.themoscowtimes.com/rss/rss.php?type=opinion' )
+                         (u'News'          , u'http://www.themoscowtimes.com/rss/news/'     )
+                        ,(u'Business'      , u'http://www.themoscowtimes.com/rss/business/'     )
+                        ,(u'Art and Ideas' , u'http://www.themoscowtimes.com/rss/arts/'     )
+                        ,(u'Opinion'       , u'http://www.themoscowtimes.com/rss/opinion/' )
                      ]
 
     keep_only_tags = [dict(name='div', attrs={'id':'content'})]
