@@ -1,0 +1,79 @@
+#!/usr/bin/env python
+
+__license__ = 'GPL v3'
+
+from calibre.web.feeds.news import BasicNewsRecipe
+import datetime
+
+class forbes_pl(BasicNewsRecipe):
+    title = u'Forbes.pl'
+    __author__ = 'Artur Stachecki <artur.stachecki@gmail.com>'
+    language = 'pl'
+    description =u'Biznes, finanse, gospodarka, strategie, wiadomości gospodarcze, analizy finasowe i strategiczne.'
+    oldest_article = 1
+    max_articles_per_feed = 100
+    remove_javascript=True
+    no_stylesheets = True
+    now = datetime.datetime.now()
+    yesterday = now - datetime.timedelta(hours=24)
+    yesterday = yesterday.strftime("%d.%m.%Y %H:%M:%S")
+    pages_count = 4
+
+    keep_only_tags =[]
+
+    keep_only_tags.append(dict(attrs = {'class' : ['single_article', 'blue']}))
+    remove_tags =[dict(attrs = {'style' : 'margin-top: 18px;' })]
+    '''preprocess_regexps = [(re.compile(r'\<b\>\<a.*\<\/a\>\<\/b\>', re.DOTALL | re.IGNORECASE), lambda match: ''),
+                         (re.compile(r'\<a .*\<strong\>.*\<\/strong\>\<\/a\>', re.DOTALL | re.IGNORECASE), lambda match: '')
+                         ]'''
+    remove_tags.append(dict(name = 'a', attrs = {'href' : re.compile(r',1$')}))
+    remove_tags.append(dict(name = 'a', attrs = {'href' : re.compile(r',1.html$')}))
+    remove_tags.append(dict(name = 'a', attrs = {'href' : re.compile(r'.aspx$')}))
+ 
+    extra_css='''       img {max-width:30%; max-height:30%; display: block; margin-left: auto; margin-right: auto;} 
+    			h1 {text-align: center;}'''
+
+    def parse_index(self):
+        feeds = []
+        for title, url in [('Wydarzenia', 'http://www.forbes.pl/wiadomosci/wydarzenia')
+                          ]:
+	        articles = self.parse_pages(url)
+        if articles:
+                feeds.append((title, articles))
+        return feeds
+
+    def parse_pages(self, pages):
+        second = self.get_pages(pages)
+        current_articles = []
+        for soup in second:
+            div = soup.find(attrs={'class': 'category'})
+            for tag in div.findAllNext(attrs = {'class': 'article'}):
+                link = tag.find('h2')
+                date = tag.find(attrs = {'class':'name'})
+                date = self.tag_to_string(date)
+                date = date.split("|")[0]
+                if (date < self.yesterday):
+                   continue
+                a = link.find('a', href = True)
+                if a is None:
+                    continue
+                title = self.tag_to_string(a)
+                url = a.get('href', False)
+                if not url or not title:
+                    continue
+                if url.startswith('/'):
+                    url = 'http://www.forbes.pl'+url
+                current_articles.append({'title': title, 'url': url, 'description':'', 'date':''})
+        return current_articles
+
+    def get_pages(self, url):
+        soup = self.index_to_soup(url) 
+        apage = soup.find('li', attrs={'id':'numb'})
+        pages = []
+        for n in range(1, self.pages_count):
+            if apage is not None:
+               nexturl = soup.find('a', attrs={'title':'Strona: %s' % (n)})  
+               nexturl = 'http://www.forbes.pl'+nexturl['href']
+               nextsoup = self.index_to_soup(nexturl)
+               pages.append(nextsoup)
+        return pages
