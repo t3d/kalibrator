@@ -20,12 +20,9 @@ class forbes_pl(BasicNewsRecipe):
     pages_count = 4
 
     keep_only_tags =[]
-
     keep_only_tags.append(dict(attrs = {'class' : ['single_article', 'blue']}))
+    
     remove_tags =[dict(attrs = {'style' : 'margin-top: 18px;' })]
-    '''preprocess_regexps = [(re.compile(r'\<b\>\<a.*\<\/a\>\<\/b\>', re.DOTALL | re.IGNORECASE), lambda match: ''),
-                         (re.compile(r'\<a .*\<strong\>.*\<\/strong\>\<\/a\>', re.DOTALL | re.IGNORECASE), lambda match: '')
-                         ]'''
     remove_tags.append(dict(name = 'a', attrs = {'href' : re.compile(r',1$')}))
     remove_tags.append(dict(name = 'a', attrs = {'href' : re.compile(r',1.html$')}))
     remove_tags.append(dict(name = 'a', attrs = {'href' : re.compile(r'.aspx$')}))
