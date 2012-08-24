@@ -1,0 +1,52 @@
+#!/usr/bin/env python
+
+__license__ = 'GPL v3'
+__copyright__ = 'teepel 2012'
+
+'''
+spidersweb.pl
+'''
+
+from calibre.web.feeds.news import BasicNewsRecipe
+import re
+
+class spidersweb(BasicNewsRecipe):
+    title = u'Spider\'s Web'
+    __author__ = 'teepel <teepel44@gmail.com>'
+    language = 'pl'
+    description =u'Opinie i analizy na temat technologii'
+    masthead_url='http://www.spidersweb.pl/wp-content/themes/spidersweb/images/logo/Logo-Mobile2.png'
+    remove_empty_feeds= True
+    oldest_article = 1 #do testów polecam ustawianie 7
+    max_articles_per_feed = 100
+    remove_javascript=True
+    no_stylesheets=True
+
+    preprocess_regexps = [(re.compile('<div class="Author">'), lambda match: '<br /><div class="Author">') ]
+	
+    keep_only_tags =[]
+    keep_only_tags.append(dict(name = 'article', attrs = {'id' : 'Post'}))
+	#linijka niżej ma przechwytywać tekst pana Pająka, które w całości są umieszczane na jego kanale RSS
+    keep_only_tags.append(dict(name = 'div', attrs = {'id' : 'feedContent'}))
+
+    remove_tags =[]
+    remove_tags.append(dict(name = 'div', attrs = {'class' : 'Comments'}))
+    remove_tags.append(dict(name = 'div', attrs = {'class' : 'Post-Tags'}))
+    remove_tags.append(dict(name = 'div', attrs = {'class' : 'Social-Buttons'}))
+
+    feeds = [
+                 (u'Wszystkie', u'http://www.spidersweb.pl/feed'),
+                 (u'Miniblog', u'http://www.spidersweb.pl/category/miniblog/feed'),
+                 (u'Przemysław Pająk', u'http://www.spidersweb.pl/author/przemekspider/feed'),
+                 (u'Ewa Lalik', u'http://www.spidersweb.pl/author/ewqaewqa/feed'),
+                 (u'Przemysław Śmit', u'http://www.spidersweb.pl/author/smitu/feed'),
+                 (u'Paweł Okopien', u'http://www.spidersweb.pl/author/okopien/feed'),
+                 (u'Daniel Cieślak', u'http://www.spidersweb.pl/author/daniel_cieslak/feed'),
+                 (u'Maciej Gajewski', u'http://www.spidersweb.pl/author/amat3ur/feed'),
+                 (u'Jakub Kralka', u'http://www.spidersweb.pl/author/jakubkralka/feed'),
+                 (u'Tomasz Krela', u'http://www.spidersweb.pl/author/tomaszkrela/feed'),
+                 (u'Mateusz Nowak', u'http://www.spidersweb.pl/author/newwalk/feed'),
+                 (u'Blog Forum', u'http://www.spidersweb.pl/blogforum-feed')
+                ]
+				 
+  
