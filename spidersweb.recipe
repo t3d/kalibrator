@@ -17,16 +17,17 @@ class spidersweb(BasicNewsRecipe):
     description =u'Opinie i analizy na temat technologii'
     masthead_url='http://www.spidersweb.pl/wp-content/themes/spidersweb/images/logo/Logo-Mobile2.png'
     remove_empty_feeds= True
-    oldest_article = 1 #do testów polecam ustawianie 7
+    oldest_article = 1
     max_articles_per_feed = 100
     remove_javascript=True
     no_stylesheets=True
+    #thanks Artur:
+    use_embedded_content = False
 
     preprocess_regexps = [(re.compile('<div class="Author">'), lambda match: '<br /><div class="Author">') ]
 	
     keep_only_tags =[]
     keep_only_tags.append(dict(name = 'article', attrs = {'id' : 'Post'}))
-	#linijka niżej ma przechwytywać tekst pana Pająka, które w całości są umieszczane na jego kanale RSS
     keep_only_tags.append(dict(name = 'div', attrs = {'id' : 'feedContent'}))
 
     remove_tags =[]
