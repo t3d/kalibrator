@@ -81,8 +81,21 @@ class Gazeta_Wyborcza(BasicNewsRecipe):
             return soup
 
     def print_version(self, url):
-        if 'http://wyborcza.biz/biznes/' not in url:
-            return url
+        if url.count('rss.feedsportal.com'):
+            u = url.find('wyborcza0Bpl')
+            u = 'http://www.wyborcza.pl/' + url[u + 11:]
+            u = u.replace('0C', '/')
+            u = u.replace('A', '')
+            u = u.replace('0E', '-')
+            u = u.replace('0H', ',')
+            u = u.replace('0I', '_')
+            u = u.replace('0B', '.')
+            u = u.replace('/1,', '/2029020,')
+            u = u.replace('/story01.htm', '')
+            print(u)
+            return u
+        elif 'http://wyborcza.pl/1' in url:
+            return url.replace('http://wyborcza.pl/1', 'http://wyborcza.pl/2029020')
         else:
             return url.replace('http://wyborcza.biz/biznes/1', 'http://wyborcza.biz/biznes/2029020')
 
