@@ -6,6 +6,7 @@ i ich konwersją oraz przenoszeniem na czytniki ebooków.
     Strona projektu Calibre:
     http://calibre-ebook.com/
 
+
 INSTALACJA
 =======================================================================
 Aby korzystać z reguł, należy pobrać pliki .recipe na dysk komputera,
@@ -16,11 +17,7 @@ Następnie można ustawić zasady pobierania wiadomości w okienku
 "Zaplanuj pobieranie aktualności". 
 
 Część reguł z tego pakietu została już dołączona do pakietu reguł
-preinstalowanych w Calibre (vide dział REGUŁY ZINTEGROWANE Z CALIBRE).
-
-Oprócz poprawnie działających reguł w repozytorium znajduje się także
-katalog beta, zawierający reguły z różnych powodów nie funkcjonujące 
-poprawnie lub niedokończone.
+preinstalowanych w Calibre.
 
 
 OPIS REGUŁ
@@ -58,40 +55,10 @@ rzeczpospolita.recipe  - Rzeczpospolita Online
 swiatkindle.recipe     - Polski blog o czytnikach
 wysokie_obcasy.recipe  - Serwis sobotniego dodatku do Gazety Wyborczej
 
-REGUŁY ZINTEGROWANE Z CALIBRE
-=======================================================================
-di.recipe              - od Calibre 0.6.41
-eclicto.recipe         - od Calibre 0.6.41
-eksiazki.recipe        - od Calibre 0.6.41
-frazpc.recipe          - od Calibre 0.7.24
-fronda.recipe          - od Calibre 0.6.46
-gazeta_pomorska.recipe - od Calibre 0.7.20
-interia_fakty.recipe   - od Calibre 0.6.41
-interia_sport.recipe   - od Calibre 0.6.41
-legeartis.recipe       - od Calibre 0.6.41
-legitymizm.recipe      - od Calibre 0.6.41
-kopalniawiedzy.recipe  - od Calibre 0.7.45
-korepondent.recipe     - od Calibre 0.7.45
-michalkiewicz.recipe   - od Calibre 0.6.41
-osnews_pl.recipe       - od Calibre 0.7.47
-rmf24_ESKN.recipe      - od Calibre 0.7.20
-rmf24_fakty.recipe     - od Calibre 0.7.20
-rmf24_opinie.recipe    - od Calibre 0.7.21
-rzeczpospolita.recipe  - od Calibre 0.8.1
-swiatkindle.recipe     - od Calibre 0.7.47
-
-REGUŁY TESTOWE
-=======================================================================
-chip_pl.recipe         - Aktualności z chip.pl
-esensja.recipe         - Kanały RSS ze strony esensja.pl
-nczas.recipe           - Wydanie internetowe tygodnika Najwyższy Czas!
-pclab_pl.recipe        - Aktualności z pclab.pl
-runa.recipe            - Blog Agencji Wydawniczej Runa
-
 
 KONTAKT
 =======================================================================
 Wszelkie sugestie i uwagi proszę zgłaszać na
 http://forum.eksiazki.org/recepty-f172/kalibrator-repozytorium-z-plikami-recipe-t11778.html
-lub do bugzilli projektu eGazeciarz:
+lub do phabricatora projektu eGazeciarz:
 http://egazeciarz.pl/bugzilla/
