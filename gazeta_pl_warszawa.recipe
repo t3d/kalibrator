@@ -11,10 +11,10 @@ from calibre.web.feeds.news import BasicNewsRecipe
 import re
 
 class gw_wawa(BasicNewsRecipe):
-    title          = u'Gazeta Wyborcza Warszawa'
+    title          = u'Gazeta.pl Warszawa'
     __author__ = 'teepel <teepel44@gmail.com> based on GW from fenuks'
     language       = 'pl'
-    description ='Wiadomości z warszawskiego wydania Gazety Wyborczej'
+    description ='Wiadomości z Warszawy na portalu Gazeta.pl.'
     category='newspaper'
     publication_type = 'newspaper'
     masthead_url='http://bi.gazeta.pl/im/3/4089/m4089863.gif'
