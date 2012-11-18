@@ -84,12 +84,12 @@ class programtvRecipe(BasicNewsRecipe):
                 for li in tag.findAll(attrs = {'class' : ['odd', 'even', 'first odd']}):
                     a = li.find('a', href = True)
                     title_time = li.find(attrs={'class': 'time'})
-            if a is None:
+                    if a is None:
                         continue
-            date = self.tag_to_string(title_time)
-                self.log('\t\t\tTIME:', title_time)
+                    date = self.tag_to_string(title_time)
+                    self.log('\t\t\tTIME:', title_time)
                     title_name = self.tag_to_string(a)
-            title = date + ' - '+ title_name
+                    title = date + ' - '+ title_name
                     url = a.get('href', False)
                     if not url or not title:
                         continue
