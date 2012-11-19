@@ -23,16 +23,11 @@ class KrytykaPolitycznaRecipe(BasicNewsRecipe):
     simultaneous_downloads = 3
 
     keep_only_tags =[]
-    keep_only_tags.append(dict(name = 'td', attrs = {'class' : 'contentheading'}))
-    keep_only_tags.append(dict(name = 'td', attrs = {'valign' : 'top'}))
+    keep_only_tags.append(dict(name = 'h1', attrs = {'class' : 'print-title'}))
+    keep_only_tags.append(dict(name = 'div', attrs = {'class' : 'print-content'}))
 
     remove_tags =[]
-    remove_tags.append(dict(name = 'ul'))
-    remove_tags.append(dict(name = 'h3'))
-    remove_tags.append(dict(name = 'div', attrs = {'id' : 'comment'}))
-    remove_tags.append(dict(name = 'img'))
-    remove_tags.append(dict(name = 'td', attrs = {'valign' : 'top', 'align' : 'left'}))
-    remove_tags.append(dict(name = 'td', attrs = {'class' : 'createdate'}))
+    remove_tags.append(dict(attrs = {'class' : ['field field-type-text field-field-story-switch', 'field field-type-filefield field-field-story-temp' , 'field field-type-text field-field-story-author', 'field field-type-text field-field-story-lead-switch']}))
 
     extra_css = '''
                     body {font-family: verdana, arial, helvetica, geneva, sans-serif ;}
@@ -40,14 +35,16 @@ class KrytykaPolitycznaRecipe(BasicNewsRecipe):
                     '''    
 
     feeds          = [
-                            ('Publicystyka', 'http://feeds.feedburner.com/KrytykaPolityczna-Publicystyka'),
-                            ('Felietony', 'http://feeds.feedburner.com/KrytykaPolityczna-Felietony'),
-                            ('Newsy', 'http://feeds.feedburner.com/NewsyKrytykiPolitycznej'),
-                            ('Zaproszenia', 'feed://feeds.feedburner.com/KrytykaPolityczna-Zaproszenia'),
-                            ('Kluby KP', 'feed://feeds.feedburner.com/KrytykaPolityczna-KlubyKp'),
-                            ('Wydawnictwo KP', 'feed://feeds.feedburner.com/WydawnictwoKrytykiPolitycznej'),
+                            ('Wszystkie', 'http://www.krytykapolityczna.pl/rss.xml')
                           ]
-    
+      
+    def print_version(self, url):
+        soup = self.index_to_soup(url)
+        print_ico = soup.find(attrs = {'class' : 'print-page'})
+        print_uri = print_ico['href']
+        self.log('PRINT', print_uri)
+        return 'http://www.krytykapolityczna.pl/' + print_uri
+
     def preprocess_html(self, soup):
         for alink in soup.findAll('a'):
             if alink.string is not None:
