@@ -8,13 +8,12 @@ appfunds.blogspot.com
 '''
 
 from calibre.web.feeds.news import BasicNewsRecipe
-import re
 
 class app_funds(BasicNewsRecipe):
     title          = u'APP Funds'
     __author__ = 'teepel <teepel44@gmail.com>'
     language       = 'pl'
-    description ='Wiadomości z bloga appfunds.blogspot.com'
+    description ='Blog inwestora dla inwestorów i oszczędzających'
     INDEX='http://appfunds.blogspot.com'
     remove_empty_feeds= True
     oldest_article = 7
