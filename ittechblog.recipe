@@ -19,7 +19,7 @@ class ittechblog(BasicNewsRecipe):
     remove_javascript=True
     no_stylesheets=True
     use_embedded_content = False
-	
+
     keep_only_tags =[]
     keep_only_tags.append(dict(name = 'div', attrs = {'id' : 'Content'}))
 

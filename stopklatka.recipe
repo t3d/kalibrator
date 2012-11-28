@@ -29,7 +29,7 @@ class stopklatka(AutomaticNewsRecipe):
                             (u'Wydarzenia DVD', u'http://rss.stopklatka.pl/wydarzenia_dvd.rss'),
                             (u'Najważniejsze wydarzenia', u'http://rss.stopklatka.pl/wydarzenia_najwazniejsze.rss'),
                             (u'Wydarzenia niezależne', u'http://rss.stopklatka.pl/wydarzenia_off.rss'),
-	    ]
+            ]
 
     #keep_only_tags =[]
 
@@ -50,5 +50,3 @@ class stopklatka(AutomaticNewsRecipe):
         segments = urlPart.split('&')
         urlPart2 = segments[0]
         return 'http://www.stopklatka.pl/narzedzia/drukuj.asp?typ=wydarzenie&id=' + urlPart2
-
-    

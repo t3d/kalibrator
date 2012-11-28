@@ -50,45 +50,45 @@ class recipeMagic(BasicNewsRecipe):
         section = ''
 
         for item in soup.findAll('item') :
-                section = self.tag_to_string(item.category)
-                if not articles.has_key(section) :
-                    sections.append(section)
-                    articles[section] = []
-                article_url = self.tag_to_string(item.guid)
-                article_title = self.tag_to_string(item.title)
-                article_date = self.tag_to_string(item.pubDate) 
-                article_description = self.tag_to_string(item.description)
-                articles[section].append( { 'title' : article_title,  'url' : article_url, 'date' : article_date, 'description' : article_description })
+            section = self.tag_to_string(item.category)
+            if not articles.has_key(section) :
+                sections.append(section)
+                articles[section] = []
+            article_url = self.tag_to_string(item.guid)
+            article_title = self.tag_to_string(item.title)
+            article_date = self.tag_to_string(item.pubDate)
+            article_description = self.tag_to_string(item.description)
+            articles[section].append( { 'title' : article_title,  'url' : article_url, 'date' : article_date, 'description' : article_description })
 
         for section in sections :
-             feeds.append((section, articles[section]))
-        return feeds 
+            feeds.append((section, articles[section]))
+        return feeds
 
-    def append_page(self, soup, appendtag):    
+    def append_page(self, soup, appendtag):
         tags = soup.find('div', attrs={'class':'navibar'})
         for tag1 in tags.findAll('a') :
-           if tag1.string == u'Trening':
-              section = 'trening/'
-           elif tag1.string == u'Dieta':
-              section = 'dieta/'
-           elif tag1.string == u'Zdrowie':
-              section = 'zdrowie/'
-           elif tag1.string == u'Sprzęt':
-              section = 'sprzet/'
-           elif tag1.string == u'Ludzie':
-              section = 'ludzie/'
-           elif tag1.string == u'Biegi':
-              section = 'biegi/'
+            if tag1.string == u'Trening':
+                section = 'trening/'
+            elif tag1.string == u'Dieta':
+                section = 'dieta/'
+            elif tag1.string == u'Zdrowie':
+                section = 'zdrowie/'
+            elif tag1.string == u'Sprzęt':
+                section = 'sprzet/'
+            elif tag1.string == u'Ludzie':
+                section = 'ludzie/'
+            elif tag1.string == u'Biegi':
+                section = 'biegi/'
 
         apage = soup.find('div', attrs={'class':'stronice'})
         if apage is not None:
-          for nexturl in apage.findAll('a'):
-             if nexturl.string in ['2','3','4','5', '6', '7', '8', '9']:
-                soup2 = self.index_to_soup('http://www.runners-world.pl/' + section + nexturl['href'])
-                pagetext = soup2.findAll('div', attrs={'class':'kol-670 big'})
-                for tag in pagetext:
-                    pos = len(appendtag.contents)
-                    appendtag.insert(pos, tag)
+            for nexturl in apage.findAll('a'):
+                if nexturl.string in ['2','3','4','5', '6', '7', '8', '9']:
+                    soup2 = self.index_to_soup('http://www.runners-world.pl/' + section + nexturl['href'])
+                    pagetext = soup2.findAll('div', attrs={'class':'kol-670 big'})
+                    for tag in pagetext:
+                        pos = len(appendtag.contents)
+                        appendtag.insert(pos, tag)
 
         while appendtag.find('div', attrs={'class': ['stronice', 'kol-160l', 'navibar', 'art-tagi', 'box-rek-336', 'Ocena-box', 'oh small']}) is not None:
             appendtag.find('div', attrs={'class': ['stronice', 'kol-160l', 'navibar', 'art-tagi', 'box-rek-336', 'Ocena-box', 'oh small']}).replaceWith('')

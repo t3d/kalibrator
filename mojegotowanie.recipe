@@ -21,13 +21,13 @@ class mojegotowanie(BasicNewsRecipe):
     max_articles_per_feed = 100
     remove_javascript=True
     no_stylesheets=True
-	
+
     keep_only_tags =[]
     keep_only_tags.append(dict(name = 'div', attrs = {'class' : 'content'}))
 
     feeds = [(u'Artykuły', u'http://mojegotowanie.pl/rss/feed/artykuly'),
                  (u'Przepisy', u'http://mojegotowanie.pl/rss/feed/przepisy')]
-				 
+
     def parse_feeds(self):
         feeds = BasicNewsRecipe.parse_feeds(self)
         for feed in feeds:
@@ -40,7 +40,7 @@ class mojegotowanie(BasicNewsRecipe):
         link = article.get('link')
         if 'Clayout0Cset0Cprint0' in link:
             return link
-		
+
     def print_version(self, url):
         segment = url.split('/')
         URLPart = segment[-2]

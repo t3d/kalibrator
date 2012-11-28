@@ -23,5 +23,5 @@ class gofin(AutomaticNewsRecipe):
     remove_javascript=True
     no_stylesheets=True
     auto_cleanup = True
-    
+
     feeds          = [(u'Podatki', u'http://www.rss.gofin.pl/podatki.xml'), (u'Prawo Pracy', u'http://www.rss.gofin.pl/prawopracy.xml'), (u'Rachunkowo\u015b\u0107', u'http://www.rss.gofin.pl/rachunkowosc.xml'), (u'Sk\u0142adki, zasi\u0142ki, emerytury', u'http://www.rss.gofin.pl/zasilki.xml'),(u'Firma', u'http://www.rss.gofin.pl/firma.xml'), (u'Prawnik radzi', u'http://www.rss.gofin.pl/prawnikradzi.xml')]

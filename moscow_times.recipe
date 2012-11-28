@@ -48,8 +48,8 @@ class Moscowtimes(BasicNewsRecipe):
     def preprocess_html(self, soup):
         for lnk in soup.findAll('a'):
             if lnk.string is not None:
-               ind = self.tag_to_string(lnk)
-               lnk.replaceWith(ind)
+                ind = self.tag_to_string(lnk)
+                lnk.replaceWith(ind)
         return soup
 
     def print_version(self, url):
@@ -63,6 +63,5 @@ class Moscowtimes(BasicNewsRecipe):
         if div:
             a = div.find('a')
             if a :
-               cover_url = 'http://www.themoscowtimes.com' + a.img['src']
+                cover_url = 'http://www.themoscowtimes.com' + a.img['src']
         return cover_url
-

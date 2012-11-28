@@ -24,34 +24,34 @@ class programtvRecipe(BasicNewsRecipe):
 
     keep_only_tags =[]
     keep_only_tags.append(dict(name = 'div', attrs = {'class' : 'mod mod_program'}))
-  
+
     remove_tags = []
     remove_tags.append(dict(name = 'ul'))
     remove_tags.append(dict(attrs = {'class' : 'channel_bar'}))
     remove_tags_after =[dict(attrs = {'class' : 'txt' })]
     def parse_index(self):
- 
-    	channel_id = '1,TVP_1'
-    	today = datetime.date.today()
 
-    	one_day = datetime.timedelta(days=1)
-    	two_days = datetime.timedelta(days=2)
-    	three_days = datetime.timedelta(days=3)
-    	four_days = datetime.timedelta(days=4)
-    	five_days = datetime.timedelta(days=5)
-    	six_days = datetime.timedelta(days=6)
-    	seven_days = datetime.timedelta(days=7)
-     
-    	day_one = today
-    	day_two = today + one_day
-    	day_three = today + two_days
-    	day_four = today + three_days
-    	day_five = today + four_days
-    	day_six = today + five_days
-    	day_seven = today + six_days
-    	day_eight = today + seven_days
-    
-    	Weekday = ['Poniedzialek', 'Wtorek', 'Sroda', 'Czwartek', 'Piatek', 'Sobota', 'Niedziela']
+        channel_id = '1,TVP_1'
+        today = datetime.date.today()
+
+        one_day = datetime.timedelta(days=1)
+        two_days = datetime.timedelta(days=2)
+        three_days = datetime.timedelta(days=3)
+        four_days = datetime.timedelta(days=4)
+        five_days = datetime.timedelta(days=5)
+        six_days = datetime.timedelta(days=6)
+        seven_days = datetime.timedelta(days=7)
+
+        day_one = today
+        day_two = today + one_day
+        day_three = today + two_days
+        day_four = today + three_days
+        day_five = today + four_days
+        day_six = today + five_days
+        day_seven = today + six_days
+        day_eight = today + seven_days
+
+        Weekday = ['Poniedzialek', 'Wtorek', 'Sroda', 'Czwartek', 'Piatek', 'Sobota', 'Niedziela']
         self.log('\t\tDate:', day_one)
 
         feeds = []
@@ -68,35 +68,35 @@ class programtvRecipe(BasicNewsRecipe):
 ('%s %s' % (Weekday[datetime.date.weekday(day_six)],day_six), 'http://tv.gazeta.pl/program_tv/0,110298,8700474,,,%s,3,%s.html' % (day_six, channel_id))
 ,
 ('%s %s' % (Weekday[datetime.date.weekday(day_seven)],day_seven), 'http://tv.gazeta.pl/program_tv/0,110298,8700474,,,%s,3,%s.html' % (day_seven, channel_id))
-			  ]:
+                          ]:
             articles = self.nz_parse_section(url)
             if articles:
-               feeds.append((title, articles))
+                feeds.append((title, articles))
         return feeds
-        
+
     def nz_parse_section(self, url):
-            soup = self.index_to_soup(url)
-            div = soup.find(attrs={'class': 'body'})
+        soup = self.index_to_soup(url)
+        div = soup.find(attrs={'class': 'body'})
 
-            current_articles = []
-            for tag in div.findAllNext('ul'):
-                self.log('\t\t\tTIME:', tag)
-                for li in tag.findAll(attrs = {'class' : ['odd', 'even', 'first odd']}):
-                    a = li.find('a', href = True)
-                    title_time = li.find(attrs={'class': 'time'})
-		    if a is None:
-                        continue
-		    date = self.tag_to_string(title_time)
-       		    self.log('\t\t\tTIME:', title_time)
-                    title_name = self.tag_to_string(a)
-		    title = date + ' - '+ title_name
-                    url = a.get('href', False)
-                    if not url or not title:
-                        continue
-                    if url.startswith('/'):
-                         url = 'http://tv.gazeta.pl'+url
-                    self.log('\t\tFound article:', title)
-                    self.log('\t\t\t', url)
-                    current_articles.append({'title': title, 'url': url, 'description':'', 'date':''})
+        current_articles = []
+        for tag in div.findAllNext('ul'):
+            self.log('\t\t\tTIME:', tag)
+            for li in tag.findAll(attrs = {'class' : ['odd', 'even', 'first odd']}):
+                a = li.find('a', href = True)
+                title_time = li.find(attrs={'class': 'time'})
+                if a is None:
+                    continue
+                date = self.tag_to_string(title_time)
+                self.log('\t\t\tTIME:', title_time)
+                title_name = self.tag_to_string(a)
+                title = date + ' - '+ title_name
+                url = a.get('href', False)
+                if not url or not title:
+                    continue
+                if url.startswith('/'):
+                    url = 'http://tv.gazeta.pl'+url
+                self.log('\t\tFound article:', title)
+                self.log('\t\t\t', url)
+                current_articles.append({'title': title, 'url': url, 'description':'', 'date':''})
 
-            return current_articles
+        return current_articles

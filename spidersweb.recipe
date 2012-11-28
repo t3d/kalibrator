@@ -25,7 +25,7 @@ class spidersweb(BasicNewsRecipe):
     use_embedded_content = False
 
     preprocess_regexps = [(re.compile('<div class="Author">'), lambda match: '<br /><div class="Author">') ]
-	
+
     keep_only_tags =[]
     keep_only_tags.append(dict(name = 'article', attrs = {'id' : 'Post'}))
     keep_only_tags.append(dict(name = 'div', attrs = {'id' : 'feedContent'}))
@@ -49,5 +49,3 @@ class spidersweb(BasicNewsRecipe):
                  (u'Mateusz Nowak', u'http://www.spidersweb.pl/author/newwalk/feed'),
                  (u'Blog Forum', u'http://www.spidersweb.pl/blogforum-feed')
                 ]
-				 
-  

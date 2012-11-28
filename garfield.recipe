@@ -84,38 +84,38 @@ class GoComics(BasicNewsRecipe):
             page_soup = self.index_to_soup(url)
             if page_soup:
                 try:
-                  strip_title = page_soup.find(name='div', attrs={'class':'top'}).h1.a.string
+                    strip_title = page_soup.find(name='div', attrs={'class':'top'}).h1.a.string
                 except:
-                  strip_title = 'Error - no Title found'
+                    strip_title = 'Error - no Title found'
                 try:
-                  date_title = page_soup.find('ul', attrs={'class': 'feature-nav'}).li.string
-                  if not date_title:
-                      date_title = page_soup.find('ul', attrs={'class': 'feature-nav'}).li.string
+                    date_title = page_soup.find('ul', attrs={'class': 'feature-nav'}).li.string
+                    if not date_title:
+                        date_title = page_soup.find('ul', attrs={'class': 'feature-nav'}).li.string
                 except:
-                  date_title = 'Error - no Date found'
+                    date_title = 'Error - no Date found'
                 title = strip_title + ' - ' + date_title
                 for i in range(2):
-                  try:
-                    strip_url_date = page_soup.find(name='div', attrs={'class':'top'}).h1.a['href']
-                    break #success - this is normal exit
-                  except:
-                    strip_url_date = None
-                    continue #try to get strip_url_date again
+                    try:
+                        strip_url_date = page_soup.find(name='div', attrs={'class':'top'}).h1.a['href']
+                        break #success - this is normal exit
+                    except:
+                        strip_url_date = None
+                        continue #try to get strip_url_date again
                 for i in range(2):
-                  try:
-                    prev_strip_url_date = page_soup.find('a', attrs={'class': 'prev'})['href']
-                    break #success - this is normal exit
-                  except:
-                    prev_strip_url_date = None
-                    continue #try to get prev_strip_url_date again
+                    try:
+                        prev_strip_url_date = page_soup.find('a', attrs={'class': 'prev'})['href']
+                        break #success - this is normal exit
+                    except:
+                        prev_strip_url_date = None
+                        continue #try to get prev_strip_url_date again
                 if strip_url_date:
-                  page_url = 'http://www.gocomics.com' + strip_url_date
+                    page_url = 'http://www.gocomics.com' + strip_url_date
                 else:
-                  continue
+                    continue
                 if prev_strip_url_date:
-                  prev_page_url = 'http://www.gocomics.com' + prev_strip_url_date
+                    prev_page_url = 'http://www.gocomics.com' + prev_strip_url_date
                 else:
-                  continue
+                    continue
             current_articles.append({'title': title, 'url': page_url, 'description':'', 'date':''})
             url = prev_page_url
         current_articles.reverse()
@@ -145,5 +145,5 @@ class GoComics(BasicNewsRecipe):
                     img {max-width:100%; min-width:100%;}
                     p{font-family:Arial,Helvetica,sans-serif;font-size:small;}
                     body{font-family:Helvetica,Arial,sans-serif;font-size:small;}
-		'''
+                '''
 

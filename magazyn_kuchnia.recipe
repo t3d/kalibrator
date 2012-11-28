@@ -90,39 +90,39 @@ class forbes_pl(BasicNewsRecipe):
     def append_page(self, soup, appendtag):
         pager = soup.find('div', attrs={'class':'navigation'})
         if pager:
-           a = pager.find('a', attrs = {'class' : 'next'})
-           a_prev = pager.find('a', attrs = {'class' : 'prev'})
-           if a:
-              nexturl = a['href']
-              soup2 = self.index_to_soup(nexturl)
-              pagetext = soup2.find('div', attrs = {'id' : 'gazeta_article'})
-              section_title = soup2.find(attrs = {'class' : 'artTitle'})
-              article_title = pagetext.find('h1')
-              article_lead = pagetext.find(attrs = {'id' : 'gazeta_article_lead'})
-              article_image = pagetext.find(attrs = {'id' : 'gazeta_article_image'})
-              article_content = pagetext.find(attrs = {'id' : 'gazeta_article_body'})
-              one_more = soup2.find('a', attrs={'class':'see-one-more-time'})
-              if one_more is None:
-                if 'Polecamy' in a_prev['href']:
-                      for first_page_content in [section_title, article_lead]:
-                          first_page_content.extract()
-                          pos = len(appendtag.contents)
-                          appendtag.insert(pos, first_page_content)
+            a = pager.find('a', attrs = {'class' : 'next'})
+            a_prev = pager.find('a', attrs = {'class' : 'prev'})
+            if a:
+                nexturl = a['href']
+                soup2 = self.index_to_soup(nexturl)
+                pagetext = soup2.find('div', attrs = {'id' : 'gazeta_article'})
+                section_title = soup2.find(attrs = {'class' : 'artTitle'})
+                article_title = pagetext.find('h1')
+                article_lead = pagetext.find(attrs = {'id' : 'gazeta_article_lead'})
+                article_image = pagetext.find(attrs = {'id' : 'gazeta_article_image'})
+                article_content = pagetext.find(attrs = {'id' : 'gazeta_article_body'})
+                one_more = soup2.find('a', attrs={'class':'see-one-more-time'})
+                if one_more is None:
+                    if 'Polecamy' in a_prev['href']:
+                        for first_page_content in [section_title, article_lead]:
+                            first_page_content.extract()
+                            pos = len(appendtag.contents)
+                            appendtag.insert(pos, first_page_content)
 
-                for content in [article_title, article_image, article_content]:
-                      content.extract()
-                      pos = len(appendtag.contents)
-                      appendtag.insert(pos, content)
-                           
-                self.append_page(pagetext, appendtag)
+                    for content in [article_title, article_image, article_content]:
+                        content.extract()
+                        pos = len(appendtag.contents)
+                        appendtag.insert(pos, content)
+
+                    self.append_page(pagetext, appendtag)
         else:
-              pagetext = soup.find('div', attrs = {'id' : 'gazeta_article'})
-              section_title = soup.find(attrs = {'class' : 'artTitle'})
-              article_title = pagetext.find('h1')
-              article_lead = pagetext.find(attrs = {'id' : 'gazeta_article_lead'})
-              article_image = pagetext.find(attrs = {'id' : 'gazeta_article_image'})
-              article_content = pagetext.find(attrs = {'id' : 'gazeta_article_body'})
-              for content in [section_title, article_title, article_image, article_content]:
-                  content.extract()
-                  pos = len(appendtag.contents)
-                  appendtag.insert(pos, content)
+            pagetext = soup.find('div', attrs = {'id' : 'gazeta_article'})
+            section_title = soup.find(attrs = {'class' : 'artTitle'})
+            article_title = pagetext.find('h1')
+            article_lead = pagetext.find(attrs = {'id' : 'gazeta_article_lead'})
+            article_image = pagetext.find(attrs = {'id' : 'gazeta_article_image'})
+            article_content = pagetext.find(attrs = {'id' : 'gazeta_article_body'})
+            for content in [section_title, article_title, article_image, article_content]:
+                content.extract()
+                pos = len(appendtag.contents)
+                appendtag.insert(pos, content)

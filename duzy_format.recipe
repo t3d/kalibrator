@@ -19,115 +19,115 @@ import os, os.path, urllib, re
 from hashlib import md5
 
 class duzyformatrss(BasicNewsRecipe):
-	__author__ = u'Lukk, intromatyk, Lukasz Grabczewski'
-	title = u'Duży Format RSS'
-	description = u'Duży Format przez RSS'
-	language = 'pl'
-	publisher = 'Agora SA'
-	publication_type = 'magazine'
-	timefmt = ' [%Y-%m-%d]'
-	
-	conversion_options = {
-		'authors' : 'wyborcza.pl'
-		,'publisher' : publisher
-		,'language' : language
-		,'preserve_cover_aspect_ratio': True
-	}
-	
-	# check articles in last days
-	if (TRACK_FEEDS):
-		oldest_article = 30
-	else:
-		oldest_article = 7
-	
-	max_articles_per_feed = 100
-	simultaneous_downloads = 20
-	timeout = 30
-	use_embedded_content = False
-	remove_empty_feeds = True
-	no_stylesheets = True
-	remove_javascript = True
-	
-	remove_tags =[]
-	# remove links from articles
-	remove_tags.append(dict(name = 'a', attrs = {'href' : 'http://wyborcza.pl/0,0.html'}))
-	# remove mailto links
-	remove_tags.append(dict(name = 'p', attrs = {'class' : 'txt_upl'})) 	
+    __author__ = u'Lukk, intromatyk, Lukasz Grabczewski'
+    title = u'Duży Format RSS'
+    description = u'Duży Format przez RSS'
+    language = 'pl'
+    publisher = 'Agora SA'
+    publication_type = 'magazine'
+    timefmt = ' [%Y-%m-%d]'
 
-	# bold lead
-	extra_css = '.lead {font-weight: bold; }'
+    conversion_options = {
+            'authors' : 'wyborcza.pl'
+            ,'publisher' : publisher
+            ,'language' : language
+            ,'preserve_cover_aspect_ratio': True
+    }
 
-	# official RSS link
-	feeds = [(u'Duży Format', u'http://rss.gazeta.pl/pub/rss/gazetawyborcza_duzyformat.xml')]
+    # check articles in last days
+    if (TRACK_FEEDS):
+        oldest_article = 30
+    else:
+        oldest_article = 7
 
-	# fix images for epub (harmless for mobi)
-	def postprocess_html(self, soup, first_fetch):
-		return self.adeify_images(soup)
+    max_articles_per_feed = 100
+    simultaneous_downloads = 20
+    timeout = 30
+    use_embedded_content = False
+    remove_empty_feeds = True
+    no_stylesheets = True
+    remove_javascript = True
 
-	# newest cover
-	def get_cover_url(self):
-		soup = self.index_to_soup('http://newsletter.gazeta.pl/newsletter/3372470,107123,0.html')
-		tr = soup.find('h2', text=re.compile('W najnowszym numerze')).parent.parent.parent
-		img = tr.find('img')['src']
-		cover_url = img.replace('T.', 'X.')
-		return cover_url
-		
-	# change url to print version
-	def print_version(self,url):
-		baseURL='http://wyborcza.pl'
-		segments = url.split('0H')
-		subPath= '/2029020,'
-		articleURL1 = segments[1]
-		articleURL1 = articleURL1.replace('A', '')
-		articleURL2 = segments[2]
-		articleURL2 = articleURL2.replace('A', '')
+    remove_tags =[]
+    # remove links from articles
+    remove_tags.append(dict(name = 'a', attrs = {'href' : 'http://wyborcza.pl/0,0.html'}))
+    # remove mailto links
+    remove_tags.append(dict(name = 'p', attrs = {'class' : 'txt_upl'}))
 
-		printVerString=articleURL1 + ',' + articleURL2
-		s=  baseURL + subPath + printVerString + '.html'
-		return s
+    # bold lead
+    extra_css = '.lead {font-weight: bold; }'
 
-	'''
-	track downloaded articles
-	copyright Pahan
-	http://www.mobileread.com/forums/showpost.php?p=1295505
-	'''
-	def parse_feeds(self):
-		feeds = BasicNewsRecipe.parse_feeds(self)
+    # official RSS link
+    feeds = [(u'Duży Format', u'http://rss.gazeta.pl/pub/rss/gazetawyborcza_duzyformat.xml')]
 
-		if (TRACK_FEEDS):
-			recipe_dir = os.path.join(config_dir,'recipes')
-			hash_dir = os.path.join(recipe_dir,'recipe_storage')
-			feed_dir = os.path.join(hash_dir,self.title.encode('utf-8').replace('/',':'))
-			if not os.path.isdir(feed_dir):
-				os.makedirs(feed_dir,mode=CONFIG_DIR_MODE)
+    # fix images for epub (harmless for mobi)
+    def postprocess_html(self, soup, first_fetch):
+        return self.adeify_images(soup)
 
-			for feed in feeds:
-				feed_hash = urllib.quote(feed.title.encode('utf-8'),safe='')
-				feed_fn = os.path.join(feed_dir,feed_hash)
+    # newest cover
+    def get_cover_url(self):
+        soup = self.index_to_soup('http://newsletter.gazeta.pl/newsletter/3372470,107123,0.html')
+        tr = soup.find('h2', text=re.compile('W najnowszym numerze')).parent.parent.parent
+        img = tr.find('img')['src']
+        cover_url = img.replace('T.', 'X.')
+        return cover_url
 
-				past_items = set()
-				if os.path.exists(feed_fn):
-					with file(feed_fn) as f:
-						for h in f:
-							past_items.add(h.strip())
-						   
-				cur_items = set()
-				for article in feed.articles[:]:
-					item_hash = md5()
-					if article.content: item_hash.update(article.content.encode('utf-8'))
-					if article.summary: item_hash.update(article.summary.encode('utf-8'))
-					item_hash = item_hash.hexdigest()
-					if article.url:
-						item_hash = article.url + ':' + item_hash
-					cur_items.add(item_hash)
-					if item_hash in past_items:
-						feed.articles.remove(article)
-				with file(feed_fn,'w') as f:
-					for h in cur_items:
-						f.write(h+'\n')
+    # change url to print version
+    def print_version(self,url):
+        baseURL='http://wyborcza.pl'
+        segments = url.split('0H')
+        subPath= '/2029020,'
+        articleURL1 = segments[1]
+        articleURL1 = articleURL1.replace('A', '')
+        articleURL2 = segments[2]
+        articleURL2 = articleURL2.replace('A', '')
 
-			remove = [f for f in feeds if len(f) == 0 and self.remove_empty_feeds]
-			for f in remove:
-				feeds.remove(f)
+        printVerString=articleURL1 + ',' + articleURL2
+        s=  baseURL + subPath + printVerString + '.html'
+        return s
 
-		return feeds
+    '''
+    track downloaded articles
+    copyright Pahan
+    http://www.mobileread.com/forums/showpost.php?p=1295505
+    '''
+    def parse_feeds(self):
+        feeds = BasicNewsRecipe.parse_feeds(self)
+
+        if (TRACK_FEEDS):
+            recipe_dir = os.path.join(config_dir,'recipes')
+            hash_dir = os.path.join(recipe_dir,'recipe_storage')
+            feed_dir = os.path.join(hash_dir,self.title.encode('utf-8').replace('/',':'))
+            if not os.path.isdir(feed_dir):
+                os.makedirs(feed_dir,mode=CONFIG_DIR_MODE)
+
+            for feed in feeds:
+                feed_hash = urllib.quote(feed.title.encode('utf-8'),safe='')
+                feed_fn = os.path.join(feed_dir,feed_hash)
+
+                past_items = set()
+                if os.path.exists(feed_fn):
+                    with file(feed_fn) as f:
+                        for h in f:
+                            past_items.add(h.strip())
+
+                cur_items = set()
+                for article in feed.articles[:]:
+                    item_hash = md5()
+                    if article.content: item_hash.update(article.content.encode('utf-8'))
+                    if article.summary: item_hash.update(article.summary.encode('utf-8'))
+                    item_hash = item_hash.hexdigest()
+                    if article.url:
+                        item_hash = article.url + ':' + item_hash
+                    cur_items.add(item_hash)
+                    if item_hash in past_items:
+                        feed.articles.remove(article)
+                with file(feed_fn,'w') as f:
+                    for h in cur_items:
+                        f.write(h+'\n')
+
+            remove = [f for f in feeds if len(f) == 0 and self.remove_empty_feeds]
+            for f in remove:
+                feeds.remove(f)
+
+        return feeds

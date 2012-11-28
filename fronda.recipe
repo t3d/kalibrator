@@ -71,7 +71,7 @@ class Fronda(BasicNewsRecipe):
             feeds.append((genName, articles[genName]))
         return feeds
 
-    keep_only_tags = [ 
+    keep_only_tags = [
         dict(name='div', attrs={'class':'yui-g'})
         ]
 

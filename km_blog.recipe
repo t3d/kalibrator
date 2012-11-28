@@ -25,7 +25,7 @@ class km_blog(BasicNewsRecipe):
     feeds          = [(u'blog', u'http://korwin-mikke.pl/blog/rss')]
 
     keep_only_tags =[]
-	#this line should show title of the article, but it doesnt work
+        #this line should show title of the article, but it doesnt work
     keep_only_tags.append(dict(name = 'div', attrs = {'class' : 'posts view'}))
     keep_only_tags.append(dict(name = 'div', attrs = {'class' : 'text'}))
     keep_only_tags.append(dict(name = 'h1'))

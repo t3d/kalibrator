@@ -35,7 +35,7 @@ class OSW_Recipe(BasicNewsRecipe):
     remove_tags =[]
     remove_tags.append(dict(name = 'table', attrs = {'id' : 'attachments'}))
     remove_tags.append(dict(name = 'div', attrs = {'class' : 'print-submitted'}))
-    
+
     feeds          = [(u'osw', u'http://www.osw.waw.pl/pl/rss.xml')]
 
     def print_version(self, url):

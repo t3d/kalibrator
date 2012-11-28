@@ -30,7 +30,7 @@ class programtvRecipe(BasicNewsRecipe):
                     {margin-top: 50px;
                     color:black;
                     text-align:justify;}
-                    '''    
+                    '''
 
     feeds          = [
                             ('Inne', 'http://egazeciarz.pl/index.php?option=com_content&view=category&id=87&format=feed&type=rss'),

@@ -21,22 +21,22 @@ class forbes_pl(BasicNewsRecipe):
 
     keep_only_tags =[]
     keep_only_tags.append(dict(attrs = {'class' : ['single_article', 'blue']}))
-    
+
     remove_tags =[dict(attrs = {'style' : 'margin-top: 18px;' })]
     remove_tags.append(dict(name = 'a', attrs = {'href' : re.compile(r',1$')}))
     remove_tags.append(dict(name = 'a', attrs = {'href' : re.compile(r',1.html$')}))
     remove_tags.append(dict(name = 'a', attrs = {'href' : re.compile(r'.aspx$')}))
- 
-    extra_css='''       img {max-width:30%; max-height:30%; display: block; margin-left: auto; margin-right: auto;} 
-    			h1 {text-align: center;}'''
+
+    extra_css='''       img {max-width:30%; max-height:30%; display: block; margin-left: auto; margin-right: auto;}
+                        h1 {text-align: center;}'''
 
     def parse_index(self):
         feeds = []
         for title, url in [('Wydarzenia', 'http://www.forbes.pl/wiadomosci/wydarzenia')
                           ]:
-	        articles = self.parse_pages(url)
+            articles = self.parse_pages(url)
         if articles:
-                feeds.append((title, articles))
+            feeds.append((title, articles))
         return feeds
 
     def parse_pages(self, pages):
@@ -50,7 +50,7 @@ class forbes_pl(BasicNewsRecipe):
                 date = self.tag_to_string(date)
                 date = date.split("|")[0]
                 if (date < self.yesterday):
-                   continue
+                    continue
                 a = link.find('a', href = True)
                 if a is None:
                     continue
@@ -64,13 +64,13 @@ class forbes_pl(BasicNewsRecipe):
         return current_articles
 
     def get_pages(self, url):
-        soup = self.index_to_soup(url) 
+        soup = self.index_to_soup(url)
         apage = soup.find('li', attrs={'id':'numb'})
         pages = []
         for n in range(1, self.pages_count):
             if apage is not None:
-               nexturl = soup.find('a', attrs={'title':'Strona: %s' % (n)})  
-               nexturl = 'http://www.forbes.pl'+nexturl['href']
-               nextsoup = self.index_to_soup(nexturl)
-               pages.append(nextsoup)
+                nexturl = soup.find('a', attrs={'title':'Strona: %s' % (n)})
+                nexturl = 'http://www.forbes.pl'+nexturl['href']
+                nextsoup = self.index_to_soup(nexturl)
+                pages.append(nextsoup)
         return pages

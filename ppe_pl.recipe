@@ -20,11 +20,11 @@ class ppeRecipe(BasicNewsRecipe):
     no_stylesheets = True
     remove_javascript = True
     simultaneous_downloads = 2
-   
+
     keep_only_tags =[]
     keep_only_tags.append(dict(name = 'div', attrs = {'class' : 'news-heading'}))
     keep_only_tags.append(dict(name = 'div', attrs = {'class' : 'tresc-poziom'}))
- 
+
     remove_tags =[]
     remove_tags.append(dict(name = 'div', attrs = {'class' : 'bateria1'}))
     remove_tags.append(dict(name = 'div', attrs = {'class' : 'bateria2'}))
@@ -35,7 +35,7 @@ class ppeRecipe(BasicNewsRecipe):
     remove_tags.append(dict(name = 'div', attrs = {'class' : 'links'}))
 
     remove_tags.append(dict(name = 'div', attrs = {'style' : 'padding: 4px'}))
-    
+
     feeds          = [
                             ('Newsy', 'feed://ppe.pl/rss/rss.xml'),
                            ]

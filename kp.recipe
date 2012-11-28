@@ -32,12 +32,12 @@ class KrytykaPolitycznaRecipe(BasicNewsRecipe):
     extra_css = '''
                     body {font-family: verdana, arial, helvetica, geneva, sans-serif ;}
                     td.contentheading{font-size: large; font-weight: bold;}
-                    '''    
+                    '''
 
     feeds          = [
                             ('Wszystkie', 'http://www.krytykapolityczna.pl/rss.xml')
                           ]
-      
+
     def print_version(self, url):
         soup = self.index_to_soup(url)
         print_ico = soup.find(attrs = {'class' : 'print-page'})
@@ -48,6 +48,6 @@ class KrytykaPolitycznaRecipe(BasicNewsRecipe):
     def preprocess_html(self, soup):
         for alink in soup.findAll('a'):
             if alink.string is not None:
-               tstr = alink.string
-               alink.replaceWith(tstr)
+                tstr = alink.string
+                alink.replaceWith(tstr)
         return soup
