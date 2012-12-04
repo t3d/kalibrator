@@ -1,0 +1,20 @@
+from calibre.web.feeds.news import BasicNewsRecipe
+
+class Historia_org_pl(BasicNewsRecipe):
+    title          = u'Historia.org.pl'
+    __author__        = 'fenuks, Artur Stachecki'
+    description   = u'history site'
+    cover_url      = 'http://lh3.googleusercontent.com/_QeRQus12wGg/TOvHsZ2GN7I/AAAAAAAAD_o/LY1JZDnq7ro/logo5.jpg'
+    category       = 'history'
+    language       = 'pl'
+    oldest_article = 8
+    remove_empty_feeds= True
+    no_stylesheets = True
+    use_embedded_content = True
+    max_articles_per_feed = 100
+
+    feeds          = [(u'Wszystkie', u'http://historia.org.pl/feed/')]
+
+
+    def print_version(self, url):
+        return url + '?tmpl=component&print=1&layout=default&page='
