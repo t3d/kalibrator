@@ -83,5 +83,7 @@ class Fronda(BasicNewsRecipe):
         dict(name='ul', attrs={'class':'comment-list'}),
         dict(name='ul', attrs={'class':'category'}),
         dict(name='p', attrs={'id':'comments-disclaimer'}),
+        dict(name='div', attrs={'style':'text-align: left; margin-bottom: 15px;'}),
+        dict(name='div', attrs={'style':'text-align: left; margin-top: 15px;'}),
         dict(name='div', attrs={'id':'comment-form'})
         ]
