@@ -1,7 +1,7 @@
 import re
 from calibre.web.feeds.news import BasicNewsRecipe
 
-class programtvRecipe(BasicNewsRecipe):
+class katalogEG(BasicNewsRecipe):
     __license__ = 'GPL v3'
     __author__ = u'Artur Stachecki <artur.stachecki@gmail.com>'
     language = 'pl'
@@ -10,7 +10,7 @@ class programtvRecipe(BasicNewsRecipe):
     title = u'Katalog eGazeciarz'
     category = u'News'
     description = ''
-    cover_url=''
+    cover_url='Katalog eGazeciarz pozwala w łatwy sposób śledzić aktualizacje na stronie. Zawiera spis wszystkich subskrypcji.'
     oldest_article = 100000
     max_articles_per_feed = 100000
     no_stylesheets = True

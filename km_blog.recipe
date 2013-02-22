@@ -13,7 +13,7 @@ class km_blog(BasicNewsRecipe):
     title          = u'Korwin-Mikke Blog'
     __author__ = 'teepel <teepel44@gmail.com>'
     language       = 'pl'
-    description ='Wiadomości z bloga korwin-mikke.pl/blog '
+    description ='Wiadomości z bloga korwin-mikke.pl/blog'
     INDEX='http://korwin-mikke.pl/blog'
     remove_empty_feeds= True
     oldest_article = 7
