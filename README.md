@@ -102,6 +102,7 @@ preinstalowanych w Calibre.
 * wolne_media.recipe - Wiadomości z wolnemedia.net
 * wprost.recipe - Weekly magazine
 * wysokie_obcasy.recipe - Serwis sobotniego dodatku do Gazety Wyborczej
+
 ### Program stacji telewizyjnych
 * tv_axnscifi.recipe
 * tv_comedycentral.recipe
