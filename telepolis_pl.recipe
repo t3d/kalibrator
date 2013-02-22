@@ -10,9 +10,7 @@ class telepolis(BasicNewsRecipe):
     title = u'Telepolis.pl'
     __author__ = 'Artur Stachecki <artur.stachecki@gmail.com>'
     language = 'pl'
-    description = u'Twój telekomunikacyjny serwis informacyjny.\
-                  Codzienne informacje, testy i artykuły,\
-                  promocje, baza telefonów oraz centrum rozrywki'
+    description = u'Twój telekomunikacyjny serwis informacyjny.'
     oldest_article = 7
     masthead_url = 'http://telepolis.pl/i/telepolis-logo2.gif'
     max_articles_per_feed = 100
