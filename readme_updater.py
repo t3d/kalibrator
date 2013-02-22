@@ -22,6 +22,7 @@ for recipe in www_recipes:
                desc = unicode(desc,'unicode-escape')
            print '*',recipe,'-', desc
            break
+print
 print '### Program stacji telewizyjnych'
 tv_stations.sort()
 for recipe in tv_stations:
