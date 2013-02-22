@@ -67,7 +67,6 @@ preinstalowanych w Calibre.
 * mobilna.recipe - twoja mobilna strona
 * mojegotowanie.recipe - Gotowanie to Twoja pasja? Uwielbiasz sałatki? Lubisz grillować? Przepisy kulinarne doskonałe na wszystkie okazje znajdziesz na www.mojegotowanie.pl.
 * money_pl.recipe - Informacje finansowe z kraju i ze świata. Aktualne i archiwalne: notowania giełdowe, kursy walut, wskaźniki gospodarcze.
-* moscow_times.recipe - The Moscow Times is a daily English-language newspaper featuring objective, reliable news on business, politics, sports and culture in Moscow, in Russia and the former Soviet Union (CIS).
 * myapple_pl.recipe -  Największy w Polsce serwis zajmujący się tematyką związaną z Apple i wszelkimi produktami tej firmy.
 * najwyzszy_czas.recipe - Wiadomości z nczas.com
 * naszdziennik.recipe - Nasz Dziennik - Ogólnopolska gazeta codzienna. Podejmuje tematykę dotyczącą życia społecznego, kulturalnego, politycznego i religijnego. Propaguje wartości chrześcijańskie oraz tradycję i kulturę polską.
