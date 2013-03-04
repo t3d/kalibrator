@@ -92,7 +92,6 @@ Aby pobrać wszystkie pliki w jednym archiwum zip, kliknij https://github.com/t3
 * samcik_blox.recipe - Blog Macieja Samcika, długoletniego dziennikarza ekonomicznego Gazety Wyborczej . O finansach małych i dużych. Mnóstwo ciekawostek na temat pieniędzy.
 * satkurier.recipe - Serwis poświęcony telewizji cyfrowej
 * slashdot.recipe - Source for technology related news with a heavy slant towards Linux and Open Source issues.
-* spidersweb.recipe - Opinie i analizy na temat technologii
 * sport_pl.recipe - Największy portal sportowy w Polsce. Wiadomości sportowe z najważniejszych wydarzeń, relacje i wyniki meczów na żywo.
 * sportowefakty.recipe - Najważniejsze informacje sportowe z kraju i ze świata, relacje, komentarze, wywiady, zdjęcia!
 * suchary.recipe - Starannie wyselekcjonowane i dokładnie wybrane kawały dowcipy rodem z Familiady.
