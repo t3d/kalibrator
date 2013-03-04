@@ -18,6 +18,8 @@ Następnie można ustawić zasady pobierania wiadomości w okienku
 Część reguł z tego pakietu została już dołączona do pakietu reguł
 preinstalowanych w Calibre.
 
+Aby pobrać wszystkie pliki w jednym archiwum zip, kliknij https://github.com/t3d/kalibrator/archive/master.zip
+
 ## Opis reguł
 * antyweb.recipe - Blog o internecie i nowych technologiach
 * app_funds.recipe - Blog inwestora dla inwestorów i oszczędzających
