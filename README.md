@@ -33,6 +33,7 @@ Aby pobrać wszystkie pliki w jednym archiwum zip, kliknij https://github.com/t3
 * bash_org_pl.recipe - Bash.org.pl - funny quotations from IRC discussions
 * benchmark_pl.recipe - benchmark.pl -IT site
 * biolog_pl.recipe - Przyrodnicze aktualności ze świata nauki (codziennie aktualizowane), kurs biologii, testy i sprawdziany, forum dyskusyjne.
+* biweekly.recipe - link with culture [English edition of Polish magazine]: literature, theatre, film, art, music, views, talks
 * blognexto.recipe - o e-publikacjach prawie wszystko
 * brewiarz.recipe - Serwis poświęcony Liturgii Godzin (brewiarzowi) - formie codziennej modlitwy Kościoła katolickiego.
 * cd_action.recipe - cdaction.pl - polish games magazine site
@@ -44,6 +45,7 @@ Aby pobrać wszystkie pliki w jednym archiwum zip, kliknij https://github.com/t3
 * di.recipe - Internet w życiu i biznesie. Porady, wywiady, interwencje, bezpieczeństwo w Sieci, technologia.
 * dobreprogamy.recipe - Aktualności i blogi z dobreprogramy.pl
 * duzy_format.recipe - Duży Format przez RSS
+* dwutygodnik.recipe - Strona Kultury: literatura, teatr, film, sztuka, muzyka, felietony, rozmowy
 * dzial_zagraniczny.recipe - Polskiego czytelnika to nie interesuje
 * dzieje_pl.recipe - Dzieje - history of Poland
 * dziennik_pl.recipe - Wiadomości z kraju i ze świata. Wiadomości gospodarcze. Znajdziesz u nas informacje, wydarzenia, komentarze, opinie.
@@ -96,7 +98,7 @@ Aby pobrać wszystkie pliki w jednym archiwum zip, kliknij https://github.com/t3
 * kp.recipe -  Lewicowe pismo zaangażowane w bieg spraw publicznych w Polsce.
 * kresy_pl.recipe - portal społeczności kresowej
 * ksiazka_pl.recipe - Portal Księgarski - tematyczny serwis o książkach. Wydarzenia z rynku księgarsko-wydawniczego, nowości, zapowiedzi, bestsellery, setki recenzji. Niezbędne informacje dla każdego miłośnika książek, księgarza, bibliotekarza i wydawcy.
-* kurier_galicyjski.recipe -
+* kurier_galicyjski.recipe - 
 * legeartis.recipe - Wszystko, co chcielibyście wiedzieć o prawie, ale wstydzicie się zapytać
 * legitymizm.recipe - Portal legitymistyczny
 * lifehacker_pl.recipe - Lifehacking - sposoby na zwiększanie własnej wydajności. Ułatwiaj sobie życie, wykorzystując wiedzę, metody, technologie, przydatne strony ...
