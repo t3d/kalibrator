@@ -3,7 +3,7 @@ import re
 class BenchmarkPl(BasicNewsRecipe):
     title          = u'Benchmark.pl'
     __author__        = 'fenuks'
-    description   = u'benchmark.pl -IT site'
+    description   = u'benchmark.pl, recenzje i testy sprzętu, aktualności, rankingi, sterowniki, porady, opinie'
     masthead_url = 'http://www.benchmark.pl/i/logo-footer.png'
     cover_url      = 'http://www.ieaddons.pl/benchmark/logo_benchmark_new.gif'
     category       = 'IT'

@@ -4,7 +4,7 @@ from calibre.ebooks.BeautifulSoup import BeautifulSoup
 class FilmWebPl(BasicNewsRecipe):
     title          = u'FilmWeb'
     __author__        = 'fenuks'
-    description   = 'FilmWeb - biggest polish movie site'
+    description   = 'Filmweb.pl - Filmy takie jak Ty Filmweb to największy i najczęściej odwiedzany polski serwis filmowy. Największa baza filmów, seriali i aktorów, repertuar kin i tv, ...'
     cover_url      = 'http://userlogos.org/files/logos/crudus/filmweb.png'
     category       = 'movies'
     language       = 'pl'

@@ -3,7 +3,7 @@ from calibre.web.feeds.recipes import BasicNewsRecipe
 class GryOnlinePl(BasicNewsRecipe):
     title          = u'Gry-Online.pl'
     __author__        = 'fenuks'
-    description   = 'Gry-Online.pl - computer games'
+    description   = 'Wiadomości o grach, recenzje, zapowiedzi. Encyklopedia Gier zawiera opisy gier na PC, konsole Xbox360, PS3 i inne platformy.'
     category       = 'games'
     language       = 'pl'
     oldest_article = 13

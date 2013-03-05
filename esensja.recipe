@@ -10,7 +10,7 @@ class Esensja(BasicNewsRecipe):
 
     title = u'Esensja'
     __author__ = 'matek09'
-    description = 'Monthly magazine'
+    description = 'Magazyn kultury popularnej'
     encoding = 'utf-8'
     no_stylesheets = True
     language = 'pl'
