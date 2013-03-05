@@ -17,11 +17,14 @@ www_recipes.sort()
 for recipe in www_recipes:
     for line in open(recipe):
         if 'description' in line:
-           desc = line.split('\'')[1]
-           if '\\' in desc:
-               desc = unicode(desc,'unicode-escape')
-           print '*',recipe,'-', desc
-           break
+            if line[-1] == '"':
+               desc = line.split('"')[1]
+            else:
+               desc = line.split('\'')[1]
+            if '\\' in desc:
+                desc = unicode(desc,'unicode-escape')
+            print '*',recipe,'-', desc
+            break
 print
 print '### Program stacji telewizyjnych'
 tv_stations.sort()
