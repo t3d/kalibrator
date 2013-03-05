@@ -10,13 +10,13 @@ from calibre.ptempfile import PersistentTemporaryFile
 from calibre.ebooks.conversion.cli import main
 
 class biweekly(BasicNewsRecipe):
-  __author__ = u'Łukasz Grąbczewski'
+	__author__ = u'Łukasz Grąbczewski'
 	title = 'Biweekly'
 	language = 'en_EN'
 	publisher = 'National Audiovisual Institute'
 	publication_type = 'magazine'
 	description = u'link with culture [English edition of Polish magazine]: literature, theatre, film, art, music, views, talks'
-	
+
 	conversion_options = {
 		'authors' : 'Biweekly.pl'
 		,'publisher' : publisher

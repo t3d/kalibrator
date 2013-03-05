@@ -10,7 +10,7 @@ from calibre.ptempfile import PersistentTemporaryFile
 from calibre.ebooks.conversion.cli import main
 
 class jazzpress(BasicNewsRecipe):
-  __author__ = u'Łukasz Grąbczewski'
+	__author__ = u'Łukasz Grąbczewski'
 	title = 'JazzPRESS'
 	language = 'pl'
 	publisher = 'Fundacja Popularyzacji Muzyki Jazzowej EuroJAZZ'
