@@ -15,13 +15,13 @@ class zyciewarszawy(BasicNewsRecipe):
 	__author__ = u'Łukasz Grączewski'
 	title = u'Życie Warszawy'
 	description = u'Wiadomości z Warszawy'
-	language = 'pl_PL'
+	language = 'pl'
 	publisher = 'Presspublica'
 	publication_type = 'newspapper'
 	masthead_url = 'http://www.zw.com.pl/static/img/logo_zw.gif'
 	no_stylesheets = True
 	remove_javascript = True
-	
+
 	oldest_article = 1 #daily news only
 	max_articles_per_feed = 100
 
@@ -29,7 +29,7 @@ class zyciewarszawy(BasicNewsRecipe):
 
 	keep_only_tags = []
 	keep_only_tags.append(dict(name = 'div', attrs = {'id' : 'storyp'}))
-	
+
 	remove_tags = []
 	remove_tags.append(dict(name = 'div', attrs = {'class' : 'authordate'}))
 	remove_tags.append(dict(name = 'div', attrs = {'class' : 'author'}))
