@@ -17,7 +17,7 @@ www_recipes.sort()
 for recipe in www_recipes:
     for line in open(recipe):
         if 'description' in line:
-            if line[-1] == '"':
+            if line[-2] == '"':
                desc = line.split('"')[1]
             else:
                desc = line.split('\'')[1]
