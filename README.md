@@ -59,8 +59,7 @@ Aby pobrać wszystkie pliki w jednym archiwum zip, kliknij https://github.com/t3
 * esensja.recipe - Monthly magazine
 * eso_pl.recipe - ESO, Europejskie Obserwatorium Południowe, buduje i obsługuje najbardziej zaawansowane naziemne teleskopy astronomiczne na świecie
 * f1_ultra.recipe - Formuła 1, Robert Kubica, F3, GP2 oraz inne serie wyścigowe.
-* film_org_pl.recipe - ów, sequeli. No i forum filmowe. Jedne z największych w Polsce."
-
+* film_org_pl.recipe - Recenzje, analizy, artykuły, rankingi - wszystko o filmie dla miłośników kina. Opisy efektów specjalnych, wersji reżyserskich, remake'ów, sequeli. No i forum filmowe. Jedne z największych w Polsce.
 * film_web.recipe - FilmWeb - biggest polish movie site
 * focus_pl.recipe - Newspaper
 * forbes_pl.recipe - Biznes, finanse, gospodarka, strategie, wiadomości gospodarcze, analizy finasowe i strategiczne.
@@ -98,7 +97,7 @@ Aby pobrać wszystkie pliki w jednym archiwum zip, kliknij https://github.com/t3
 * kp.recipe -  Lewicowe pismo zaangażowane w bieg spraw publicznych w Polsce.
 * kresy_pl.recipe - portal społeczności kresowej
 * ksiazka_pl.recipe - Portal Księgarski - tematyczny serwis o książkach. Wydarzenia z rynku księgarsko-wydawniczego, nowości, zapowiedzi, bestsellery, setki recenzji. Niezbędne informacje dla każdego miłośnika książek, księgarza, bibliotekarza i wydawcy.
-* kurier_galicyjski.recipe - 
+* kurier_galicyjski.recipe -
 * legeartis.recipe - Wszystko, co chcielibyście wiedzieć o prawie, ale wstydzicie się zapytać
 * legitymizm.recipe - Portal legitymistyczny
 * lifehacker_pl.recipe - Lifehacking - sposoby na zwiększanie własnej wydajności. Ułatwiaj sobie życie, wykorzystując wiedzę, metody, technologie, przydatne strony ...
@@ -174,6 +173,7 @@ Aby pobrać wszystkie pliki w jednym archiwum zip, kliknij https://github.com/t3
 * wprost.recipe - Weekly magazine
 * wysokie_obcasy.recipe - Serwis sobotniego dodatku do Gazety Wyborczej
 * zaufana_trzecia_strona.recipe - Niezależne źródło wiadomości o świecie bezpieczeństwa IT
+* zycie_warszawy.recipe - Wiadomości z Warszawy
 
 ### Program stacji telewizyjnych
 * tv_axnscifi.recipe
