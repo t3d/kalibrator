@@ -12,6 +12,6 @@ class Fotoblogia_pl(BasicNewsRecipe):
     max_articles_per_feed = 100
     no_stylesheets = True
     use_embedded_content = False
-    keep_only_tags=[dict(name='div', attrs={'class':'post-view post-standard'})]
+    keep_only_tags=[dict(name='div', attrs={'class':['post-view post-standard', 'photo-container']})]
     remove_tags=[dict(attrs={'class':['external fotoblogia', 'categories', 'tags']})]
     feeds          = [(u'Wszystko', u'http://fotoblogia.pl/feed/rss2')]
