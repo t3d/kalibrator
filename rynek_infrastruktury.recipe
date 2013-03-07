@@ -21,15 +21,15 @@ class prawica_recipe(BasicNewsRecipe):
     no_stylesheets=True
 
     feeds          = [
-                (u'Drogi', u'http://www.rynekinfrastruktury.pl/rss/41'),
-                (u'Lotniska', u'http://www.rynekinfrastruktury.pl/rss/42'),
-                (u'Kolej', u'http://www.rynekinfrastruktury.pl/rss/37'),
-                (u'Energetyka', u'http://www.rynekinfrastruktury.pl/rss/30'),
-                (u'Telekomunikacja', u'http://www.rynekinfrastruktury.pl/rss/31'),
-                (u'Porty', u'http://www.rynekinfrastruktury.pl/rss/32'),
-                (u'Prawo i polityka', u'http://www.rynekinfrastruktury.pl/rss/47'),
-                (u'Komentarze', u'http://www.rynekinfrastruktury.pl/rss/38'),
-             ]
+		(u'Drogi', u'http://www.rynekinfrastruktury.pl/rss/41'),
+		(u'Lotniska', u'http://www.rynekinfrastruktury.pl/rss/42'),
+		(u'Kolej', u'http://www.rynekinfrastruktury.pl/rss/37'),
+		(u'Energetyka', u'http://www.rynekinfrastruktury.pl/rss/30'),
+		(u'Telekomunikacja', u'http://www.rynekinfrastruktury.pl/rss/31'),
+		(u'Porty', u'http://www.rynekinfrastruktury.pl/rss/32'),
+		(u'Prawo i polityka', u'http://www.rynekinfrastruktury.pl/rss/47'),
+		(u'Komentarze', u'http://www.rynekinfrastruktury.pl/rss/38'),
+	     ]
 
     keep_only_tags =[]
     keep_only_tags.append(dict(name = 'div', attrs = {'class' : 'articleContent'}))
