@@ -3,7 +3,7 @@
 
 __license__   = 'GPL v3'
 __copyright__   = u'Łukasz Grąbczewski 2012-2013'
-__version__   = '1.1'
+__version__   = '1.2'
 
 '''
 zw.com.pl
@@ -22,7 +22,7 @@ class zyciewarszawy(BasicNewsRecipe):
 	no_stylesheets = True
 	remove_javascript = True
 
-	oldest_article = 1 #daily news only
+	oldest_article = 2 #daily news +1 for today
 	max_articles_per_feed = 100
 
 	feeds = [(u'Najnowsze', u'http://www.zw.com.pl/rss/1.html')]
@@ -31,9 +31,9 @@ class zyciewarszawy(BasicNewsRecipe):
 	keep_only_tags.append(dict(name = 'div', attrs = {'id' : 'storyp'}))
 
 	remove_tags = []
-	remove_tags.append(dict(name = 'div', attrs = {'class' : 'authordate'}))
+	#remove_tags.append(dict(name = 'div', attrs = {'class' : 'authordate'}))
 	remove_tags.append(dict(name = 'div', attrs = {'class' : 'author'}))
-	'''remove_tags.append(dict(name = 'div', attrs = {'class' : 'seealso'}))'''
+	#remove_tags.append(dict(name = 'div', attrs = {'class' : 'seealso'}))
 	remove_tags.append(dict(name = 'div', attrs = {'class' : 'more'}))
 	remove_tags.append(dict(name = 'div', attrs = {'class' : 'clr'}))
 	remove_tags.append(dict(name = 'div', attrs = {'id' : 'adk_0'}))
