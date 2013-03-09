@@ -40,10 +40,7 @@ class telepolis(BasicNewsRecipe):
 
     def preprocess_html(self, soup):
         self.append_page(soup, soup.body)
-<<<<<<< HEAD
         for image in soup.findAll('img'):
             if 'm.jpg' in image['src']:
                 image['src'] = image['src'].replace('m.jpg', '.jpg')
-=======
->>>>>>> 44ee36fb35cf5abb962e6b5db4ba7b12987d9ae6
         return soup
