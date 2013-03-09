@@ -111,7 +111,7 @@ Aby pobrać wszystkie pliki w jednym archiwum zip, kliknij https://github.com/t3
 * kp.recipe -  Lewicowe pismo zaangażowane w bieg spraw publicznych w Polsce.
 * kresy_pl.recipe - portal społeczności kresowej
 * ksiazka_pl.recipe - Portal Księgarski - tematyczny serwis o książkach. Wydarzenia z rynku księgarsko-wydawniczego, nowości, zapowiedzi, bestsellery, setki recenzji. Niezbędne informacje dla każdego miłośnika książek, księgarza, bibliotekarza i wydawcy.
-* kurier_galicyjski.recipe -
+* kurier_galicyjski.recipe - Kurier Galicyjski - największa gazeta dla Polaków na Ukrainie. Bieżące wydarzenia z życia polskiej mniejszości, historia, kultura, polityka, reportaże.
 * kurier_lubelski.recipe - Gazeta Regionalna Kurier Lubelski. Najnowsze Wiadomości Lublin. Czytaj Informacje Lublin!
 * kurier_poranny.recipe - Kurier Poranny | poranny.pl - portal miejski Białegostoku,informacje,wydarzenia
 * kurier_szczecinski.recipe - 24Kurier jest portalem Kuriera Szczecińskiego. Zawiera aktualności ze Szczecina oraz wiadomości regionalne z  województwa zachodniopomorskiego.
@@ -137,7 +137,7 @@ Aby pobrać wszystkie pliki w jednym archiwum zip, kliknij https://github.com/t3
 * national_geographic_pl.recipe - legenda wśród magazynów z historią sięgającą 120 lat
 * nauka_w_polsce.recipe - Serwis Nauka w Polsce ma za zadanie popularyzację polskiej nauki. Można na nim znaleźć wiadomości takie jak:  osiągnięcia polskich naukowców, wydarzenia na polskich uczelniach, osiągnięcia studentów, konkursy dla badaczy, staże i stypendia naukowe, wydarzenia w polskiej nauce, kalendarium wydarzeń w nauce, materiały wideo o nauce.
 * newsweek_polska.recipe - Weekly magazine
-* niebezpiecznik.recipe - Niebezpiecznik.pl
+* niebezpiecznik.recipe - Niebezpiecznik.pl – o bezpieczeństwie i nie...
 * nowa_fantastyka.recipe - Strona dla miłośników fantastyki
 * nowiny_rybnik.recipe - Tygodnik Regionalny NOWINY. Ogłoszenia drobne, wiadomości i wydarzenia z regionu Rybnika i okolic
 * nowy_ekran.recipe - Niezależny serwis społeczności blogerów
