@@ -29,6 +29,7 @@ Aby pobrać wszystkie pliki w jednym archiwum zip, kliknij https://github.com/t3
 * astro_news_pl.recipe - AstroNEWS regularnie dostarcza wiadomości o wydarzeniach związanych z astronomią i astronautyką. Informujemy o aktualnych odkryciach i wydarzeniach naukowych, zapowiadamy ciekawe zjawiska astronomiczne. Serwis jest częścią portalu astronomicznego AstroNET prowadzonego przez miłośników astronomii i zawodowych astronomów.
 * astroflesz.recipe - astroflesz.pl - to portal poświęcony astronomii. Informuje zarówno o aktualnych wydarzeniach i odkryciach naukowych, jak również zapowiada ciekawe zjawiska astronomiczne
 * astronomia_pl.recipe - Astronomia.pl jest edukacyjnym portalem skierowanym do uczniów, studentów i miłośników astronomii. Przedstawiamy gwiazdy, planety, galaktyki, czarne dziury i wiele innych tajemnic Wszechświata.
+* bachormagazyn.recipe - Alternatywny magazyn o alternatywach rodzicielstwa
 * badania_net.recipe - chcesz wiedzieć więcej?
 * bankier_pl.recipe - Polski portal finansowy. Informacje o: gospodarka, inwestowanie, finanse osobiste, prowadzenie firmy, kursy walut, notowania akcji, fundusze.
 * bash_org_pl.recipe - Bash.org.pl - zabawne cytaty z IRC
@@ -141,6 +142,7 @@ Aby pobrać wszystkie pliki w jednym archiwum zip, kliknij https://github.com/t3
 * nowa_fantastyka.recipe - Strona dla miłośników fantastyki
 * nowiny_rybnik.recipe - Tygodnik Regionalny NOWINY. Ogłoszenia drobne, wiadomości i wydarzenia z regionu Rybnika i okolic
 * nowy_ekran.recipe - Niezależny serwis społeczności blogerów
+* nowy_obywatel.recipe - Pismo na rzecz sprawiedliwości społecznej
 * nto.recipe - Nowa Trybuna Opolska - portal regionalny województwa opolskiego.
 * oclab_pl.recipe - Portal OCLab.pl jest miejscem przyjaznym pasjonatom sprzętu komputerowego, w szczególności overclockerom, które będzie służyć im za aktualną bazę wiedzy o podkręcaniu komputera, źródło aktualnych informacji z rynku oraz opinii na temat sprzętu komputerowego.
 * optyczne_pl.recipe - Najlepsze testy obiektywów, testy aparatów cyfrowych i testy lornetek w sieci!
