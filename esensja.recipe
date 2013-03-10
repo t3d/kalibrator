@@ -16,6 +16,7 @@ class Esensja(BasicNewsRecipe):
     no_stylesheets = True
     language = 'pl'
     remove_javascript = True
+    masthead_url = 'http://esensja.pl/img/wrss.gif'
     oldest_article = 1
     URL = 'http://esensja.pl'
     HREF = '0'
