@@ -30,11 +30,15 @@ class Adventure_zone(BasicNewsRecipe):
     def populate_article_metadata(self, article, soup, first):
         result = re.search('(.+) - Adventure Zone', soup.title.string)
         if result:
-            article.title = result.group(1)
+            result = result.group(1)
         else:
             result = soup.body.find('strong')
             if result:
-                article.title = result.string
+                result = result.string
+        if result:
+            result = result.replace('&amp;', '&')
+            result = result.replace('&#39;', '’')
+            article.title = result
 
     def skip_ad_pages(self, soup):
         skip_tag = soup.body.find(name='td', attrs={'class':'main-bg'})
