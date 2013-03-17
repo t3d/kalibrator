@@ -9,7 +9,7 @@ for recipe in os.listdir('.'):
         file = os.path.join( 'icons/' + recipe.replace('.recipe','.png'))
         if not os.path.isfile(file):
             print "no icon for " + recipe + "!"
-    
+
 for icon in os.listdir('icons'):
     if icon.endswith('.png'):
         file = icon.replace('.png','.recipe')
