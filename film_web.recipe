@@ -14,7 +14,7 @@ class FilmWebPl(BasicNewsRecipe):
     no_stylesheets = True
     remove_empty_feeds = True
     ignore_duplicate_articles = {'title', 'url'}
-    preprocess_regexps = [(re.compile(u'\(kliknij\,\ aby powiększyć\)', re.IGNORECASE), lambda m: ''), ]#(re.compile(ur' | ', re.IGNORECASE), lambda m: '')]
+    preprocess_regexps = [(re.compile(u'\(kliknij\,\ aby powiększyć\)', re.IGNORECASE), lambda m: ''), (re.compile(ur'<br ?/?>\s*?<br ?/?>', re.IGNORECASE), lambda m: '<br />')]#(re.compile(ur' | ', re.IGNORECASE), lambda m: '')]
     extra_css      = '.hdrBig {font-size:22px;} ul {list-style-type:none; padding: 0; margin: 0;}'
     remove_tags = [dict(name='div', attrs={'class':['recommendOthers']}), dict(name='ul', attrs={'class':'fontSizeSet'}), dict(attrs={'class':'userSurname anno'})]
     remove_attributes = ['style',]
