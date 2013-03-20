@@ -65,7 +65,7 @@ Aby pobrać wszystkie pliki w jednym archiwum zip, kliknij https://github.com/t3
 * elektroda_pl.recipe - Międzynarodowy portal elektroniczny udostępniający bogate zasoby z dziedziny elektroniki oraz forum dyskusyjne.
 * emuzica_pl.recipe - Emuzyka to największa i najpopularniejsza strona o muzyce w Polsce
 * equipped.recipe - Wiadomości z equipped.pl
-* esensja.recipe - Magazyn kultury popularnej
+* esenja.recipe - Magazyn kultury popularnej
 * esensja_(rss).recipe - Magazyn kultury popularnej
 * eso_pl.recipe - ESO, Europejskie Obserwatorium Południowe, buduje i obsługuje najbardziej zaawansowane naziemne teleskopy astronomiczne na świecie
 * f1_ultra.recipe - Formuła 1, Robert Kubica, F3, GP2 oraz inne serie wyścigowe.
