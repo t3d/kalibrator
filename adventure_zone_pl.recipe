@@ -26,7 +26,7 @@ class Adventure_zone(BasicNewsRecipe):
         cover=soup.find(id='box_OstatninumerAZ')
         self.cover_url='http://www.adventure-zone.info/fusion/'+ cover.center.a.img['src']
         return getattr(self, 'cover_url', self.cover_url)'''
-        
+
     def populate_article_metadata(self, article, soup, first):
         result = re.search('(.+) - Adventure Zone', soup.title.string)
         if result:
@@ -66,5 +66,4 @@ class Adventure_zone(BasicNewsRecipe):
             if a.has_key('href') and 'http://' not in a['href'] and 'https://' not in a['href']:
                 a['href']=self.index + a['href']
         return soup
-           
-            
+

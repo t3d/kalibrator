@@ -43,12 +43,12 @@ class FilmWebPl(BasicNewsRecipe):
         skip_tag = soup.find('a', attrs={'class':'welcomeScreenButton'})
         if skip_tag is not None:
             return self.index_to_soup(skip_tag['href'], raw=True)
-            
+
     def postprocess_html(self, soup, first_fetch):
         for r in soup.findAll(attrs={'class':'singlephoto'}):
             r['style'] = 'float:left; margin-right: 10px;'
         return soup
-        
+
     def preprocess_html(self, soup):
         for a in soup('a'):
             if a.has_key('href') and 'http://' not in a['href'] and 'https://' not in a['href']:

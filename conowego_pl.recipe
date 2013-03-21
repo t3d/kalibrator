@@ -36,7 +36,7 @@ class CoNowegoPl(BasicNewsRecipe):
                 pagetext = soup2.find(attrs={'class':'ni_content'})
                 pos = len(appendtag.contents)
                 appendtag.insert(pos, pagetext)
-                
+
             comments = appendtag.findAll(text=lambda text:isinstance(text, Comment))
             for comment in comments:
                 comment.extract()
