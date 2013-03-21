@@ -1,2 +1,4 @@
 .arcconfig
 .directory
+*.epub
+*.mobi
