@@ -36,6 +36,7 @@ Aby pobrać wszystkie pliki w jednym archiwum zip, kliknij https://github.com/t3
 * benchmark_pl.recipe - benchmark.pl, recenzje i testy sprzętu, aktualności, rankingi, sterowniki, porady, opinie
 * biolog_pl.recipe - Przyrodnicze aktualności ze świata nauki (codziennie aktualizowane), kurs biologii, testy i sprawdziany, forum dyskusyjne.
 * biweekly.recipe - link with culture [English edition of Polish magazine]: literature, theatre, film, art, music, views, talks
+* blog_biszopa.recipe - Zapiski z Granitowego Miasta
 * blognexto.recipe - o e-publikacjach prawie wszystko
 * brewiarz.recipe - Serwis poświęcony Liturgii Godzin (brewiarzowi) - formie codziennej modlitwy Kościoła katolickiego.
 * cd_action.recipe - Strona CD-Action (CDA), największego w Polsce pisma dla graczy.Pełne wersje gier, newsy, recenzje, zapowiedzi, konkursy, forum, opinie, galerie screenów,trailery, filmiki, patche, teksty. Gry komputerowe (PC) oraz na konsole (PS3, XBOX 360).
@@ -64,7 +65,8 @@ Aby pobrać wszystkie pliki w jednym archiwum zip, kliknij https://github.com/t3
 * elektroda_pl.recipe - Międzynarodowy portal elektroniczny udostępniający bogate zasoby z dziedziny elektroniki oraz forum dyskusyjne.
 * emuzica_pl.recipe - Emuzyka to największa i najpopularniejsza strona o muzyce w Polsce
 * equipped.recipe - Wiadomości z equipped.pl
-* esensja.recipe - Magazyn kultury popularnej
+* esenja.recipe - Magazyn kultury popularnej
+* esensja_(rss).recipe - Magazyn kultury popularnej
 * eso_pl.recipe - ESO, Europejskie Obserwatorium Południowe, buduje i obsługuje najbardziej zaawansowane naziemne teleskopy astronomiczne na świecie
 * f1_ultra.recipe - Formuła 1, Robert Kubica, F3, GP2 oraz inne serie wyścigowe.
 * film_org_pl.recipe - Recenzje, analizy, artykuły, rankingi - wszystko o filmie dla miłośników kina. Opisy efektów specjalnych, wersji reżyserskich, remake'ów, sequeli. No i forum filmowe. Jedne z największych w Polsce.
@@ -189,6 +191,7 @@ Aby pobrać wszystkie pliki w jednym archiwum zip, kliknij https://github.com/t3
 * tvp_info.recipe - Serwis informacyjny TVP.INFO
 * ubuntu_pl.recipe - Polskie forum użytkowników Ubuntu Linux. Projekty, porady i dyskusje, gotowe rozwiązania problemów.
 * ubuntu_pomoc_org.recipe - Strona poświęcona systemowi Ubuntu Linux. Znajdziesz tutaj przydatne i sprawdzone poradniki oraz sposoby rozwiązywania wielu popularnych problemów. Ten blog rozwiąże każdy Twój problem - jeśli nie teraz, to wkrótce! :)
+* websecurity_pl.recipe - WebSecurity.pl to największy w Polsce portal o bezpieczeństwie sieciowym.
 * wirtualnemedia_pl.recipe - Portal o mediach, reklamie, internecie, PR, telekomunikacji - nr 1 w Polsce - WirtualneMedia.pl - wiadomości z pierwszej ręki.
 * wnp.recipe - Wirtualny Nowy Przemysł
 * wolne_media.recipe - Wiadomości z wolnemedia.net
