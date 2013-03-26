@@ -8,7 +8,6 @@ gofin.pl
 '''
 
 from calibre.web.feeds.news import BasicNewsRecipe
-import re
 
 class gofin(AutomaticNewsRecipe):
     title          = u'Gofin'
