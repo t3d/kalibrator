@@ -92,6 +92,7 @@ Aby pobrać wszystkie pliki w jednym archiwum zip, kliknij https://github.com/t3
 * gildia_pl.recipe - Fantastyczny Portal Kulturalny - newsy, recenzje, galerie, wywiady. Literatura, film, gry komputerowe i planszowe, komiks, RPG, sklep. Nie lekceważ potęgi wyobraźni!
 * glos_wielkopolski.recipe - Gazeta Regionalna Głos Wielkopolski. Najnowsze Wiadomości Poznań. Czytaj Informacje Poznań!
 * gofin_pl.recipe - Portal Podatkowo-Księgowy
+* gosc_niedzielny.recipe - Ogólnopolski tygodnik katolicki
 * gram_pl.recipe - Serwis społecznościowy o grach: recenzje, newsy, zapowiedzi, encyklopedia gier, forum. Gry PC, PS3, X360, PS Vita, sprzęt dla graczy.
 * gry_online_pl.recipe - Wiadomości o grach, recenzje, zapowiedzi. Encyklopedia Gier zawiera opisy gier na PC, konsole Xbox360, PS3 i inne platformy.
 * hatalska.recipe - Blog specjalistki z branży mediowo-reklamowej - Natalii Hatalskiej
@@ -138,7 +139,7 @@ Aby pobrać wszystkie pliki w jednym archiwum zip, kliknij https://github.com/t3
 * naszdziennik.recipe - Nasz Dziennik - Ogólnopolska gazeta codzienna. Podejmuje tematykę dotyczącą życia społecznego, kulturalnego, politycznego i religijnego. Propaguje wartości chrześcijańskie oraz tradycję i kulturę polską.
 * natemat_pl.recipe - informacje, komentarze, opinie
 * national_geographic_pl.recipe - legenda wśród magazynów z historią sięgającą 120 lat
-* nauka_w_polsce.recipe - Serwis Nauka w Polsce ma za zadanie popularyzację polskiej nauki. Można na nim znaleźć wiadomości takie jak:  osiągnięcia polskich naukowców, wydarzenia na polskich uczelniach, osiągnięcia studentów, konkursy dla badaczy, staże i stypendia naukowe, wydarzenia w polskiej nauce, kalendarium wydarzeń w nauce, materiały wideo o nauce.
+* nauka_w_polsce.recipe - Serwis Nauka w Polsce ma za zadanie popularyzację polskiej nauki. Można na nim znaleźć wiadomości takie jak: osiągnięcia polskich naukowców, wydarzenia na polskich uczelniach, osiągnięcia studentów, konkursy dla badaczy, staże i stypendia naukowe, wydarzenia w polskiej nauce, kalendarium wydarzeń w nauce, materiały wideo o nauce.
 * newsweek_polska.recipe - Weekly magazine
 * niebezpiecznik.recipe - Niebezpiecznik.pl – o bezpieczeństwie i nie...
 * nowa_fantastyka.recipe - Strona dla miłośników fantastyki
@@ -196,6 +197,7 @@ Aby pobrać wszystkie pliki w jednym archiwum zip, kliknij https://github.com/t3
 * wnp.recipe - Wirtualny Nowy Przemysł
 * wolne_media.recipe - Wiadomości z wolnemedia.net
 * wprost.recipe - Weekly magazine
+* wprost_rss.recipe - Weekly magazine
 * wysokie_obcasy.recipe - Serwis sobotniego dodatku do Gazety Wyborczej
 * zaufana_trzecia_strona.recipe - Niezależne źródło wiadomości o świecie bezpieczeństwa IT
 * zycie_warszawy.recipe - Wiadomości z Warszawy
