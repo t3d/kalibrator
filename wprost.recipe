@@ -16,7 +16,7 @@ class Wprost(BasicNewsRecipe):
     ICO_BLOCKED = 'http://www.wprost.pl/G/layout2/ico_blocked.png'
     title = u'Wprost'
     __author__ = 'matek09'
-    description = 'Weekly magazine'
+    description = u'Popularny tygodnik ogólnopolski - Wprost. Najlepszy wśród polskich tygodników - opiniotwórczy - społeczno-informacyjny - społeczno-kulturalny.'
     encoding = 'ISO-8859-2'
     no_stylesheets = True
     language = 'pl'

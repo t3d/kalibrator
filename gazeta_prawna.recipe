@@ -21,7 +21,7 @@ class gazetaprawna(BasicNewsRecipe):
     description = 'Polski dziennik gospodarczy'
     language = 'pl'
     encoding = 'utf-8'
-
+    ignore_duplicate_articles = {'title', 'url'}
     remove_tags_after = [
                dict(name='div', attrs={'class':['data-art']})
     ]
@@ -51,3 +51,8 @@ class gazetaprawna(BasicNewsRecipe):
         url = url.replace('prawo.gazetaprawna', 'www.gazetaprawna')
         url = url.replace('praca.gazetaprawna', 'www.gazetaprawna')
         return url
+
+    def get_cover_url(self):
+        soup = self.index_to_soup('http://www.egazety.pl/infor/e-wydanie-dziennik-gazeta-prawna.html')
+        self.cover_url = soup.find('p', attrs={'class':'covr'}).a['href']
+        return getattr(self, 'cover_url', self.cover_url)

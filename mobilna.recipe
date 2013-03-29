@@ -15,16 +15,13 @@ class mobilna(BasicNewsRecipe):
     __author__ = 'MrStefan <mrstefaan@gmail.com>'
     language = 'pl'
     description =u'twoja mobilna strona'
-    masthead_url=''
+    #masthead_url=''
     remove_empty_feeds= True
     oldest_article = 7
     max_articles_per_feed = 100
     remove_javascript=True
     no_stylesheets=True
-
-    keep_only_tags =[]
-    keep_only_tags.append(dict(name = 'h1'))
-    keep_only_tags.append(dict(attrs = {'class' : 'Content'}))
-    print(keep_only_tags)
+    use_embedded_content = True
+    #keep_only_tags =[dict(attrs={'class':'Post'})]
 
     feeds          = [(u'Artykuły', u'http://mobilna.pl/feed/')]

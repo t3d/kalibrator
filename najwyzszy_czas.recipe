@@ -18,10 +18,11 @@ class nczas(BasicNewsRecipe):
     INDEX='http://nczas.com'
     oldest_article = 7
     max_articles_per_feed = 100
-    auto_cleanup = True
+    use_embedded_content = True
     remove_empty_feeds= True
     simultaneous_downloads = 5
     remove_javascript=True
+    remove_attributes = ['style']
     no_stylesheets=True
 
     feeds          = [(u'Najwyższy Czas', u'http://nczas.com/feed/')]
