@@ -16,6 +16,7 @@ class mojegotowanie(BasicNewsRecipe):
     language = 'pl'
     description =u'Gotowanie to Twoja pasja? Uwielbiasz sałatki? Lubisz grillować? Przepisy kulinarne doskonałe na wszystkie okazje znajdziesz na www.mojegotowanie.pl.'
     masthead_url='http://www.mojegotowanie.pl/extension/selfstart/design/self/images/top_c2.gif'
+    cover_url = 'http://www.mojegotowanie.pl/extension/selfstart/design/self/images/mgpl/mojegotowanie.gif'
     remove_empty_feeds= True
     oldest_article = 7
     max_articles_per_feed = 100

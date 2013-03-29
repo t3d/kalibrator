@@ -12,7 +12,7 @@ import re
 class Wprost(BasicNewsRecipe):
     title = u'Wprost (RSS)'
     __author__ = 'matek09'
-    description = 'Weekly magazine'
+    description = u'Portal informacyjny. Najświeższe wiadomości, najciekawsze komentarze i opinie. Blogi najlepszych publicystów.'
     encoding = 'ISO-8859-2'
     no_stylesheets = True
     language = 'pl'

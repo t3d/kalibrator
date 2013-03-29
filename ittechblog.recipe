@@ -13,21 +13,15 @@ class ittechblog(BasicNewsRecipe):
     __author__ = 'MrStefan <mrstefaan@gmail.com>'
     language = 'pl'
     description =u'Na naszym blogu technologicznym znajdziesz między innymi: testy sprzętu, najnowsze startupy, technologiczne nowinki, felietony tematyczne.'
-    remove_empty_feeds= True
+    extra_css = '.cover > img {display:block;}'
+    remove_empty_feeds = True
     oldest_article = 7
     max_articles_per_feed = 100
-    remove_javascript=True
-    no_stylesheets=True
+    remove_javascript = True
+    no_stylesheets = True
     use_embedded_content = False
 
-    keep_only_tags =[]
-    keep_only_tags.append(dict(name = 'div', attrs = {'id' : 'Content'}))
-
-    remove_tags =[]
-    remove_tags.append(dict(name = 'div', attrs = {'id' : 'Sidebar'}))
-    remove_tags.append(dict(name = 'div', attrs = {'id' : 'disqus_thread'}))
-    remove_tags.append(dict(name = 'div', attrs = {'id' : 'social'}))
-    remove_tags.append(dict(name = 'span', attrs = {'class' : 'TagsStream'}))
-    remove_tags.append(dict(name = 'div', attrs = {'class' : 'RelatedPosts'}))
+    keep_only_tags =[dict(attrs={'class':'box'})]
+    remove_tags =[dict(name='aside'), dict(attrs={'class':['tags', 'counter', 'twitter-share-button']})]
 
     feeds          = [(u'Artykuły', u'http://feeds.feedburner.com/ITTechBlog?format=xml')]
