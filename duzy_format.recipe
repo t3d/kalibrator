@@ -19,7 +19,7 @@ import os, os.path, urllib, re
 from hashlib import md5
 
 class duzyformatrss(BasicNewsRecipe):
-    __author__ = u'Lukk, intromatyk, Lukasz Grabczewski'
+    __author__ = u'Lukk, Artur Stachecki, Lukasz Grabczewski'
     title = u'Duży Format RSS'
     description = u'Duży Format przez RSS'
     language = 'pl'
