@@ -20,7 +20,7 @@ class Wprost(BasicNewsRecipe):
     no_stylesheets = True
     language = 'pl'
     remove_javascript = True
-    recursions = 0  
+    recursions = 0
     remove_tags_before = dict(dict(name = 'div', attrs = {'id' : 'print-layer'}))
     remove_tags_after = dict(dict(name = 'div', attrs = {'id' : 'print-layer'}))
     '''
