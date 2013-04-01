@@ -1,22 +1,16 @@
 # Kalibrator
-Kalibrator to zbiór reguł do ściągania wiadomości z polskich stron www 
-za pomocą programu Calibre.
+Kalibrator to zbiór reguł do ściągania wiadomości z polskich stron www za pomocą programu Calibre.
 
-Sam program Calibre służy do zarządzania cyfrowymi kopiami książek
-i ich konwersją oraz przenoszeniem na czytniki ebooków.
+Sam program Calibre służy do zarządzania cyfrowymi kopiami książek i ich konwersją oraz przenoszeniem na czytniki ebooków.
     Strona projektu Calibre:
     [http://calibre-ebook.com/](http://calibre-ebook.com/)
 
 ## Instalacja
-Aby korzystać z reguł, należy pobrać pliki .recipe na dysk komputera,
-a następnie wskazać pobrany plik w okienku "Dodaj własne źródło 
-aktualności" w programie Calibre. 
+Aby korzystać z reguł, należy pobrać pliki .recipe na dysk komputera, a następnie wskazać pobrany plik w okienku "Dodaj własne źródło aktualności" w programie Calibre.
 
-Następnie można ustawić zasady pobierania wiadomości w okienku 
-"Zaplanuj pobieranie aktualności". 
+Następnie można ustawić zasady pobierania wiadomości w okienku "Zaplanuj pobieranie aktualności".
 
-Część reguł z tego pakietu została już dołączona do pakietu reguł
-preinstalowanych w Calibre.
+Część reguł z tego pakietu została już dołączona do pakietu reguł preinstalowanych w Calibre.
 
 Aby pobrać wszystkie pliki w jednym archiwum zip, kliknij https://github.com/t3d/kalibrator/archive/master.zip
 
@@ -79,12 +73,12 @@ Aby pobrać wszystkie pliki w jednym archiwum zip, kliknij https://github.com/t3
 * fronda.recipe - Portal poświęcony - Informacje
 * gameplay_pl.recipe - gameplay.pl - serwis o naszych zainteresowaniach, grach, filmach, książkach, muzyce, fotografii i konsolach.
 * garfield.recipe - 200+ Comics - Customize for more days/comics: Defaults to 7 days, 25 comics - 20 general, 5 editorial.
+* gazeta-prawna-calibre-v1.recipe - Polski dziennik gospodarczy
 * gazeta_krakowska.recipe - Gazeta Regionalna Gazeta Krakowska. Najnowsze Wiadomości Kraków. Informacje Kraków. Czytaj!
 * gazeta_lubuska.recipe - Gazeta Lubuska - portal regionalny województwa lubuskiego.
 * gazeta_pl_krakow.recipe - Wiadomości z Krakowa na portalu Gazeta.pl.
 * gazeta_pl_warszawa.recipe - Wiadomości z Warszawy na portalu Gazeta.pl.
 * gazeta_pomorska.recipe - Gazeta Pomorska - portal regionalny
-* gazeta_prawna.recipe - Polski dziennik gospodarczy
 * gazeta_wroclawska.recipe - Gazeta Regionalna Gazeta Wrocławska. Najnowsze Wiadomości Wrocław, Informacje Wrocław. Czytaj!
 * gazeta_wspolczesna.recipe - Gazeta Współczesna - portal regionalny.
 * gazeta_wyborcza.recipe - Wiadomości z Polski i ze świata. Serwisy tematyczne i lokalne w 20 miastach.
@@ -196,8 +190,8 @@ Aby pobrać wszystkie pliki w jednym archiwum zip, kliknij https://github.com/t3
 * wirtualnemedia_pl.recipe - Portal o mediach, reklamie, internecie, PR, telekomunikacji - nr 1 w Polsce - WirtualneMedia.pl - wiadomości z pierwszej ręki.
 * wnp.recipe - Wirtualny Nowy Przemysł
 * wolne_media.recipe - Wiadomości z wolnemedia.net
-* wprost.recipe - Weekly magazine
-* wprost_rss.recipe - Weekly magazine
+* wprost.recipe - Popularny tygodnik ogólnopolski - Wprost. Najlepszy wśród polskich tygodników - opiniotwórczy - społeczno-informacyjny - społeczno-kulturalny.
+* wprost_rss.recipe - Portal informacyjny. Najświeższe wiadomości, najciekawsze komentarze i opinie. Blogi najlepszych publicystów.
 * wysokie_obcasy.recipe - Serwis sobotniego dodatku do Gazety Wyborczej
 * zaufana_trzecia_strona.recipe - Niezależne źródło wiadomości o świecie bezpieczeństwa IT
 * zycie_warszawy.recipe - Wiadomości z Warszawy
@@ -226,5 +220,4 @@ Aby pobrać wszystkie pliki w jednym archiwum zip, kliknij https://github.com/t3
 * tv_viasathistory.recipe
 
 ## Kontakt
-Wszelkie sugestie i uwagi proszę zgłaszać w [wątku na forum eksiazki.org](http://forum.eksiazki.org/recepty-f172/kalibrator-repozytorium-z-plikami-recipe-t11778.html),
-lub do [phabricatora projektu eGazeciarz](http://egazeciarz.pl/bugzilla/)
+Wszelkie sugestie i uwagi proszę zgłaszać w [wątku na forum eksiazki.org](http://forum.eksiazki.org/recepty-f172/kalibrator-repozytorium-z-plikami-recipe-t11778.html) lub do [phabricatora projektu eGazeciarz](http://egazeciarz.pl/bugzilla/)
