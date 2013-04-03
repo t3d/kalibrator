@@ -175,7 +175,6 @@ Aby pobrać wszystkie pliki w jednym archiwum zip, kliknij https://github.com/t3
 * sport_pl.recipe - Największy portal sportowy w Polsce. Wiadomości sportowe z najważniejszych wydarzeń, relacje i wyniki meczów na żywo.
 * sportowefakty.recipe - Najważniejsze informacje sportowe z kraju i ze świata, relacje, komentarze, wywiady, zdjęcia!
 * stopklatka.recipe - Stopklatka.pl to najdłużej działający polski portal filmowy. Baza filmów, seriali i aktorów, repertuar kin, program tv, wydarzenia ze świata filmu
-* suchary.recipe - Starannie wyselekcjonowane i dokładnie wybrane kawały dowcipy rodem z Familiady.
 * swiat_obrazu.recipe - Internetowy Dziennik o Fotografii i Wideo www.SwiatObrazu.pl to źródło informacji o technice fotografii i wideo, o sprzęcie najbardziej znanych i uznanych firm: Canon, Nikon, Sony, Hasselblad i wielu innych. Znajdziecie tu programy do obróbki zdjęć, forum foto i forum wideo i galerie zdjęć. Codziennie najświeższe informacje: aktualności, testy, poradniki, wywiady, felietony. Swiatobrazu.pl stale organizuje konkursy oraz warsztaty fotograficzne i wideo.
 * swiatkindle.recipe - Czytniki e-książek w Polsce. Jak wybrać, kupić i korzystać z Amazon Kindle i innych
 * tablety_pl.recipe - Tablety, gry i aplikacje na tablety.
