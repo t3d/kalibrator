@@ -4,11 +4,10 @@ __license__ = 'GPL v3'
 
 from calibre.web.feeds.news import BasicNewsRecipe
 from calibre.utils.magick import Image
-import re
 
 class sportowefakty(BasicNewsRecipe):
     title          = u'SportoweFakty'
-    __author__ = 'Artur Stachecki <artur.stachecki@gmail.com>'
+    __author__ = 'Artur Stachecki <artur.stachecki@gmail.com>, Tomasz Długosz <tomek3d@gmail.com>'
     language       = 'pl'
     description    = u'Najważniejsze informacje sportowe z kraju i ze świata, relacje, komentarze, wywiady, zdjęcia!'
     oldest_article = 1
@@ -18,6 +17,7 @@ class sportowefakty(BasicNewsRecipe):
     use_embedded_content=False
     remove_javascript=True
     no_stylesheets=True
+    ignore_duplicate_articles = {'title', 'url'}
 
     keep_only_tags = [dict(attrs = {'class' : 'box-article'})]
     remove_tags =[]
@@ -34,6 +34,13 @@ class sportowefakty(BasicNewsRecipe):
                       (u'Moto', u'http://www.sportowefakty.pl/moto/index.rss'),
                       (u'Tenis', u'http://www.sportowefakty.pl/tenis/index.rss')
                      ]
+
+    def get_article_url(self, article):
+        link = article.get('link', None)
+        if 'utm_source' in link:
+            return link.split('?utm')[0]
+        else:
+            return link
 
     def print_version(self, url):
         print_url = url + '/drukuj'
