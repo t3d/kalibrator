@@ -77,6 +77,7 @@ Aby pobrać wszystkie pliki w jednym archiwum zip, kliknij https://github.com/t3
 * gazeta_krakowska.recipe - Gazeta Regionalna Gazeta Krakowska. Najnowsze Wiadomości Kraków. Informacje Kraków. Czytaj!
 * gazeta_lubuska.recipe - Gazeta Lubuska - portal regionalny województwa lubuskiego.
 * gazeta_pl_krakow.recipe - Wiadomości z Krakowa na portalu Gazeta.pl.
+* gazeta_pl_szczecin.recipe - Wiadomości ze Szczecina na portalu Gazeta.pl.
 * gazeta_pl_warszawa.recipe - Wiadomości z Warszawy na portalu Gazeta.pl.
 * gazeta_pomorska.recipe - Gazeta Pomorska - portal regionalny
 * gazeta_wroclawska.recipe - Gazeta Regionalna Gazeta Wrocławska. Najnowsze Wiadomości Wrocław, Informacje Wrocław. Czytaj!
