@@ -41,12 +41,14 @@ Aby pobrać wszystkie pliki w jednym archiwum zip, kliknij https://github.com/t3
 * czas_gentlemanow.recipe - Historia mężczyzn z dala od wielkiej polityki
 * di.recipe - Internet w życiu i biznesie. Porady, wywiady, interwencje, bezpieczeństwo w Sieci, technologia.
 * dobreprogamy.recipe - Aktualności i blogi z dobreprogramy.pl
+* drytooling_pl.recipe - Drytooling.com.pl jest serwisem wspinaczki zimowej, alpinizmu i himalaizmu. Jeśli uwielbiasz zimę, nie możesz doczekać się aż wyciągniesz szpej z szafki i uderzysz w Tatry, Alpy, czy może Himalaje, to znajdziesz tutaj naprawdę dużo interesujących Cię treści! Zapraszamy!
 * dwutygodnik.recipe - Strona Kultury: literatura, teatr, film, sztuka, muzyka, felietony, rozmowy
 * dzial_zagraniczny.recipe - Polskiego czytelnika to nie interesuje
 * dzieje_pl.recipe - Dzieje.pl - najlepszy portal informacyjno-edukacyjny dotyczący historii Polski XX wieku. Archiwalne fotografie, filmy, katalog postaci, quizy i konkursy.
 * dziennik_baltycki.recipe - Gazeta Regionalna Dziennik Bałtycki. Najnowsze Wiadomości Trójmiasto i Wiadomości Pomorskie. Czytaj!
 * dziennik_lodzki.recipe - Gazeta Regionalna Dziennik Łódzki. Najnowsze Wiadomości Łódź. Czytaj Wiadomości Łódzkie!
 * dziennik_pl.recipe - Wiadomości z kraju i ze świata. Wiadomości gospodarcze. Znajdziesz u nas informacje, wydarzenia, komentarze, opinie.
+* dziennik_polski.recipe - Wiadomości z wydania Dziennika Polskiego
 * dziennik_wschodni.recipe - Dziennik Wschodni - portal regionalny województwa lubelskiego.
 * dziennik_zachodni.recipe - Gazeta Regionalna Dziennik Zachodni. Najnowsze Wiadomości Śląskie. Wiadomości Śląsk. Czytaj!
 * echo_dnia.recipe - Echo Dnia - portal regionalny świętokrzyskiego radomskiego i podkarpackiego. Najnowsze wiadomości z Twojego regionu, galerie, video, mp3.
@@ -89,7 +91,9 @@ Aby pobrać wszystkie pliki w jednym archiwum zip, kliknij https://github.com/t3
 * gosc_niedzielny.recipe - Ogólnopolski tygodnik katolicki
 * gram_pl.recipe - Serwis społecznościowy o grach: recenzje, newsy, zapowiedzi, encyklopedia gier, forum. Gry PC, PS3, X360, PS Vita, sprzęt dla graczy.
 * gry_online_pl.recipe - Wiadomości o grach, recenzje, zapowiedzi. Encyklopedia Gier zawiera opisy gier na PC, konsole Xbox360, PS3 i inne platformy.
+* gs24_pl.recipe - Internetowy serwis Głosu Szczecińskiego
 * hatalska.recipe - Blog specjalistki z branży mediowo-reklamowej - Natalii Hatalskiej
+* histmag.recipe - Artykuly historyczne i publicystyczne
 * historia_news.recipe - Historia-news to portal dla ludzi kochających historię. Najnowsze newsy z historii bliższej i dalszej, archeologii, paleontologii oraz ciekawostki i podcasty z historii kultury, sportu, motoryzacji i inne.
 * historia_pl.recipe - Artykuły dotyczące historii w układzie epok i tematów, forum. Najlepsza strona historii. Matura z historii i egzamin gimnazjalny z historii.
 * in4_pl.recipe - Serwis Informacyjny - Aktualnosci, recenzje
@@ -151,6 +155,8 @@ Aby pobrać wszystkie pliki w jednym archiwum zip, kliknij https://github.com/t3
 * pc_arena.recipe - Najnowsze informacje z branży IT - testy, recenzje, aktualności, rankingi, wywiady. Twoje źródło informacji o sprzęcie komputerowym.
 * pc_centre_pl.recipe - Portal komputerowy, a w nim: testy sprzętu komputerowego, recenzje gier i oprogramowania. a także opisy produktów związanych z komputerami.
 * pc_foster.recipe - Vortal technologiczny: testy, recenzje sprzętu komputerowego i telefonów, nowinki hardware, programy i gry dla Windows. Podkręcanie, modding i Overclocking.
+* pc_lab.recipe - Articles from PC Lab website
+* polityka.recipe - Weekly magazine. Last archive issue
 * polska_times.recipe - Internetowe wydanie dziennika ogólnopolskiego Polska The Times. Najświeższe informacje: wydarzenia w kraju i na świecie, reportaże, poradniki, opinie.
 * poradnia_pwn.recipe - Internetowa poradnia językowa Wydawnictwa Naukowego PWN. Poradnię prowadzi Redaktor Naczelny Słowników Języka Polskiego, prof. Mirosław Bańko. Pomagają mu eksperci - znani polscy językoznawcy. Współpracuje z nami m.in. prof. Jerzy Bralczyk oraz dr Jan Grzenia.
 * ppe_pl.recipe - Portal o konsolach i grach wideo.
@@ -158,6 +164,7 @@ Aby pobrać wszystkie pliki w jednym archiwum zip, kliknij https://github.com/t3
 * presseurop.recipe - Najlepsze artykuły z prasy europejskiej
 * puls_biznesu.recipe - Puls Biznesu - biznes, ekonomia, giełda, inwestycje
 * pure_pc.recipe - Artykuły, aktualności, sprzęt, forum, chłodzenie, modding, urządzenia mobilne - wszystko w jednym miejscu.
+* racjonalista_pl.recipe - Racjonalista.pl
 * res_publica.recipe - Portal kulturalno-społecznego kwartalnika o profilu liberalnym, wydawany przez Fundację Res Publica
 * rmf24_ESKN.recipe - Ekonomia, sport, kultura i nauka ze strony rmf24.pl
 * rmf24_fakty.recipe - Fakty ze strony rmf24.pl
