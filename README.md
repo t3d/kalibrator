@@ -41,7 +41,6 @@ Aby pobrać wszystkie pliki w jednym archiwum zip, kliknij https://github.com/t3
 * czas_gentlemanow.recipe - Historia mężczyzn z dala od wielkiej polityki
 * di.recipe - Internet w życiu i biznesie. Porady, wywiady, interwencje, bezpieczeństwo w Sieci, technologia.
 * dobreprogamy.recipe - Aktualności i blogi z dobreprogramy.pl
-* duzy_format.recipe - Duży Format przez RSS
 * dwutygodnik.recipe - Strona Kultury: literatura, teatr, film, sztuka, muzyka, felietony, rozmowy
 * dzial_zagraniczny.recipe - Polskiego czytelnika to nie interesuje
 * dzieje_pl.recipe - Dzieje.pl - najlepszy portal informacyjno-edukacyjny dotyczący historii Polski XX wieku. Archiwalne fotografie, filmy, katalog postaci, quizy i konkursy.
