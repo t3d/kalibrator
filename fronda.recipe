@@ -55,7 +55,10 @@ class Fronda(BasicNewsRecipe):
         articles = {}
 
         for url, genName in genres:
-            soup = self.index_to_soup('http://www.fronda.pl/c/'+ url)
+            try:
+                soup = self.index_to_soup('http://www.fronda.pl/c/'+ url)
+            except:
+                continue
             articles[genName] = []
             for item in soup.findAll('li'):
                 article_h = item.find('h2')
