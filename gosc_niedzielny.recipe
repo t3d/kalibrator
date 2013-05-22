@@ -66,16 +66,11 @@ class GN(BasicNewsRecipe):
             return self.temp_files[-1].name
 
         def find_last_issue(self):
-            year = date.today().year
-            while True:
-                url = 'http://gosc.pl/wyszukaj/wydania/3.Gosc-Niedzielny/rok/' + str(year)
-                doc = html.fromstring(urllib2.urlopen(url).read())
-                page = doc.xpath('//div[@class="c"]//div[@class="search-result"]/div[1]/div[2]/h1//a/@href')
-                if page:
-                    return page[1]
+            url = 'http://gosc.pl/wyszukaj/wydania/3.Gosc-Niedzielny/'
+            doc = html.fromstring(urllib2.urlopen(url).read())
+            page = doc.xpath('//div[@class="c"]//div[@class="search-result"]/div[1]/div[2]/h1//a/@href')
 
-                else:
-                    year-=1
+            return page[1]
 
         def parse_index(self):
                 soup = self.index_to_soup('http://gosc.pl' + self.find_last_issue())
