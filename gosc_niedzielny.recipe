@@ -7,10 +7,8 @@ __copyright__ = '2011, Piotr Kontek, piotr.kontek@gmail.com \
 
 from calibre.web.feeds.news import BasicNewsRecipe
 from calibre.ptempfile import PersistentTemporaryFile
-from datetime import date
 import re
 from lxml import html
-import urllib2
 
 class GN(BasicNewsRecipe):
 
@@ -66,8 +64,8 @@ class GN(BasicNewsRecipe):
             return self.temp_files[-1].name
 
         def find_last_issue(self):
-            url = 'http://gosc.pl/wyszukaj/wydania/3.Gosc-Niedzielny/'
-            doc = html.fromstring(urllib2.urlopen(url).read())
+            raw = self.index_to_soup('http://gosc.pl/wyszukaj/wydania/3.Gosc-Niedzielny/', raw=True)
+            doc = html.fromstring(raw)
             page = doc.xpath('//div[@class="c"]//div[@class="search-result"]/div[1]/div[2]/h1//a/@href')
 
             return page[1]
