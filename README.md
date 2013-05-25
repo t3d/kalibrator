@@ -88,7 +88,7 @@ Aby pobrać wszystkie pliki w jednym archiwum zip, kliknij https://github.com/t3
 * gildia_pl.recipe - Fantastyczny Portal Kulturalny - newsy, recenzje, galerie, wywiady. Literatura, film, gry komputerowe i planszowe, komiks, RPG, sklep. Nie lekceważ potęgi wyobraźni!
 * glos_wielkopolski.recipe - Gazeta Regionalna Głos Wielkopolski. Najnowsze Wiadomości Poznań. Czytaj Informacje Poznań!
 * gofin_pl.recipe - Portal Podatkowo-Księgowy
-* gosc_niedzielny.recipe - Ogólnopolski tygodnik katolicki
+* gosc_niedzielny.recipe - Ogólnopolski tygodnik katolicki - fragmenty artykułów z poprzedniego numeru
 * gram_pl.recipe - Serwis społecznościowy o grach: recenzje, newsy, zapowiedzi, encyklopedia gier, forum. Gry PC, PS3, X360, PS Vita, sprzęt dla graczy.
 * gry_online_pl.recipe - Wiadomości o grach, recenzje, zapowiedzi. Encyklopedia Gier zawiera opisy gier na PC, konsole Xbox360, PS3 i inne platformy.
 * gs24_pl.recipe - Internetowy serwis Głosu Szczecińskiego
