@@ -169,7 +169,6 @@ Aby pobrać wszystkie pliki w jednym archiwum zip, kliknij https://github.com/t3
 * rmf24_ESKN.recipe - Ekonomia, sport, kultura i nauka ze strony rmf24.pl
 * rmf24_fakty.recipe - Fakty ze strony rmf24.pl
 * rmf24_opinie.recipe - Blogi, wywiady i komentarze ze strony rmf24.pl
-* runners_world.recipe - Runners World PL, magazyn dla biegaczy  <br>
 * rybinski.recipe - Blog ekonomiczny dra hab. Krzysztofa Rybińskiego
 * rynek_infrastruktury.recipe - Portal "Rynek Infrastruktury" to źródło informacji o kluczowych elementach polskiej gospodarki: drogach, kolei, lotniskach, portach, telekomunikacji, energetyce, prawie i polityce, wzmocnione eksperckimi komentarzami kluczowych analityków.
 * rynek_kolejowy.recipe - Rynek Kolejowy - kalendarium wydarzeń branży kolejowej, konferencje, sympozja, targi kolejowe, krajowe i zagraniczne.
