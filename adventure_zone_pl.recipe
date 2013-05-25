@@ -1,5 +1,4 @@
 from calibre.web.feeds.news import BasicNewsRecipe
-import re
 class Adventure_zone(BasicNewsRecipe):
     title          = u'Adventure Zone'
     __author__        = 'fenuks'
