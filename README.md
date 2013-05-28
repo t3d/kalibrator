@@ -16,6 +16,7 @@ Aby pobrać wszystkie pliki w jednym archiwum zip, kliknij https://github.com/t3
 
 ## Opis reguł
 * adventure_zone_pl.recipe - Czytaj więcej o przygodzie - codzienne nowinki. Szukaj u nas solucji i poradników, czytaj recenzje i zapowiedzi. Także galeria, pliki oraz forum dla wszystkich fanów gier przygodowych.
+* alejakomiksu_com.recipe - Serwis poświęcony komiksom. Najnowsze wieści, recenzje, artykuły, wywiady, galerie, komiksy online, konkursy, linki, baza komiksów online.
 * android_com_pl.recipe - Android.com.pl - to największe w Polsce centrum Android OS. Znajdziesz tu: nowości, forum, pomoc, recenzje, gry, aplikacje.
 * antyweb.recipe - Blog o internecie i nowych technologiach
 * app_funds.recipe - Blog inwestora dla inwestorów i oszczędzających
@@ -64,6 +65,7 @@ Aby pobrać wszystkie pliki w jednym archiwum zip, kliknij https://github.com/t3
 * esensja_(rss).recipe - Magazyn kultury popularnej
 * eso_pl.recipe - ESO, Europejskie Obserwatorium Południowe, buduje i obsługuje najbardziej zaawansowane naziemne teleskopy astronomiczne na świecie
 * f1_ultra.recipe - Formuła 1, Robert Kubica, F3, GP2 oraz inne serie wyścigowe.
+* fdb_pl.recipe - Wiadomości ze świata filmu, baza danych filmowych, recenzje, zwiastuny, boxoffice.
 * film_org_pl.recipe - Recenzje, analizy, artykuły, rankingi - wszystko o filmie dla miłośników kina. Opisy efektów specjalnych, wersji reżyserskich, remake'ów, sequeli. No i forum filmowe. Jedne z największych w Polsce.
 * film_web.recipe - Filmweb.pl - Filmy takie jak Ty Filmweb to największy i najczęściej odwiedzany polski serwis filmowy. Największa baza filmów, seriali i aktorów, repertuar kin i tv, ...
 * focus_pl.recipe - Focus.pl - pierwszy w Polsce portal społecznościowy dla miłośników nauki. Tematyka: nauka, historia, cywilizacja, technika, przyroda, sport, gadżety
@@ -121,6 +123,7 @@ Aby pobrać wszystkie pliki w jednym archiwum zip, kliknij https://github.com/t3
 * legitymizm.recipe - Portal legitymistyczny
 * lifehacker_pl.recipe - Lifehacking - sposoby na zwiększanie własnej wydajności. Ułatwiaj sobie życie, wykorzystując wiedzę, metody, technologie, przydatne strony ...
 * linux_journal.recipe - The monthly magazine of the Linux community, promoting the use of Linux worldwide.
+* linuxportal_pl.recipe - Na LinuxPortal.pl znajdziesz wiadomości o systemie Linux, open source oraz Androidzie.
 * lomza.recipe - Regionalny portal. Najświeższe informacje z regionu, kulturalne, sportowe. Ogłoszenia, baza biznesu, forum.
 * magazyn_consido.recipe - Portal dla architektów i projektantów
 * magazyn_kuchnia.recipe - Kuchnia - magazyn dla smakoszy! Przepisy kulinarne, gotowanie, felietony i kulinarne podróże.
@@ -156,8 +159,10 @@ Aby pobrać wszystkie pliki w jednym archiwum zip, kliknij https://github.com/t3
 * pc_centre_pl.recipe - Portal komputerowy, a w nim: testy sprzętu komputerowego, recenzje gier i oprogramowania. a także opisy produktów związanych z komputerami.
 * pc_foster.recipe - Vortal technologiczny: testy, recenzje sprzętu komputerowego i telefonów, nowinki hardware, programy i gry dla Windows. Podkręcanie, modding i Overclocking.
 * pc_lab.recipe - Articles from PC Lab website
+* picoboard_pl.recipe - Portal poświęcony takim urządzeniom jak: Raspberry Pi, XBMC, ODROID-X, BeagleBoard czy CuBox. Systemy operacyjne, modyfikacje oraz obudowy i innego rodzaju dodatki.
 * polityka.recipe - Weekly magazine. Last archive issue
 * polska_times.recipe - Internetowe wydanie dziennika ogólnopolskiego Polska The Times. Najświeższe informacje: wydarzenia w kraju i na świecie, reportaże, poradniki, opinie.
+* polter_pl.recipe - Największy polski serwis poświęcony ogólno pojętej fantastyce - grom fabularnym (RPG), książkom, filmowi, komiksowi, grom planszowym, karcianym i bitewnym.
 * poradnia_pwn.recipe - Internetowa poradnia językowa Wydawnictwa Naukowego PWN. Poradnię prowadzi Redaktor Naczelny Słowników Języka Polskiego, prof. Mirosław Bańko. Pomagają mu eksperci - znani polscy językoznawcy. Współpracuje z nami m.in. prof. Jerzy Bralczyk oraz dr Jan Grzenia.
 * ppe_pl.recipe - Portal o konsolach i grach wideo.
 * prawica_net.recipe - Wiadomości ze strony prawica.net
@@ -175,6 +180,7 @@ Aby pobrać wszystkie pliki w jednym archiwum zip, kliknij https://github.com/t3
 * rzeczpospolita.recipe - Newspaper
 * samcik_blox.recipe - Blog Macieja Samcika, długoletniego dziennikarza ekonomicznego Gazety Wyborczej . O finansach małych i dużych. Mnóstwo ciekawostek na temat pieniędzy.
 * satkurier.recipe - Serwis poświęcony telewizji cyfrowej
+* sekurak_pl.recipe - Wiadomości z dziedziny bezpieczeństwa
 * slashdot.recipe - Source for technology related news with a heavy slant towards Linux and Open Source issues.
 * spiders_web_pl.recipe - Autorskie teksty popularnych blogerów, testy sprzętu i aplikacji, oraz wiele więcej.
 * sport_pl.recipe - Największy portal sportowy w Polsce. Wiadomości sportowe z najważniejszych wydarzeń, relacje i wyniki meczów na żywo.
@@ -184,6 +190,7 @@ Aby pobrać wszystkie pliki w jednym archiwum zip, kliknij https://github.com/t3
 * swiatkindle.recipe - Czytniki e-książek w Polsce. Jak wybrać, kupić i korzystać z Amazon Kindle i innych
 * tablety_pl.recipe - Tablety, gry i aplikacje na tablety.
 * tanuki.recipe - Tanuki - portal o anime i mandze.
+* tawernarpg_pl.recipe - Tawerna RPG to ogólnopolski serwis zajmujący się fantastyką i grami fantastycznymi. Znajdziesz u nas zarówno gry fabularne, karciane, planszowe i komputerowe, a także recenzje, opowiadania i sporą dawkę humoru.
 * telepolis_pl.recipe - Twój telekomunikacyjny serwis informacyjny.
 * trojmiasto_pl.recipe - Wiadomości, imprezy, wydarzenia, spektakle.Gdańsk, Gdynia, Sopot - NOCLEGI, Katalog firm, repertuar kin, wydarzenia, przewodnik, mapa, kwatery, hotele. Portal regionalny trojmiasto.pl
 * trystero.recipe - Trystero.pl jest niezależnym blogiem finansowym. Publikowane na nim teksty dotyczą rynku kapitałowego, ekonomii, gospodarki i życia społecznego – w takiej mniej więcej kolejności.
