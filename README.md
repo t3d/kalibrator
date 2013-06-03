@@ -129,11 +129,9 @@ Aby pobrać wszystkie pliki w jednym archiwum zip, kliknij https://github.com/t3
 * magazyn_kuchnia.recipe - Kuchnia - magazyn dla smakoszy! Przepisy kulinarne, gotowanie, felietony i kulinarne podróże.
 * mateusz_czytania.recipe - Codzienne czytania z jednego z najstarszych polskich serwisów katolickich.
 * media2.recipe - Media2.pl to jeden z najczęściej odwiedzanych serwisów dla profesjonalistów z branży medialnej, telekomunikacyjnej, public relations oraz nowych technologii.
-* mens_health_pl.recipe - Mens Health PL, lifestylowy magazyn dla mężczyzn <br>
 * michalkiewicz.recipe - Strona autorska * felietony * artykuły * komentarze
 * mlody_technik_pl.recipe - Młody technik
 * mobilna.recipe - twoja mobilna strona
-* mojegotowanie.recipe - Gotowanie to Twoja pasja? Uwielbiasz sałatki? Lubisz grillować? Przepisy kulinarne doskonałe na wszystkie okazje znajdziesz na www.mojegotowanie.pl.
 * money_pl.recipe - Informacje finansowe z kraju i ze świata. Aktualne i archiwalne: notowania giełdowe, kursy walut, wskaźniki gospodarcze.
 * myapple_pl.recipe -  Największy w Polsce serwis zajmujący się tematyką związaną z Apple i wszelkimi produktami tej firmy.
 * najwyzszy_czas.recipe - Wiadomości z nczas.com
