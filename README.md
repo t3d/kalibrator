@@ -1,3 +1,6 @@
+**Projekt zawieszony z powodu przejścia Calibre do githuba. Rozwój polskich reguł został przeniesiony do [oficjalnego repozytorium](https://github.com/kovidgoyal/calibre)**
+
+
 # Kalibrator
 Kalibrator to zbiór reguł do ściągania wiadomości z polskich stron www za pomocą programu Calibre.
 
